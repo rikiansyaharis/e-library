@@ -6,8 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{asset('images/logo.png')}}" type="image">
 
-    <title>E-Library </title>
+    <title>E-Perpus</title>
 
     <!-- Bootstrap -->
     <link href=" {{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -31,7 +32,7 @@
         <div class="animate form login_form">
           <section class="login_content">
             <form>
-              <h1>Login Form</h1>
+              <h1>Login e-library</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" />
               </div>
@@ -39,23 +40,23 @@
                 <input type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="/gotohome">Log in</a>
-                <a class="reset_pass" href="#">Lost your password?</a>
+                <a class="btn btn-default submit" href="/home">Masuk</a>
+                <a class="reset_pass" href="#">lupa password?</a>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
+                <p class="change_link">Belum punya akun?
+                  <a href="#signup" class="to_register"> Daftar  </a>
                 </p>
 
                 <div class="clearfix"></div>
                 <br />
 
                 <div>
-                  <h1><img src="{{ asset('images/icon.png') }}" class=""></img> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><img src="{{ asset('images/icon.png') }}" class="logo" width="250px"></img> </h1>
+                  <p>©2022 All Rights Reserved. Privacy and Terms</p>
                 </div>
               </div>
             </form>
@@ -65,7 +66,7 @@
         <div id="register" class="animate form registration_form">
           <section class="login_content">
             <form>
-              <h1>Create Account</h1>
+              <h1>Daftar</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" />
               </div>
@@ -82,16 +83,16 @@
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Already an acoount ?
-                  <a href="#signin" class="to_register"> Log in </a>
+                <p class="change_link">Sudah punya akun? 
+                  <a href="#signin" class="to_register"> Masuk </a>
                 </p>
 
                 <div class="clearfix"></div>
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><img src="{{ asset('images/icon.png') }}" class="logo" width="250px"></img> </h1>
+                  <p>©2022 All Rights Reserved. Privacy and Terms</p>
                 </div>
               </div>
             </form>
