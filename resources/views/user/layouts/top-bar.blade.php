@@ -33,112 +33,15 @@
 
 
     <!-- Custom Theme Style -->
-    <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
+    <link href="{{asset('build/css/style.css')}}" rel="stylesheet">
 </head>
 
-<body class="nav-md">
-
-<div class="container body">
-    <div class="main_container">
-
-        <div class="col-md-3 left_col">
-            <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-                <a href="/home" class="site_title">
-                    <img src="{{ asset('images/logo.png') }}" alt="" width="30px" class="mx-auto">
-                    <span style="font-family: poppins"> - Perpus</span>
-                </a>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <!-- menu profile quick info -->
-            <div class="profile clearfix">
-                <div class="profile_pic">
-                <img src="{{ asset('images/img.jpg') }}" alt="..." class="img-circle profile_img">
-                </div>
-                <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>Rikiansyah</h2>
-                </div>
-            </div>
-            <!-- /menu profile quick info -->
-
-            <br />
-
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu" >
-                <div class="menu_section">
-                <h3>General</h3>
-                    <ul class="nav side-menu">
-                        <li>
-                            <a href="/home">
-                                <i class="fa fa-home"></i> Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="fa fa-edit"></i> Data
-                                <span class="fa fa-chevron-down"></span>
-                            </a>
-                            <ul class="nav child_menu">
-                                <li><a href="/dataadmin">Data Pengurus</a></li>
-                                <li><a href="/datauser">Data Pengguna</a></li>
-                                <li><a href="/databuku">Data Buku</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="fa fa-money"></i> Transaksi
-                                <span class="fa fa-chevron-down"></span>
-                            </a>
-                            <ul class="nav child_menu">
-                                <li><a href="/transaksi">Peminjaman</a></li>
-                                <li><a href="/pengembalian">Pengembalian</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="/laporan">
-                                <i class="fa fa-file-text"></i> Laporan
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- /sidebar menu -->
-        </div>
-    </div>
-
-        <!-- top navigation -->
-        <div class="top_nav">
-            <div class="nav_menu">
-                <div class="nav toggle">
-                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                </div>
-                <nav class="nav navbar-nav">
-                <ul class=" navbar-right">
-                  <li class="nav-item dropdown open" style="padding-left: 15px;">
-                    <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="images/img.jpg" alt="">John Doe
-                    </a>
-                    <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item"  href="#">Profile</a>
-                        <a class="dropdown-item"  href="#">Settings</a>
-                        <a class="dropdown-item"  href="#">Help</a>
-                        <a class="dropdown-item"  href="/"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
-                    </div>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        <!-- /top navigation -->
-
-@yield('content')
+<body>
 
 
-    </div>
-</div>
+
+@yield('content-user')
+
 
 <!-- jQuery -->
 <script src="{{asset('vendors/jquery/dist/jquery.min.js')}}"></script>

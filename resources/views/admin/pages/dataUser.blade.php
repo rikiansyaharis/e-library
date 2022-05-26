@@ -25,9 +25,9 @@
                                     <th>Opsi</th>
                                 </tr>
                                 </thead>
-
+                                    
                                 <tbody>
-                                <tr>
+                                    <tr>
                                     <td>Tiger Nixon</td>
                                     <td>System Architect</td>
                                     <td>Edinburgh</td>
@@ -36,7 +36,7 @@
                                     <td>$320,800</td>
                                     <td >
                                         <a href="#">Edit</a> |
-                                        <a href="#">Hapus</a> |
+                                        <a href="#" onclick="return confirm('Hapus?');">Hapus</a> |
                                         <a href="#">Print</a>
                                     </td>
                                 </tr>
@@ -49,7 +49,7 @@
                                     <td>$170,750</td>
                                     <td>
                                         <a href="#">Edit</a> |
-                                        <a href="#">Hapus</a> |
+                                        <a href="#" onclick="return confirm('Hapus?');">Hapus</a> |
                                         <a href="#">Print</a>
                                     </td>
                                 </tr>

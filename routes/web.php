@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('admin.pages.signin');
 });
+
 Route::get('/home', function () {
     return view('admin.pages.home', [
         "title" => "Beranda"
@@ -34,5 +36,20 @@ Route::get('/datauser', function () {
 Route::get('/databuku', function () {
     return view('admin.pages.dataBuku', [
         "title" => "Data Buku"
+    ]);
+});
+Route::get('/transaksi', function () {
+    return view('admin.pages.transaksi', [
+        "title" => "Transaksi"
+    ]);
+});
+Route::get('/pengembalian', function () {
+    return view('admin.pages.pengembalian', [
+        "title" => "Pengembalian"
+    ]);
+});
+Route::get('/laporan', function () {
+    return view('admin.pages.laporan', [
+        "title" => "Laporan"
     ]);
 });
