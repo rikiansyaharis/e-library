@@ -37,14 +37,40 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2A3F54">
+        <div class="container">
+        <a class="navbar-brand text-white" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" size="50%" placeholder="Cari" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Cari</button>
+                </form>
+            </ul>
+        <div class="dropdown">
+            <a class="btn text-white dropdown-toggle btn-sm " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+            Profil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Profil</a>
+              <a class="dropdown-item" href="#">Favorite</a>
+              <a class="dropdown-item" href="#">History</a>
+              <a class="dropdown-item" href="/"><i class="fa fa-sign-out pull-right mt-1"></i>Log out</a>
+            </div>
+          </div>
+        </div>
+    </div>
+</nav>
 
 
+    @yield('content-user')
 
-@yield('content-user')
 
-
-<!-- jQuery -->
-<script src="{{asset('vendors/jquery/dist/jquery.min.js')}}"></script>
+    <!-- jQuery -->
+    <script src="{{asset('vendors/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap -->
 <script src="{{asset('vendors/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
 <!-- FastClick -->

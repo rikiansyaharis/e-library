@@ -28,11 +28,16 @@ Route::get('/dataadmin', function () {
         "title" => "Data admin"
     ]);
 });
+
 Route::get('/datauser', function () {
     return view('admin.pages.dataUser', [
         "title" => "Data User"
     ]);
 });
+
+Route::get('/dataadmin', 'App\Http\Controllers\PageController@admin',["title" => "Data User"]);
+Route::get('/datauser', 'App\Http\Controllers\PageController@user',["title" => "Data User"]);
+
 Route::get('/databuku', function () {
     return view('admin.pages.dataBuku', [
         "title" => "Data Buku"
@@ -51,5 +56,12 @@ Route::get('/pengembalian', function () {
 Route::get('/laporan', function () {
     return view('admin.pages.laporan', [
         "title" => "Laporan"
+    ]);
+});
+
+
+Route::get('/dashboard', function () {
+    return view('user.pages.dashboard', [
+        "title" => "Dashboard"
     ]);
 });

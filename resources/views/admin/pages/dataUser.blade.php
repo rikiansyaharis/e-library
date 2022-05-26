@@ -17,50 +17,36 @@
                                 <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Email</th>
+                                    <th>No.Hp</th>
                                     <th>Opsi</th>
                                 </tr>
                                 </thead>
-                                    
-                                <tbody>
-                                    <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                    <td >
-                                        <a href="#">Edit</a> |
-                                        <a href="#" onclick="return confirm('Hapus?');">Hapus</a> |
-                                        <a href="#">Print</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011/07/25</td>
-                                    <td>$170,750</td>
-                                    <td>
-                                        <a href="#">Edit</a> |
-                                        <a href="#" onclick="return confirm('Hapus?');">Hapus</a> |
-                                        <a href="#">Print</a>
-                                    </td>
-                                </tr>
-                                
-                                </tbody>
+                                 @if (count ($items) > 0)
+
+                                 <tbody>
+                                     @foreach ($items as $us)
+
+                                     <tr>
+                                         <td>{{$us[0]}}</td>
+                                         <td>{{$us[1]}}</td>
+                                         <td>{{$us[2]}}</td>
+                                         <td >
+                                             <a href="#">Edit</a> |
+                                            <a href="#" onclick="return confirm('Hapus?');">Hapus</a> |
+                                            <a href="#">Print</a>
+                                        </td>
+                                    </tr>
+
+                                    @endforeach
+                                    </tbody>
+                                    @endif
                             </table>
                             <hr>
                             <button class="btn btn-outline-success ml-3 col-sm-2">Tambah
                                 <i class="fa fa-plus"></i>
                             </button>
-                            <button class="btn btn-outline-primary ml-3 col-sm-2">Cetak  
+                            <button class="btn btn-outline-primary ml-3 col-sm-2">Cetak
                                 <i class="fa fa-print"></i>
                             </button>
                         </div>

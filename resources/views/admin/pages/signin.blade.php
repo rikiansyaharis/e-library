@@ -43,13 +43,14 @@
                 <a class="btn btn-default submit" href="/home">Masuk</a>
                 <a class="reset_pass" href="#">lupa password?</a>
               </div>
-
+              <a href="/dashboard">ke user</a>
               <div class="clearfix"></div>
 
               <div class="separator">
                 <p class="change_link">Belum punya akun?
                   <a href="#signup" class="to_register"> Daftar  </a>
                 </p>
+
 
                 <div class="clearfix"></div>
                 <br />
@@ -83,9 +84,10 @@
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Sudah punya akun? 
+                <p class="change_link">Sudah punya akun?
                   <a href="#signin" class="to_register"> Masuk </a>
                 </p>
+
 
                 <div class="clearfix"></div>
                 <br />
