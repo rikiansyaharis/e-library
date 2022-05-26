@@ -17,8 +17,22 @@ Route::get('/', function () {
     return view('admin.pages.signin');
 });
 Route::get('/home', function () {
-    return view('admin.pages.home');
+    return view('admin.pages.home', [
+        "title" => "Beranda"
+    ]);
 });
-Route::get('/bookfiles', function () {
-    return view('admin.pages.dataBuku');
+Route::get('/dataadmin', function () {
+    return view('admin.pages.dataAdmin', [
+        "title" => "Data admin"
+    ]);
+});
+Route::get('/datauser', function () {
+    return view('admin.pages.dataUser', [
+        "title" => "Data User"
+    ]);
+});
+Route::get('/databuku', function () {
+    return view('admin.pages.dataBuku', [
+        "title" => "Data Buku"
+    ]);
 });
