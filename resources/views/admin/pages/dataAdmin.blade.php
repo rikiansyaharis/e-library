@@ -16,21 +16,21 @@
                             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
                                 <thead>
                                 <tr>
+                                    <th>NIP</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>No.Hp</th>
                                     <th>Opsi</th>
                                 </tr>
                                 </thead>
-                                @if (count ($items) > 0)
-
                                 <tbody>
-                                    @foreach ($items as $us)
+                                    @foreach ($dataAdmin as $us)
 
                                     <tr>
-                                        <td>{{$us[0]}}</td>
-                                        <td>{{$us[1]}}</td>
-                                        <td>{{$us[2]}}</td>
+                                        <td>{{$us['NIP']}}</td>
+                                        <td>{{$us['nama']}}</td>
+                                        <td>{{$us['email']}}</td>
+                                        <td>{{$us['no']}}</td>
                                         <td >
                                             <a href="#">Edit</a> |
                                            <a href="#" onclick="return confirm('Hapus?');">Hapus</a> |
@@ -40,7 +40,6 @@
 
                                    @endforeach
                                    </tbody>
-                                   @endif
                             </table>
                             <hr>
                             <button class="btn btn-outline-success ml-3 col-sm-2">Tambah

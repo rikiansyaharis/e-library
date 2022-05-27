@@ -35,8 +35,10 @@ Route::get('/datauser', function () {
     ]);
 });
 
-Route::get('/dataadmin', 'App\Http\Controllers\PageController@admin',["title" => "Data User"]);
-Route::get('/datauser', 'App\Http\Controllers\PageController@user',["title" => "Data User"]);
+Route::get('/dataadmin', [PageController::class,'admin'])->name('admin');
+Route::get('/datauser', [PageController::class,'user'])->name('user');
+// Route::get('/dataadmin', 'App\Http\Controllers\PageController@admin',["title" => "Data User"]);
+// Route::get('/datauser', 'App\Http\Controllers\PageController@user',["title" => "Data User"]);
 
 Route::get('/databuku', function () {
     return view('admin.pages.dataBuku', [

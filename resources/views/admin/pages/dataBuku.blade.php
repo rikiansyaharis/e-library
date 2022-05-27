@@ -9,7 +9,7 @@
           <div class="title_left">
             <h3>Koleksi</h3>
           </div>
-          
+
           <div class="title_right">
             <div class="col-md-5 col-sm-5   form-group pull-right top_search">
               <div class="input-group">
@@ -24,7 +24,7 @@
         <hr>
         <h5>Top Trending</h5>
           <a href="">
-            <button class="btn btn-sm btn-outline-success pull-right"> Tambah buku 
+            <button class="btn btn-sm btn-outline-success pull-right"> Tambah buku
               <i class="fa fa-plus"></i>
             </button>
           </a>
@@ -33,11 +33,10 @@
             <div class="col-lg-12">
               <div class="card-deck">
                 <div class="card">
-                  
-                  <img src="{{asset('images/book_colection/Buku-tia.jpg')}}" class="card-img-top" alt="...">
+
+                  <img src="{{asset('images/book_colection/tia.jpg')}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Tia - Buku Novel</h5>
-                    <h4 class="card-text">Tahun terbit : 2019</h4>
+                    <h6 class="card-title">Tia</h6>
                     <a href="">
                       <p class="card-text">
                         <button class="btn btn-sm btn-outline-success">
@@ -53,12 +52,12 @@
                     </a>
                   </div>
                 </div>
+
                 <div class="card">
-                  <img src="{{asset('images/book_colection/mindset-1.jpg')}}" class="card-img-top"  alt="...">
+
+                  <img src="{{asset('images/book_colection/mindset.jpg')}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    
-                    <h5 class="card-title">Mindset</h5>
-                    <h4 class="card-text">Tahun terbit : 2016</h4>
+                    <h6 class="card-title">Mindset</h6>
                     <a href="">
                       <p class="card-text">
                         <button class="btn btn-sm btn-outline-success">
@@ -74,12 +73,12 @@
                     </a>
                   </div>
                 </div>
+
                 <div class="card">
-                  <img src="{{asset('images/book_colection/senja-dan-pagi-1.jpg')}}" class="card-img-top" alt="...">
+
+                  <img src="{{asset('images/book_colection/Cooking.jpg')}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    
-                    <h5 class="card-title">Senja dan Pagi</h5>
-                    <h4 class="card-text">Tahun terbit : 2018</h4>
+                    <h6 class="card-title">Cooking</h6>
                     <a href="">
                       <p class="card-text">
                         <button class="btn btn-sm btn-outline-success">
@@ -95,51 +94,51 @@
                     </a>
                   </div>
                 </div>
-                <div class="card">
-                  <img src="{{asset('images/book_colection/Wujud-Tanpa-Suara-Nurul.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    
-                    <h5 class="card-title">Wujud Tanpa Suara</h5>
-                    <h4 class="card-text">Tahun terbit : 2017</h4>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="{{asset('images/book_colection/Wujud-Tanpa-Suara-Nurul.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Tia - Buku Novel</h5>
-                    <h4 class="card-text">Tahun terbit : 2017</h4>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-                
-              </div>  
 
 
+                <div class="card">
+                  <img src="{{asset('images/book_colection/Wujud-Tanpa-Suara.jpg')}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+
+                    <h6 class="card-title">Wujud Tanpa Suara</h6>
+                    <a href="">
+                      <p class="card-text">
+                        <button class="btn btn-sm btn-outline-success">
+                          Lihat detail....
+                        </button>
+                      </p>
+                    </a>
+                    <a href="">
+                      <button class="btn btn-sm btn-outline-primary">Edit</button>
+                    </a>
+                    <a href="">
+                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="{{asset('images/book_colection/orang-orang-biasa.jpg')}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+
+                    <h6 class="card-title">Orang-orang Biasa</h6>
+                    <a href="">
+                      <p class="card-text">
+                        <button class="btn btn-sm btn-outline-success">
+                          Lihat detail....
+                        </button>
+                      </p>
+                    </a>
+                    <a href="">
+                      <button class="btn btn-sm btn-outline-primary">Edit</button>
+                    </a>
+                    <a href="">
+                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
@@ -148,7 +147,7 @@
           <h5 class="mt-4">Action</h5>
           <hr>
           <a href="">
-            <button class="btn btn-sm btn-outline-success pull-right"> Tambah buku 
+            <button class="btn btn-sm btn-outline-success pull-right"> Tambah buku
               <i class="fa fa-plus"></i>
             </button>
           </a>
@@ -157,11 +156,9 @@
             <div class="col-lg-12">
               <div class="card-deck">
                 <div class="card">
-                  
-                  <img src="{{asset('images/book_colection/Buku-tia.jpg')}}" class="card-img-top" alt="...">
+                  <img src="{{asset('images/book_colection/Komet_Minor.jpg')}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Tia - Buku Novel</h5>
-                    <h4 class="card-text">Tahun terbit : 2019</h4>
+                    <h6 class="card-title">Komet Minor</h6>
                     <a href="">
                       <p class="card-text">
                         <button class="btn btn-sm btn-outline-success">
@@ -178,114 +175,30 @@
                   </div>
                 </div>
                 <div class="card">
-                  <img src="{{asset('images/book_colection/mindset-1.jpg')}}" class="card-img-top"  alt="...">
+                  <img src="{{asset('images/book_colection/Hyderabad.jpg')}}" class="card-img-top"  alt="...">
                   <div class="card-body">
-                    
-                    <h5 class="card-title">Mindset</h5>
-                    <h4 class="card-text">Tahun terbit : 2016</h4>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="{{asset('images/book_colection/senja-dan-pagi-1.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    
-                    <h5 class="card-title">Senja dan Pagi</h5>
-                    <h4 class="card-text">Tahun terbit : 2018</h4>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="{{asset('images/book_colection/Wujud-Tanpa-Suara-Nurul.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    
-                    <h5 class="card-title">Wujud Tanpa Suara</h5>
-                    <h4 class="card-text">Tahun terbit : 2017</h4>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="{{asset('images/book_colection/Wujud-Tanpa-Suara-Nurul.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Tia - Buku Novel</h5>
-                    <h4 class="card-text">Tahun terbit : 2017</h4>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-                
-              </div>  
 
+                    <h6 class="card-title">Hyderabad</h6>
+                    <a href="">
+                      <p class="card-text">
+                        <button class="btn btn-sm btn-outline-success">
+                          Lihat detail....
+                        </button>
+                      </p>
+                    </a>
+                    <a href="">
+                      <button class="btn btn-sm btn-outline-primary">Edit</button>
+                    </a>
+                    <a href="">
+                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
+                    </a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="{{asset('images/book_colection/the-power-of-habit.jpg')}}" class="card-img-top" alt="...">
+                  <div class="card-body">
 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12 col-sm-12 ">
-          <h5 class="mt-4">Horor</h5>
-          <hr>
-          <a href="">
-            <button class="btn btn-sm btn-outline-success pull-right"> Tambah buku 
-              <i class="fa fa-plus"></i>
-            </button>
-          </a>
-        <div class="x_content">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="card-deck">
-                <div class="card">
-                  
-                  <img src="{{asset('images/book_colection/Buku-tia.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Tia - Buku Novel</h5>
-                    <h4 class="card-text">Tahun terbit : 2019</h4>
+                    <h6 class="card-title">Habbit</h6>
                     <a href="">
                       <p class="card-text">
                         <button class="btn btn-sm btn-outline-success">
@@ -302,91 +215,46 @@
                   </div>
                 </div>
                 <div class="card">
-                  <img src="{{asset('images/book_colection/mindset-1.jpg')}}" class="card-img-top"  alt="...">
+                  <img src="{{asset('images/book_colection/senja-dan-pagi.jpg')}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    
-                    <h5 class="card-title">Mindset</h5>
-                    <h4 class="card-text">Tahun terbit : 2016</h4>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="{{asset('images/book_colection/senja-dan-pagi-1.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    
-                    <h5 class="card-title">Senja dan Pagi</h5>
-                    <h4 class="card-text">Tahun terbit : 2018</h4>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="{{asset('images/book_colection/Wujud-Tanpa-Suara-Nurul.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    
-                    <h5 class="card-title">Wujud Tanpa Suara</h5>
-                    <h4 class="card-text">Tahun terbit : 2017</h4>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="{{asset('images/book_colection/Wujud-Tanpa-Suara-Nurul.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Tia - Buku Novel</h5>
-                    <h4 class="card-text">Tahun terbit : 2017</h4>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-                
-              </div>  
 
+                    <h6 class="card-title">Senja dan Pagi</h6>
+                    <a href="">
+                      <p class="card-text">
+                        <button class="btn btn-sm btn-outline-success">
+                          Lihat detail....
+                        </button>
+                      </p>
+                    </a>
+                    <a href="">
+                      <button class="btn btn-sm btn-outline-primary">Edit</button>
+                    </a>
+                    <a href="">
+                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
+                    </a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="{{asset('images/book_colection/kisah-tanah-jawa.jpg')}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6 class="card-title">Kisah Tanah Jawa</h6>
+                    <a href="">
+                      <p class="card-text">
+                        <button class="btn btn-sm btn-outline-success">
+                          Lihat detail....
+                        </button>
+                      </p>
+                    </a>
+                    <a href="">
+                      <button class="btn btn-sm btn-outline-primary">Edit</button>
+                    </a>
+                    <a href="">
+                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
 
             </div>
           </div>

@@ -46,18 +46,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" size="50%" placeholder="Cari" aria-label="Search">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Cari</button>
+                    <input class="form-control mr-sm-2" type="search" size="70%" placeholder="Cari..................." aria-label="Search">
+
                 </form>
             </ul>
         <div class="dropdown">
             <a class="btn text-white dropdown-toggle btn-sm " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
-            Profil
+            Nama
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="#">Profil</a>
+              <a class="dropdown-item" href="#">Data Peminjaman</a>
               <a class="dropdown-item" href="#">Favorite</a>
               <a class="dropdown-item" href="#">History</a>
+              <hr>
               <a class="dropdown-item" href="/"><i class="fa fa-sign-out pull-right mt-1"></i>Log out</a>
             </div>
           </div>
@@ -67,6 +69,82 @@
 
 
     @yield('content-user')
+
+
+    <!-- Footer -->
+    <footer class="text-white pt-5 pb-4 " style="background-color: #2A3F54; margin-top:140px">
+        <div class="container text-md-left">
+            <div class="row  text-md-left">
+                <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning text-center">E-Perpus</h5>
+                    <p class="text-center">E-Perpus adalah perpustakaan digital yang menyediakan informasi dari setiap buku dari perpustakaan aslinya. e-perpus juga menyediakan layanan untuk membaca buku secara online dan digital.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Link</h5>
+                    <p>
+                        <a href="https://www.blogger.com" class="text-white" style="text-decoration: none;">Blog</a>
+                    </p>
+                    <p>
+                        <a href="" class="text-white" style="text-decoration: none;">Contact Me</a>
+                    </p>
+                    <p>
+                        <a href="https://fontawesome.com/ " class="text-white" style="text-decoration: none;">Font Awesome</a>
+                    </p>
+                    <p>
+                        <a href="https://termify.io/" class="text-white" style="text-decoration: none;">Terms of Service</a>
+                    </p>
+
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-1 mx-auto mt-2">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Tutorial</h5>
+                    <p>
+                        <a href="https://laravel.com/docs/9.x" class="text-white" style="text-decoration: none;">Laravel</a>
+                    </p>
+                    <p>
+                        <a href="https://getbootstrap.com/docs/" class="text-white" style="text-decoration: none;">Bootstrap</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/" class="text-white" style="text-decoration: none;">Github</a>
+                    </p>
+                    <p>
+                        <a href="https://www.gramedia.com/" class="text-white" style="text-decoration: none;">E-Book</a>
+                    </p>
+                </div>
+
+                <div class="col-md-5 col-lg-3 col-xl-3 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p>
+                        <i class="fa fa-paw mr-3"></i> E-Perpus
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope mr-3"></i> perpus.digital@gmail.com
+                    </p>
+                    <p>
+                        <i class="fa fa-print mr-3"></i> +16 8123456789
+                    </p>
+                    <p>
+                        <i class="fa fa-map-marker mr-3"></i> Banyuwangi
+                    </p>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>
+                        Copyright ©2022 All Rights Reserved By:
+                        <a href="#" style="text-decoration: none;">
+                            <strong class="text-warning">
+                                E-Perpus
+                            </strong>
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+<!-- End Footer -->
 
 
     <!-- jQuery -->
