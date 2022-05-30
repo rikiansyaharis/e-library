@@ -18,14 +18,21 @@
                             <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                                 <div class="item form-group">
-                                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="id-buku">ID Buku<span class="required">*</span>
+                                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="id-buku">Kode Buku<span class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 ">
                                         <input type="text" id="id-buku" required="required" class="form-control ">
                                     </div>
                                 </div>
                                 <div class="item form-group">
-                                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Nama <span class="required">*</span>
+                                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Nama Anggota<span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 ">
+                                        <input type="text" id="nama" name="nama" required="required" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="item form-group">
+                                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Nama Petugas<span class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 ">
                                         <input type="text" id="nama" name="nama" required="required" class="form-control">

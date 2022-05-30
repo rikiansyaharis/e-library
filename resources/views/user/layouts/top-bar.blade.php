@@ -46,7 +46,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" size="70%" placeholder="Cari..................." aria-label="Search">
+                    <input class="form-control mr-sm-2 mx-md-3 my-auto mx" type="search" size="70%" placeholder="Cari.." aria-label="Search">
 
                 </form>
             </ul>
@@ -57,8 +57,9 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="#">Profil</a>
               <a class="dropdown-item" href="#">Data Peminjaman</a>
-              <a class="dropdown-item" href="#">Favorite</a>
+              <a class="dropdown-item" href="/favorit">Favorite</a>
               <a class="dropdown-item" href="#">History</a>
+              
               <hr>
               <a class="dropdown-item" href="/"><i class="fa fa-sign-out pull-right mt-1"></i>Log out</a>
             </div>

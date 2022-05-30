@@ -23,28 +23,39 @@ Route::get('/home', function () {
         "title" => "Beranda"
     ]);
 });
-Route::get('/dataadmin', function () {
-    return view('admin.pages.dataAdmin', [
-        "title" => "Data admin"
-    ]);
-});
+// Route::get('/dataadmin', function () {
+//     return view('admin.pages.dataAdmin', [
+//         "title" => "Data admin"
+//     ]);
+// });
 
-Route::get('/datauser', function () {
-    return view('admin.pages.dataUser', [
-        "title" => "Data User"
-    ]);
-});
+// Route::get('/datauser', function () {
+//     return view('admin.pages.dataUser', [
+//         "title" => "Data User"
+//     ]);
+// });
+
+// Route::get('/detailbukuadmin', function () {
+//     return view('admin.pages.detailBuku', [
+//         "title" => "Detail"
+//     ]);
+// });
+
+
 
 Route::get('/dataadmin', [PageController::class,'admin'])->name('admin');
 Route::get('/datauser', [PageController::class,'user'])->name('user');
+Route::get('/databuku', [PageController::class,'buku'])->name('Data Buku');
+Route::get('/detailbukuadmin', [PageController::class,'detailBuku'])->name('Detail');
 // Route::get('/dataadmin', 'App\Http\Controllers\PageController@admin',["title" => "Data User"]);
 // Route::get('/datauser', 'App\Http\Controllers\PageController@user',["title" => "Data User"]);
 
-Route::get('/databuku', function () {
-    return view('admin.pages.dataBuku', [
-        "title" => "Data Buku"
-    ]);
-});
+// Route::get('/databuku', function () {
+//     return view('admin.pages.dataBuku', [
+//         "title" => "Data Buku"
+//     ]);
+// });
+
 Route::get('/transaksi', function () {
     return view('admin.pages.transaksi', [
         "title" => "Transaksi"
@@ -67,3 +78,11 @@ Route::get('/dashboard', function () {
         "title" => "Dashboard"
     ]);
 });
+
+Route::get('/favorit', function () {
+    return view('user.pages.Favorit', [
+        "title" => "Favorit"
+    ]);
+});
+
+Route::resource('products','App\Http\Controllers\PostController');

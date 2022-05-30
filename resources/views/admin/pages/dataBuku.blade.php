@@ -32,12 +32,13 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="card-deck">
-                <div class="card">
 
-                  <img src="{{asset('images/book_colection/tia.jpg')}}" class="card-img-top" alt="...">
+                @foreach ($buku as $lt)
+                <div class="card">
+                  <img src="{{asset('images/book_colection/' . $lt['foto'])}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h6 class="card-title">Tia</h6>
-                    <a href="">
+                    <h6 class="card-title">{{ $lt['judul_buku'] }}</h6>
+                    <a href="/detailbukuadmin">
                       <p class="card-text">
                         <button class="btn btn-sm btn-outline-success">
                           Lihat detail....
@@ -52,91 +53,7 @@
                     </a>
                   </div>
                 </div>
-
-                <div class="card">
-
-                  <img src="{{asset('images/book_colection/mindset.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title">Mindset</h6>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="card">
-
-                  <img src="{{asset('images/book_colection/Cooking.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title">Cooking</h6>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-
-
-                <div class="card">
-                  <img src="{{asset('images/book_colection/Wujud-Tanpa-Suara.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-
-                    <h6 class="card-title">Wujud Tanpa Suara</h6>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="card">
-                  <img src="{{asset('images/book_colection/orang-orang-biasa.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-
-                    <h6 class="card-title">Orang-orang Biasa</h6>
-                    <a href="">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
-                </div>
+                @endforeach
 
               </div>
             </div>
