@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Pinjam;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,11 @@ class IsiPinjam extends Seeder
      */
     public function run()
     {
-        //
+        Pinjam::insert(
+            [
+                'id' => 78,
+
+            ],
+        );
     }
 }
