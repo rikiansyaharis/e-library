@@ -20,14 +20,14 @@ return new class extends Migration
             $table->string('nama_buku');
             $table->string('penulis_buku');
             $table->string('penerbit_buku');
-            $table->string('tahun_terbit');
             $table->string('genre');
+            $table->string('tahun_terbit');
             $table->string('jumlah_halaman');
             $table->text('deskripsi');
             $table->timestamps();
         });
     }
-    
+
     public function boot() {
         Schema::defaultStringLength(200);
     }

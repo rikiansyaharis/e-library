@@ -83,8 +83,8 @@
                                 <span class="fa fa-chevron-down"></span>
                             </a>
                             <ul class="nav child_menu">
-                                <li><a href="/dataadmin">Data Pengurus</a></li>
-                                <li><a href="/datauser">Data Pengguna</a></li>
+                                <li><a href="/dataadmin">Data Admin</a></li>
+                                <li><a href="/datauser">Data User</a></li>
                                 <li><a href="/databuku">Data Buku</a></li>
                             </ul>
                         </li>

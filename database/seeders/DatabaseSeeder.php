@@ -17,7 +17,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             IsiAnggota::class,
             IsiDetail::class,
-            IsiPengguna::class
+            IsiPengguna::class,
+            IsiFavorit::class,
+            IsiHistory::class,
+            IsiPinjam::class,
+            IsiPeminjaman::class
         ]);
     }
 }

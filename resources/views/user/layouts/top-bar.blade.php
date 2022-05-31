@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{asset('images/logo.png')}}" type="image">
 
-    <title>E-Perpus | {{$title}}</title>
+    <title>E-Perpus | </title>
 
     <!-- Bootstrap -->
     <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -56,10 +56,10 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="#">Profil</a>
-              <a class="dropdown-item" href="#">Data Peminjaman</a>
+              <a class="dropdown-item" href="/datapeminjaman">Data Peminjaman</a>
               <a class="dropdown-item" href="/favorit">Favorite</a>
               <a class="dropdown-item" href="#">History</a>
-              
+
               <hr>
               <a class="dropdown-item" href="/"><i class="fa fa-sign-out pull-right mt-1"></i>Log out</a>
             </div>

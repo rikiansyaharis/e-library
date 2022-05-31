@@ -16,8 +16,10 @@
                             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
                                 <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th>NIP</th>
                                     <th>Name</th>
+                                    <th>Jabatan</th>
                                     <th>Email</th>
                                     <th>No.Hp</th>
                                     <th>Opsi</th>
@@ -27,10 +29,12 @@
                                     @foreach ($dataAdmin as $us)
 
                                     <tr>
-                                        <td>{{$us['NIP']}}</td>
-                                        <td>{{$us['nama']}}</td>
+                                        <td>{{$us['id']}}</td>
+                                        <td>{{$us['nip']}}</td>
+                                        <td>{{$us['nama_petugas']}}</td>
+                                        <td>{{$us['jabatan']}}</td>
                                         <td>{{$us['email']}}</td>
-                                        <td>{{$us['no']}}</td>
+                                        <td>{{$us['nomor']}}</td>
                                         <td >
                                             <a href="#">Edit</a> |
                                            <a href="#" onclick="return confirm('Hapus?');">Hapus</a> |
