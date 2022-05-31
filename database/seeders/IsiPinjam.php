@@ -14,6 +14,6 @@ class IsiPinjam extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }
