@@ -1,7 +1,7 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-   
+
   <!-- page content -->
     <div class="right_col" role="main">
     <!-- top tiles -->
@@ -239,7 +239,7 @@
           </div>
         </div>
 
-   
+
       </div>
     </div>
   <!-- /page content -->
