@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->date('tanggal_pinjam');
-            $table->integer('ID_Anggota');
-            $table->integer('ID_Pengurus');
+            $table->foreignId('id_anggota');
+            $table->foreignId('id_pengurus');
+            $table->foreign('id_anggota')->references('id')->on('anggotas');
+            $table->foreign('id_pengurus')->references('id')->on('penggunas');
         });
     }
 

@@ -17,9 +17,9 @@ class IsiHistory extends Seeder
     {
         History::insert(
             [
-                'id' => 003,
-                'id_anggota' => 03,
-                'nama_buku' => 'Bumi'
+                // 'id' => 003,
+                // 'id_anggota' => 03,
+                // 'nama_buku' => 'Bumi'
             ],
         );
     }

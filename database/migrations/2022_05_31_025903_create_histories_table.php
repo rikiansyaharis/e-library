@@ -15,9 +15,12 @@ return new class extends Migration
     {
         Schema::create('histories', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_anggota');
-            $table->string('nama_buku');
+            $table->foreignId('id_anggota');
+            $table->foreignId('id_buku');
             $table->timestamps();
+
+            $table->foreign('id_anggota')->references('id')->on('anggotas');
+            $table->foreign('id_buku')->references('id')->on('detail_bukus');
         });
     }
 

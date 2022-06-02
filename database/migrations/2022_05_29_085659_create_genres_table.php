@@ -13,14 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('favorits', function (Blueprint $table) {
+        Schema::create('genres', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_buku');
-            $table->foreignId('id_anggota');
+            $table->string('nama_genre');
             $table->timestamps();
-
-            $table->foreign('id_buku')->references('id')->on('detail_bukus');
-            $table->foreign('id_anggota')->references('id')->on('anggotas');
         });
     }
 
@@ -31,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('favorits');
+        Schema::dropIfExists('genres');
     }
 };

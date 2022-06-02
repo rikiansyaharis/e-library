@@ -15,18 +15,21 @@ return new class extends Migration
     {
         Schema::create('detail_bukus', function (Blueprint $table) {
             $table->id();
-            $table->integer('kode_buku');
+            $table->foreignId('id_genre');
             $table->string('foto_buku');
             $table->string('nama_buku');
             $table->string('penulis_buku');
             $table->string('penerbit_buku');
-            $table->string('genre');
             $table->string('tahun_terbit');
             $table->string('jumlah_halaman');
             $table->text('deskripsi');
             $table->timestamps();
+            $table->foreign('id_genre')->references('id')->on('genres');
         });
     }
+
+
+
 
     public function boot() {
         Schema::defaultStringLength(200);

@@ -15,12 +15,15 @@ return new class extends Migration
     {
         Schema::create('peminjamen', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_pinjam');
-            $table->integer('id_buku');
-            $table->integer('id_pengurus');
+            $table->foreignId('id_pinjam');
+            $table->foreignId('id_buku');
+            $table->foreignId('id_pengurus');
             $table->date('tanggal_kembali');
             $table->timestamps();
 
+            $table->foreign('id_buku')->references('id')->on('detail_bukus');
+            $table->foreign('id_pengurus')->references('id')->on('penggunas');
+            $table->foreign('id_pinjam')->references('id')->on('pinjams');
         });
     }
 

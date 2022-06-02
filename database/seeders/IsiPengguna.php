@@ -17,20 +17,12 @@ class IsiPengguna extends Seeder
     {
         Pengguna::insert([
             [
-                'id' => '2345',
-                'nip' => '1434325',
+                'id' => '01',
+                'nip' => '1016',
                 'nama_petugas' => 'Rikiansyah',
                 'jabatan' => 'Petugas',
                 'email' => 'rikiansyah.aris29@gmail.com',
                 'nomor' => '081230464341'
-            ],
-            [
-                'id' => '2355',
-                'nip' => '1434325',
-                'nama_petugas' => 'Rikiansyah aris',
-                'jabatan' => 'Petugas',
-                'email' => 'rikiansyah.aris28@gmail.com',
-                'nomor' => '081230464342'
             ],
         ]);
     }

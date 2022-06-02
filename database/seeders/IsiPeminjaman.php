@@ -17,11 +17,11 @@ class IsiPeminjaman extends Seeder
     {
         Peminjaman::insert(
             [
-                'id' => 002,
-                'id_pinjam' => 2301,
-                'id_buku' => 3001,
-                'id_pengurus' => 2,
-                'tanggal_kembali' => '2022-05-19'
+                // 'id' => 002,
+                // 'id_pinjam' => 2301,
+                // 'id_buku' => 3001,
+                // 'id_pengurus' => 2,
+                // 'tanggal_kembali' => '2022-05-19'
             ],
         );
     }

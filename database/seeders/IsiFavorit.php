@@ -17,9 +17,9 @@ class IsiFavorit extends Seeder
     {
         Favorit::insert(
             [
-                'id' => 004,
-                'id_buku' => 3002,
-                'id_anggota' => 004
+                // 'id' => 004,
+                // 'id_buku' => 3002,
+                // 'id_anggota' => 004
             ],
         );
     }

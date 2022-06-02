@@ -37,37 +37,44 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2A3F54">
         <div class="container">
-        <a class="navbar-brand text-white" href="#">E-Perpus</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand text-white" href="#">E-Perpus</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2 mx-md-3 my-auto mx" type="search" size="70%" placeholder="Cari.." aria-label="Search">
-
-                </form>
-            </ul>
-        <div class="dropdown">
-            <a class="btn text-white dropdown-toggle btn-sm " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
-            Nama
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Profil</a>
-              <a class="dropdown-item" href="/datapeminjaman">Data Peminjaman</a>
-              <a class="dropdown-item" href="/favorit">Favorite</a>
-              <a class="dropdown-item" href="#">History</a>
-
-              <hr>
-              <a class="dropdown-item" href="/"><i class="fa fa-sign-out pull-right mt-1"></i>Log out</a>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Kategori
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Horor</a>
+                        <a class="dropdown-item" href="/datapeminjaman">Action</a>
+                        <a class="dropdown-item" href="/favorit">Romance</a>
+                    </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Nama
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                        <a class="dropdown-item" href="/datapeminjaman">Data Peminjaman</a>
+                        <a class="dropdown-item" href="/favorit">Favorite</a>
+                        <a class="dropdown-item" href="#">History</a>
+                        <hr>
+                        <a class="dropdown-item" href="/"><i class="fa fa-sign-out pull-right mt-1"></i>Log out</a>
+                    </div>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-    </div>
-</nav>
-
+    </nav>
 
     @yield('content-user')
 

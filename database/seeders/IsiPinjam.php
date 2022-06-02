@@ -17,10 +17,10 @@ class IsiPinjam extends Seeder
     {
         Pinjam::insert(
             [
-                'id' => 001,
-                'tanggal_pinjam' => '2022-05-12',
-                'ID_Anggota' => 01,
-                'ID_pengurus' => 1
+                // 'id' => 001,
+                // 'tanggal_pinjam' => '2022-05-12',
+                // 'ID_Anggota' => 01,
+                // 'ID_pengurus' => 1
             ],
         );
     }
