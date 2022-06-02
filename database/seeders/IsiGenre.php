@@ -15,19 +15,23 @@ class IsiGenre extends Seeder
      */
     public function run()
     {
-        Genre::insert(
+        Genre::insert([
         [
-            'id'=>'101',
-            'nama_genre' => 'Horor',
+            'id' => 101,
+            'nama_genre' => 'horor',
         ],
         [
-            'id'=>'102',
-            'nama_genre' => 'Romance',
+            'id' => 102,
+            'nama_genre' => 'romance',
         ],
         [
-            'id'=>'103',
-            'nama_genre' => 'Action',
+            'id' => 103,
+            'nama_genre' => 'action',
         ],
-    );
+        [
+            'id' => 104,
+            'nama_genre' => 'umum',
+        ]
+    ]);
     }
 }

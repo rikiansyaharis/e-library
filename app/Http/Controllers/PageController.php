@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DetailBuku;
 use App\Models\Pengguna;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 
@@ -15,6 +17,8 @@ class PageController extends Controller {
         ];
       return view('admin.pages.dataAdmin', $admin);
   }
+
+
 
   public function user() {
     $user = [
@@ -61,49 +65,16 @@ class PageController extends Controller {
 
     public function buku() {
         $buku = [
-            'buku' => [
-                [
-                    'foto' => 'tia.jpg',
-                    'judul_buku' => 'Tia',
-                ],
-                [
-                    'foto' => 'Cooking.jpg',
-                    'judul_buku' => 'Cooking',
-                ],
-                [
-                    'foto' => 'mindset.jpg',
-                    'judul_buku' => 'Mindset',
-                ],
-                [
-                    'foto' => 'Hyderabad.jpg',
-                    'judul_buku' => 'Hyderabat',
-                ],
-                [
-                    'foto' => 'kisah-tanah-jawa.jpg',
-                    'judul_buku' => 'Kisah Tanah Jawa',
-                ],
-            ]
+            'buku' => DetailBuku::all()
         ];
         return view('admin.pages.dataBuku', $buku);
     }
 
-    public function detailBuku() {
+    public function detailBuku($id) {
         $detailBuku = [
-            'detailBuku' => [
-                [
-                    'foto' => 'Rikiansyah',
-                    'judul_buku' => 'Tia',
-                    'Penerbit' => 'Gramedia Pustaka Utama',
-                    'Penulis' => 'kembangmanggis',
-                    'Tahun_Terbit' => '29 Jul 2019',
-                    'Genre' => 'Romance',
-                    'Jumlah_Halaman' => '427',
-                    'Deskripsi' => 'Tia, seorang gadis SMA kelas dua, menatap kehidupan dengan penuh ironi. Kedewasaan adalah penghapusan sekian banyak kenikmatan hidup, begitu selalu pendapatnya. Namun tentu saja dia tidak dapat menahan perputaran dunia. Hukum alam berlaku pada setiap manusia, termasuk Tia, yang sejak awal tegas-tegas menolaknya. Di saat dia tengah memasuki arti kedewasaan itu sendiri, Tia sama sekali tidak menyadarinya. Alam telah menjeratnya dengan amat halus, mengantar gadis itu ke dunia barunya tanpa penolakan lagi. Tia kini telah siap menyongsong fajar dengan mata dan hati terbuka. Dia berhasil menembus pintu kedewasaan itu lewat uluran tangan gaib yang menolongnya. Apa lagi kalau bukan tangan-tangan gaib cinta?',
-
-                ],
-            ]
+            'detailBuku' => DetailBuku::find($id)
             ];
-            return view('admin.pages.detailBuku', $detailBuku);
+        return view('admin.pages.detailBuku', $detailBuku);
     }
 
     public function dataPengembalian() {
@@ -149,4 +120,6 @@ class PageController extends Controller {
                 ];
         return view('user.pages.data_peminjaman', $dPengembalian);
     }
+
+
 }

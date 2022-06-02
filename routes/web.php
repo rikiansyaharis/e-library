@@ -44,9 +44,16 @@ Route::get('/home', function () {
 
 
 Route::get('/dataadmin', [PageController::class,'admin'])->name('admin');
+Route::get('/dataadmin', [PageController::class,'edit'])->name('edit');
+Route::get('/tambahadmin', function () {
+    return view('admin.pages.formAdmin', [
+        "title" => "Add"
+    ]);
+});
+
 Route::get('/datauser', [PageController::class,'user'])->name('user');
-Route::get('/databuku', [PageController::class,'buku'])->name('Data Buku');
-Route::get('/detailbukuadmin', [PageController::class,'detailBuku'])->name('Detail');
+Route::get('/databuku', [PageController::class,'Buku'])->name('Data Buku');
+Route::get('/detailbukuadmin/{id}', [PageController::class,'detailBuku'])->name('Detail');
 Route::get('/datapeminjaman', [PageController::class,'dataPengembalian'])->name('datapengembalian');
 // Route::get('/dataadmin', 'App\Http\Controllers\PageController@admin',["title" => "Data User"]);
 // Route::get('/datauser', 'App\Http\Controllers\PageController@user',["title" => "Data User"]);

@@ -98,11 +98,7 @@
                                 <li><a href="/pengembalian">Pengembalian</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="/laporan">
-                                <i class="fa fa-file-text"></i> Laporan
-                            </a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
