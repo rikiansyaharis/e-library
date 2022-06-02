@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,55 +16,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('admin.pages.signin');
-});
+//home
+Route::get('/', [PageController::class,'index'])->name('index');
+Route::get('/home', [PageController::class,'home'])->name('home');
 
-Route::get('/home', function () {
-    return view('admin.pages.home', [
-        "title" => "Beranda"
-    ]);
-});
-// Route::get('/dataadmin', function () {
-//     return view('admin.pages.dataAdmin', [
-//         "title" => "Data admin"
-//     ]);
-// });
+//admin
+Route::get('/dataadmin', [AdminController::class,'admin'])->name('admin');
+Route::get('/formAdmin', [AdminController::class,'formAdmin'])->name('form');
+Route::post('/insertadmin',[AdminController::class,'insertAdmin'])->name('insertAdmin');
+Route::get('/updateadmin/{id}',[AdminController::class,'update'])->name('update');
+Route::post('/updateadmin/{id}',[AdminController::class,'updateAdmin'])->name('updateAdmin');
+Route::get('/deleteadmin/{id}',[AdminController::class,'deleteAdmin'])->name('delete');
 
-// Route::get('/datauser', function () {
-//     return view('admin.pages.dataUser', [
-//         "title" => "Data User"
-//     ]);
-// });
+//buku
+Route::get('/datauser', [BookController::class,'user'])->name('user');
+Route::get('/databuku', [BookController::class,'Buku'])->name('databuku');
+Route::get('/detailbukuadmin/{id}', [BookController::class,'detailBuku'])->name('detail');
+Route::get('/datapeminjaman', [BookController::class,'dataPengembalian'])->name('datapengembalian');
 
-// Route::get('/detailbukuadmin', function () {
-//     return view('admin.pages.detailBuku', [
-//         "title" => "Detail"
-//     ]);
-// });
-
-
-
-Route::get('/dataadmin', [PageController::class,'admin'])->name('admin');
-Route::get('/dataadmin', [PageController::class,'edit'])->name('edit');
-Route::get('/tambahadmin', function () {
-    return view('admin.pages.formAdmin', [
-        "title" => "Add"
-    ]);
-});
-
-Route::get('/datauser', [PageController::class,'user'])->name('user');
-Route::get('/databuku', [PageController::class,'Buku'])->name('Data Buku');
-Route::get('/detailbukuadmin/{id}', [PageController::class,'detailBuku'])->name('Detail');
-Route::get('/datapeminjaman', [PageController::class,'dataPengembalian'])->name('datapengembalian');
-// Route::get('/dataadmin', 'App\Http\Controllers\PageController@admin',["title" => "Data User"]);
-// Route::get('/datauser', 'App\Http\Controllers\PageController@user',["title" => "Data User"]);
-
-// Route::get('/databuku', function () {
-//     return view('admin.pages.dataBuku', [
-//         "title" => "Data Buku"
-//     ]);
-// });
 
 Route::get('/transaksi', function () {
     return view('admin.pages.transaksi', [
@@ -81,6 +52,8 @@ Route::get('/laporan', function () {
 });
 
 
+
+// user
 Route::get('/dashboard', function () {
     return view('user.pages.dashboard', [
         "title" => "Dashboard"
