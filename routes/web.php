@@ -92,3 +92,9 @@ Route::get('/favorit', function () {
         "title" => "Favorit"
     ]);
 });
+
+Route::get('/detail', function () {
+    return view('user.pages.detail', [
+        "title" => "Detail"
+    ]);
+});
