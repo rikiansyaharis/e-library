@@ -16,7 +16,9 @@
                             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
+                                    <th>Nama</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Alamat</th>
                                     <th>Email</th>
                                     <th>No.Hp</th>
                                     <th>Opsi</th>
@@ -26,13 +28,22 @@
                                      @foreach ($dataUser as $us)
 
                                      <tr>
-                                         <td>{{$us['nama']}}</td>
-                                         <td>{{$us['email']}}</td>
-                                         <td>{{$us['no']}}</td>
+                                         <td>{{$us->nama_anggota}}</td>
+                                         <td>{{$us->jenis_kelamin}}</td>
+                                         <td>{{$us->alamat}}</td>
+                                         <td>{{$us->email}}</td>
+                                         <td>{{$us->nomor}}</td>
                                          <td >
-                                             <a href="#">Edit</a> |
-                                            <a href="#" onclick="return confirm('Hapus?');">Hapus</a> |
-                                            <a href="#">Print</a>
+                                            <a href="#">
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                            <a href="#" onclick="return confirm('Hapus?');">
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                </button>
+                                            </a> 
                                         </td>
                                     </tr>
 
@@ -43,9 +54,7 @@
                             <button class="btn btn-outline-success ml-3 col-sm-2">Tambah
                                 <i class="fa fa-plus"></i>
                             </button>
-                            <button class="btn btn-outline-primary ml-3 col-sm-2">Cetak
-                                <i class="fa fa-print"></i>
-                            </button>
+
                         </div>
                     </div>
                 </div>

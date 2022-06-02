@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +29,11 @@ Route::get('/updateadmin/{id}',[AdminController::class,'update'])->name('update'
 Route::post('/updateadmin/{id}',[AdminController::class,'updateAdmin'])->name('updateAdmin');
 Route::get('/deleteadmin/{id}',[AdminController::class,'deleteAdmin'])->name('delete');
 
+//user/anggota
+Route::get('/datauser', [UsersController::class,'user'])->name('user');
+
+
 //buku
-Route::get('/datauser', [BookController::class,'user'])->name('user');
 Route::get('/databuku', [BookController::class,'Buku'])->name('databuku');
 Route::get('/detailbukuadmin/{id}', [BookController::class,'detailBuku'])->name('detail');
 Route::get('/datapeminjaman', [BookController::class,'dataPengembalian'])->name('datapengembalian');
