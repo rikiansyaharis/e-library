@@ -70,6 +70,12 @@ Route::get('/favorit', function () {
     ]);
 });
 
+Route::get('/history', function () {
+    return view('user.pages.history', [
+        "title" => "History"
+    ]);
+});
+
 Route::get('/detail', function () {
     return view('user.pages.detail', [
         "title" => "Detail"

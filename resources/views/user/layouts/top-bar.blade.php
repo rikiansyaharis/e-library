@@ -66,7 +66,7 @@
                         <a class="dropdown-item" href="/dashboard">Dashboard</a>
                         <a class="dropdown-item" href="/datapeminjaman">Data Peminjaman</a>
                         <a class="dropdown-item" href="/favorit">Favorite</a>
-                        <a class="dropdown-item" href="#">History</a>
+                        <a class="dropdown-item" href="/history">History</a>
                         <hr>
                         <a class="dropdown-item" href="/"><i class="fa fa-sign-out pull-right mt-1"></i>Log out</a>
                     </div>
