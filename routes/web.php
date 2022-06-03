@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\HistoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,12 @@ Route::get('/deleteadmin/{id}',[AdminController::class,'deleteAdmin'])->name('de
 
 //user/anggota
 Route::get('/datauser', [UsersController::class,'user'])->name('user');
+Route::get('/formUser', [UsersController::class,'formUser'])->name('form');
+Route::post('/insertuser',[UsersController::class,'insertUser'])->name('insertUser');
+Route::get('/updateuser/{id}',[UsersController::class,'update'])->name('update');
+Route::post('/updateuser/{id}',[UsersController::class,'updateUser'])->name('updateUser');
+Route::get('/deleteuser/{id}',[UsersController::class,'deleteUser'])->name('delete');
+
 
 //buku
 Route::get('/databuku', [BookController::class,'Buku'])->name('databuku');
@@ -48,12 +55,16 @@ Route::get('/pengembalian', function () {
         "title" => "Pengembalian"
     ]);
 });
+<<<<<<< HEAD
 Route::get('/datapeminjaman', [BookController::class,'dataPengembalian'])->name('datapengembalian');
 Route::get('/laporan', function () {
     return view('admin.pages.laporan', [
         "title" => "Laporan"
     ]);
 });
+=======
+
+>>>>>>> dfa4c43107ac7afa21ac2e0859e7e79fe151323d
 
 
 
@@ -70,11 +81,9 @@ Route::get('/favorit', function () {
     ]);
 });
 
-Route::get('/history', function () {
-    return view('user.pages.history', [
-        "title" => "History"
-    ]);
-});
+// Historry
+Route::get('/history', [HistoryController::class, 'history'])->name('history');
+Route::get('/history', [HistoryController::class, 'historyUser'])->name('historyUser');
 
 Route::get('/detail', function () {
     return view('user.pages.detail', [

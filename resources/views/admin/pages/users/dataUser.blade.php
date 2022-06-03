@@ -25,21 +25,21 @@
                                 </tr>
                                 </thead>
                                  <tbody>
-                                     @foreach ($dataUser as $us)
+                                     @foreach ($dataUser as $user)
 
                                      <tr>
-                                         <td>{{$us->nama_anggota}}</td>
-                                         <td>{{$us->jenis_kelamin}}</td>
-                                         <td>{{$us->alamat}}</td>
-                                         <td>{{$us->email}}</td>
-                                         <td>{{$us->nomor}}</td>
+                                         <td>{{$user->nama_anggota}}</td>
+                                         <td>{{$user->jenis_kelamin}}</td>
+                                         <td>{{$user->alamat}}</td>
+                                         <td>{{$user->email}}</td>
+                                         <td>{{$user->nomor}}</td>
                                          <td >
-                                            <a href="#">
+                                            <a href="/updateuser/{{$user->id}}">
                                                 <button class="btn btn-sm btn-outline-primary">
                                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                                 </button>
                                             </a>
-                                            <a href="#" onclick="return confirm('Hapus?');">
+                                            <a href="#/deleteuser/{{$user->id}}" onclick="return confirm('Hapus?');">
                                                 <button class="btn btn-sm btn-outline-primary">
                                                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                 </button>
@@ -51,10 +51,11 @@
                                     </tbody>
                             </table>
                             <hr>
+                            <a href="/formUser">
                             <button class="btn btn-outline-success ml-3 col-sm-2">Tambah
                                 <i class="fa fa-plus"></i>
                             </button>
-
+                            </a>
                         </div>
                     </div>
                 </div>

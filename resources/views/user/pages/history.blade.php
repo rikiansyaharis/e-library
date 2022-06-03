@@ -3,51 +3,45 @@
 @section('content-user')
 
 <div class="container">
-    <h2 class="text-center mt-5">History</h2>
-        <div class="card" style="width: 70rem;">
-            <div class="card-header">
-                <p><b>Today - Thursday, June 2, 2022</b></p>
+    <div class="col-md-12 col-sm-12 mt-5">
+        <div class="x_panel">
+            <div class="x_title">
+                    <h3 class="text-center">History</h3>
             </div>
-            <div class="row mt-4">
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">11:44 PM </li>
-                        <li class="list-group-item">11:42 PM </li>
-                        <li class="list-group-item">11:42 PM </li>
-                        <li class="list-group-item">11:42 PM </li>
-                        <li class="list-group-item">11:39 PM </li>
-                        <li class="list-group-item">11:36 PM </li>
-                        <li class="list-group-item">11:35 PM </li>
-                    </ul>
-                </div>
-                <div class="col-lg-8 col-md-6 mb-4 mb-md-0">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">E-Perpus | 127.0.0.1</li>
-                        <li class="list-group-item">E-Perpus | 127.0.0.1</li>
-                        <li class="list-group-item">E-Perpus | 127.0.0.1</li>
-                        <li class="list-group-item">E-Perpus | 127.0.0.1</li>
-                        <li class="list-group-item">E-Perpus | 127.0.0.1</li>
-                        <li class="list-group-item">Cards · Bootstrap v5.0 getbootstrap.com</li>
-                        <li class="list-group-item">(5193) Membuat Laravel SSO (Single Sign On) Seperti Google - YouTube www.youtube.com </li>
-                        <li class="list-group-item">(5193) cara membuat tampilan story seperti google laravel - YouTube www.youtube.com </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">hapus</li>
-                        <li class="list-group-item">hapus</li>
-                        <li class="list-group-item">hapus</li>
-                        <li class="list-group-item">hapus</li>
-                        <li class="list-group-item">hapus</li>
-                        <li class="list-group-item">hapus</li>
-                        <li class="list-group-item">hapus</li>
-                        <li class="list-group-item">hapus</li>
-                    </ul>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+                            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Time</th>
+                                            <th>Nama</th>
+                                            <th>Judul</th>
+                                            <th> </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($userHistory as $historyU)
+
+                                        <tr>
+                                            <td>{{$historyU['time']}}</td>
+                                            <td>{{$historyU['namaAnggota']}}</td>
+                                            <td>{{$historyU['judul']}}</td>
+                                            <td >
+                                            <a href="/hapusHistory" onclick="return confirm('Hapus?');">Hapus</a> |
+                                        </td>
+                                    </tr>
+
+                                    @endforeach
+                                    </tbody>                  
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 </div>
-
 
 @endsection
