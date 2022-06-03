@@ -12,18 +12,18 @@ class AdminController extends Controller
         $admin = [
         'dataAdmin' => Pengguna::all()
             ];
-        return view('admin.pages.dataAdmin', $admin);
+        return view('admin.pages.admin.dataAdmin', $admin);
     }
 
     public function formAdmin() {
-        return view('admin.pages.formAdmin', ['action' => '/insertadmin']);
+        return view('admin.pages.admin.formAdmin', ['action' => '/insertadmin']);
     }
 
     public function create() {
         $create = [
             'createadmin' => Pengguna::all()
         ];
-        return view('admin.pages.formAdmin', $create);
+        return view('admin.pages.admin.formAdmin', $create);
     }
 
     public function insertAdmin(Request $request) {
@@ -35,7 +35,7 @@ class AdminController extends Controller
         $update = [
             'updateadmin' => Pengguna::find($id)
         ];
-        return view('admin.pages.formAdmin',  ['action' => '/updateadmin/'. $id], $update);
+        return view('admin.pages..admin.formAdmin',  ['action' => '/updateadmin/'. $id], $update);
     }
 
     public function updateAdmin(Request $request, $id) {

@@ -12,13 +12,13 @@ class BookController extends Controller
         $buku = [
             'buku' => DetailBuku::all()
         ];
-        return view('admin.pages.dataBuku', $buku);
+        return view('admin.pages.book.dataBuku', $buku);
     }
 
     public function detailBuku($id) {
         $detailBuku = [
             'detailBuku' => DetailBuku::find($id)
             ];
-        return view('admin.pages.detailBuku', $detailBuku);
+        return view('admin.pages.book.detailBuku', $detailBuku);
     }
 }

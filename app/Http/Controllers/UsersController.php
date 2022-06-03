@@ -11,7 +11,7 @@ class UsersController extends Controller
         $user = [
             'dataUser' => Anggota::all()
                 ];
-            return view('admin.pages.dataUser', $user);
+            return view('admin.pages.users.dataUser', $user);
     }
 
 }
