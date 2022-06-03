@@ -15,10 +15,14 @@ class BookController extends Controller
         return view('admin.pages.book.dataBuku', $buku);
     }
 
-    public function detailBuku($id) {
-        $detailBuku = [
-            'detailBuku' => DetailBuku::find($id)
-            ];
-        return view('admin.pages.book.detailBuku', $detailBuku);
+    public function formBuku() {
+        return view('admin.pages.book.formBuku');
     }
+    // public function detailBuku($id) {
+    //     $detailBuku = [
+    //         'detailBuku' => DetailBuku::find($id)
+    //         ];
+    //     return view('admin.pages.book.detailBuku', $detailBuku);
+    // }
 }
+

@@ -15,10 +15,14 @@
     <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{ asset('vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="{{ asset('vendors/fonts/dropify.ttf')}}">
+    <link rel="stylesheet" href="{{ asset('vendors/fonts/dropify.woff')}}">
     <!-- NProgress -->
     <link href="{{asset('vendors/nprogress/nprogress.css')}}" rel="stylesheet">
     <!-- iCheck -->
     <link href="{{asset('vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
+
 
     <!-- bootstrap-progressbar -->
     <link href="{{asset('vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet">
@@ -31,7 +35,14 @@
     <link href="{{ asset('vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Dropify -->
+    <link href="{{ asset('vendors/dropify/dropify.js') }}" rel="stylesheet">
+    <link href="{{ asset('vendors/dropify/dropify.min.css') }}" rel="stylesheet">
 
+
+
+    <!-- Dropify -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Custom Theme Style -->
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
@@ -98,7 +109,7 @@
                                 <li><a href="/pengembalian">Pengembalian</a></li>
                             </ul>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -137,6 +148,7 @@
     </div>
 </div>
 
+
 <!-- jQuery -->
 <script src="{{asset('vendors/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap -->
@@ -161,6 +173,9 @@
 <script src="{{asset('vendors/Flot/jquery.flot.time.js')}}"></script>
 <script src="{{asset('vendors/Flot/jquery.flot.stack.js')}}"></script>
 <script src="{{asset('vendors/Flot/jquery.flot.resize.js')}}"></script>
+<!-- Dropify -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!-- Flot plugins -->
 <script src="{{asset('vendors/flot.orderbars/js/jquery.flot.orderBars.js')}}"></script>
 <script src="{{asset('vendors/flot-spline/js/jquery.flot.spline.min.js')}}"></script>
@@ -190,10 +205,15 @@
 <script src="{{ asset('vendors/jszip/dist/jszip.min.js') }} "></script>
 <script src="{{ asset('vendors/pdfmake/build/pdfmake.min.js') }} "></script>
 <script src="{{ asset('vendors/pdfmake/build/vfs_fonts.js') }} "></script>
+<!-- Dropify -->
+<script src="{{ asset('vendors/dropify/dropify.js') }} "></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Custom Theme Scripts -->
 <script src="{{asset('build/js/custom.min.js')}}"></script>
+
+@yield('script')
 
 </body>
 </html>

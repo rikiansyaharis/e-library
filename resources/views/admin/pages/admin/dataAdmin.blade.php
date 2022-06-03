@@ -13,7 +13,7 @@
                       <div class="row">
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
-                            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap " style="width:100%" >
+                            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%" >
                                 <thead>
                                 <tr>
                                     <th>ID</th>
@@ -28,6 +28,7 @@
                                 <tbody>
                                     @foreach ($dataAdmin as $us)
                                     <tr>
+                                        
                                         <td>{{$us->id}}</td>
                                         <td>{{$us->nip}}</td>
                                         <td>{{$us->nama_petugas}}</td>

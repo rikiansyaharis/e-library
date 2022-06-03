@@ -2,67 +2,73 @@
 
 @section('content')
 <div class="right_col" role="main">
-  <div class="">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 ">
-        <div class="page-title">
-          <div class="title_left">
-            <h3>Koleksi</h3>
-          </div>
-
-          <div class="title_right">
-            <div class="col-md-5 col-sm-5   form-group pull-right top_search">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary text-white" type="button">Go!</button>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <h5>Top Trending</h5>
-          <a href="">
-            <button class="btn btn-sm btn-outline-success pull-right"> Tambah buku
-              <i class="fa fa-plus"></i>
-            </button>
-          </a>
-        <div class="x_content">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="card-deck">
-
-                @foreach ($buku as $lt)
-                <div class="card">
-                  <img src="{{asset('images/book_colection/' . $lt['foto_buku'])}} " class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title">{{ $lt['judul_buku'] }}</h6>
-                    <a href="/detailbukuadmin/{{ $lt['id'] }}">
-                      <p class="card-text">
-                        <button class="btn btn-sm btn-outline-success">
-                          Lihat detail....
-                        </button>
-                      </p>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-primary">Edit</button>
-                    </a>
-                    <a href="">
-                      <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus?');">Hapus</button>
-                    </a>
-                  </div>
+    <div class="">
+        <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h3>Data Pengguna</h3>
                 </div>
-                @endforeach
+                <a href="/formbuku">
+                    <button class="btn btn-sm btn-outline-success mr-auto col-sm-2" style="width: 100px;">Tambah
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </a>
+                <div class="x_content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+                        <table  class="table table-striped table-bordered dt-responsive nowrap" >
+                            <thead>
+                            <tr>
+                                <th width="10px">No.</th>
+                                <th width="50px">Image</th>
+                                <th width="50px">Nama</th>
+                                <th width="50px">Penulis</th>
+                                <th width="50px">Jumlah Halaman</th>
+                                <th width="840px">Deskripsi</th>
+                                <th width="50px">Opsi</th>
+                            </tr>
+                        </thead>
+                                <tbody>
+                                    @foreach ($buku as $listBuku)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td><img src="{{ asset('images/book_colection/' . $listBuku['foto_buku'])}}" width="50px" height="80" alt=""></td>
+                                        <td>{{ $listBuku ['nama_buku'] }}</td>
+                                        <td>{{ $listBuku ['penulis_buku'] }}</td>
+                                        <td>{{ $listBuku ['jumlah_halaman'] }}</td>
+                                        <td>{{ $listBuku ['deskripsi'] }}</td>
+                                        <td>
+                                            <a href="#">
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                            <a href="#" onclick="return confirm('Hapus?');">
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </td>
+                                    </tr>
 
-              </div>
+                                @endforeach
+                                </tbody>
+                        </table>
+                        <hr>
+
+
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div>
     </div>
-  </div>
 </div>
+
+@endsection
+
+@section('script')
+
 
 @endsection

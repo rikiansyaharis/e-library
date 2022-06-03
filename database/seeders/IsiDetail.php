@@ -22,8 +22,6 @@ class IsiDetail extends Seeder
                 'foto_buku' => 'Tia.jpg',
                 'nama_buku' => 'Tia',
                 'penulis_buku' => 'kembangmanggis',
-                'penerbit_buku' => 'Gramedia Pustaka Utama',
-                'tahun_terbit' => '2019',
                 'jumlah_halaman' => '427',
                 'deskripsi' => 'Tia, seorang gadis SMA kelas dua, menatap kehidupan dengan penuh ironi. Kedewasaan adalah penghapusan sekian banyak kenikmatan hidup, begitu selalu pendapatnya. Namun tentu saja dia tidak dapat menahan perputaran dunia. Hukum alam berlaku pada setiap manusia, termasuk Tia, yang sejak awal tegas-tegas menolaknya. Di saat dia tengah memasuki arti kedewasaan itu sendiri, Tia sama sekali tidak menyadarinya. Alam telah menjeratnya dengan amat halus, mengantar gadis itu ke dunia barunya tanpa penolakan lagi. Tia kini telah siap menyongsong fajar dengan mata dan hati terbuka. Dia berhasil menembus pintu kedewasaan itu lewat uluran tangan gaib yang menolongnya. Apa lagi kalau bukan tangan-tangan gaib cinta?'
             ],
@@ -33,8 +31,6 @@ class IsiDetail extends Seeder
                 'foto_buku' => 'kisah-tanah-jawa.jpg',
                 'nama_buku' => 'Kisah Tanah Jawa',
                 'penulis_buku' => '@kisahtanahjawa',
-                'penerbit_buku' => 'GagasMedia',
-                'tahun_terbit' => '2018',
                 'jumlah_halaman' => '250',
                 'deskripsi' => 'Tanah Jawa menyimpan banyak kisah misteri yang takkan habis diceritakan dalam semalam. Sosok misterius, ritual mistis, dan tempat angker, selalu membuat kita penasaran. Buku Kisah Tanah Jawa mengajak pembaca membuka selubung mitos dan mistis yang selama ini hanya menjadi ksak-kusuk di masyarakat'
             ],
@@ -44,8 +40,6 @@ class IsiDetail extends Seeder
                 'foto_buku' => 'kisah-tanah-jawa.jpg',
                 'nama_buku' => 'Kisah Tanah Jawa',
                 'penulis_buku' => '@kisahtanahjawa',
-                'penerbit_buku' => 'GagasMedia',
-                'tahun_terbit' => '2018',
                 'jumlah_halaman' => '250',
                 'deskripsi' => 'Tanah Jawa menyimpan banyak kisah misteri yang takkan habis diceritakan dalam semalam. Sosok misterius, ritual mistis, dan tempat angker, selalu membuat kita penasaran. Buku Kisah Tanah Jawa mengajak pembaca membuka selubung mitos dan mistis yang selama ini hanya menjadi ksak-kusuk di masyarakat'
             ],
@@ -55,8 +49,6 @@ class IsiDetail extends Seeder
                 'foto_buku' => 'Hyderabad.jpg',
                 'nama_buku' => 'Hyderabad',
                 'penulis_buku' => 'Irvan Karquza',
-                'penerbit_buku' => 'Pendidikan Deepublish.',
-                'tahun_terbit' => '2020',
                 'jumlah_halaman' => '172',
                 'deskripsi' => 'Pedih, terpaksa aku berpamit dari rumah. Menuju tempat baru yang masih tereka dalam imajinasi. Salah satu hal yang mendasar bagiku merantau adalah, enam orang anak Ibu, tidak satu pun yang kuliah. Bukan tanpa alasan. Karena Penghasilan Ayah yang rendah, pendidikan yang tak sampai, serta relasi yang terbatas. Membuatku ingin mengubah keadaan keluarga ini.
                 Ibuku tidak banyak bicara, tapi ku tahu dia banyak menangis dalam doa.  Setiap aku berdoa aku juga membayangkan wajahnya, air mataku tumpah. Aku katakan “Aku akan membanggakanmu Ibu.”
@@ -70,8 +62,6 @@ class IsiDetail extends Seeder
                 'foto_buku' => 'Mindset.jpg',
                 'nama_buku' => 'Mindset',
                 'penulis_buku' => 'Irvan Karquza',
-                'penerbit_buku' => 'Carol S. Dweck',
-                'tahun_terbit' => '2006',
                 'jumlah_halaman' => '172',
                 'deskripsi' => 'Paparan tentang kesuksesan dalam buku ini sangat mendasar dan langka.
                 Lazimnya, buku-buku tentang kesuksesan lebih menawarkan sisi-sisi

@@ -32,12 +32,11 @@ Route::get('/deleteadmin/{id}',[AdminController::class,'deleteAdmin'])->name('de
 //user/anggota
 Route::get('/datauser', [UsersController::class,'user'])->name('user');
 
-
 //buku
 Route::get('/databuku', [BookController::class,'Buku'])->name('databuku');
-Route::get('/detailbukuadmin/{id}', [BookController::class,'detailBuku'])->name('detail');
-Route::get('/datapeminjaman', [BookController::class,'dataPengembalian'])->name('datapengembalian');
+Route::get('/formbuku', [BookController::class,'formBuku'])->name('formbuku');
 
+// Route::get('/detailbukuadmin/{id}', [BookController::class,'detailBuku'])->name('detail');
 
 Route::get('/transaksi', function () {
     return view('admin.pages.transaksi', [
@@ -49,6 +48,7 @@ Route::get('/pengembalian', function () {
         "title" => "Pengembalian"
     ]);
 });
+Route::get('/datapeminjaman', [BookController::class,'dataPengembalian'])->name('datapengembalian');
 Route::get('/laporan', function () {
     return view('admin.pages.laporan', [
         "title" => "Laporan"
