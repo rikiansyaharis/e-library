@@ -55,17 +55,6 @@ Route::get('/pengembalian', function () {
         "title" => "Pengembalian"
     ]);
 });
-<<<<<<< HEAD
-Route::get('/datapeminjaman', [BookController::class,'dataPengembalian'])->name('datapengembalian');
-Route::get('/laporan', function () {
-    return view('admin.pages.laporan', [
-        "title" => "Laporan"
-    ]);
-});
-=======
-
->>>>>>> dfa4c43107ac7afa21ac2e0859e7e79fe151323d
-
 
 
 // user
