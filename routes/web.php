@@ -31,12 +31,12 @@ Route::post('/updateadmin/{id}',[AdminController::class,'updateAdmin'])->name('u
 Route::get('/deleteadmin/{id}',[AdminController::class,'deleteAdmin'])->name('delete');
 
 //user/anggota
-Route::get('/datauser', [AdminController::class,'user'])->name('user');
-Route::get('/formUser', [AdminController::class,'formUser'])->name('form');
-Route::post('/insertuser',[AdminController::class,'insertUser'])->name('insertUser');
-Route::get('/updateuser/{id}',[AdminController::class,'update'])->name('update');
-Route::post('/updateuser/{id}',[AdminController::class,'updateUser'])->name('updateUser');
-Route::get('/deleteuser/{id}',[AdminController::class,'deleteUser'])->name('delete');
+Route::get('/datauser', [UsersController::class,'user'])->name('user');
+Route::get('/formUser', [UsersController::class,'formUser'])->name('form');
+Route::post('/insertuser',[UsersController::class,'insertUser'])->name('insertUser');
+Route::get('/updateuser/{id}',[UsersController::class,'update'])->name('update');
+Route::post('/updateuser/{id}',[UsersController::class,'updateUser'])->name('updateUser');
+Route::get('/deleteuser/{id}',[UsersController::class,'deleteUser'])->name('delete');
 
 
 

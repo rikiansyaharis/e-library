@@ -19,15 +19,15 @@
                             </div>
                             <div class="form-group" >
                                 <label for="nama_anggota">Nama</label>
-                                <input type="text" class="form-control form-control-sm" name="nama_petugas" id="nama_anggota" required value="{{ isset($updateuser) ? $updateuser->nama_anggota : '' }}">
+                                <input type="text" class="form-control form-control-sm" name="nama_anggota" id="nama_anggota" required value="{{ isset($updateuser) ? $updateuser->nama_anggota : '' }}">
                             </div>
                             <div class="form-group">
-                                <label for="jenis_kelamin">Jenis Kelamin'</label>
-                                <input type="text" class="form-control form-control-sm" name="jabatan" id="jenis_kelamin" required value="{{ isset($updateuser) ? $updateuser->jenis_kelamin : '' }}">
+                                <label for="jenis_kelamin">Jenis Kelamin</label>
+                                <input type="text" class="form-control form-control-sm" name="jenis_kelamin" id="jenis_kelamin" required value="{{ isset($updateuser) ? $updateuser->jenis_kelamin : '' }}">
                             </div>
                             <div class="form-group">
                                 <label for="alamat">Alamat</label>
-                                <input type="text" class="form-control form-control-sm" name="email" id="alamat" required value="{{ isset($updateuser) ? $updateuser->alamat : '' }}">
+                                <input type="text" class="form-control form-control-sm" name="alamat" id="alamat" required value="{{ isset($updateuser) ? $updateuser->alamat : '' }}">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
@@ -39,7 +39,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary btn-sm">Submit</button>
 
-                            <a href="/dataadmin">
+                            <a href="/datauser">
                                 <button type="button" class="btn btn-secondary btn-sm">Close</button>
                             </a>
                         </form>
