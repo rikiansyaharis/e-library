@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\HistoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,7 +31,13 @@ Route::post('/updateadmin/{id}',[AdminController::class,'updateAdmin'])->name('u
 Route::get('/deleteadmin/{id}',[AdminController::class,'deleteAdmin'])->name('delete');
 
 //user/anggota
-Route::get('/datauser', [UsersController::class,'user'])->name('user');
+Route::get('/datauser', [AdminController::class,'user'])->name('user');
+Route::get('/formUser', [AdminController::class,'formUser'])->name('form');
+Route::post('/insertuser',[AdminController::class,'insertUser'])->name('insertUser');
+Route::get('/updateuser/{id}',[AdminController::class,'update'])->name('update');
+Route::post('/updateuser/{id}',[AdminController::class,'updateUser'])->name('updateUser');
+Route::get('/deleteuser/{id}',[AdminController::class,'deleteUser'])->name('delete');
+
 
 
 //buku
@@ -49,11 +56,7 @@ Route::get('/pengembalian', function () {
         "title" => "Pengembalian"
     ]);
 });
-Route::get('/laporan', function () {
-    return view('admin.pages.laporan', [
-        "title" => "Laporan"
-    ]);
-});
+
 
 
 
@@ -70,11 +73,9 @@ Route::get('/favorit', function () {
     ]);
 });
 
-Route::get('/history', function () {
-    return view('user.pages.history', [
-        "title" => "History"
-    ]);
-});
+// Historry
+Route::get('/history', [HistoryController::class, 'history'])->name('history');
+Route::get('/history', [HistoryController::class, 'historyUser'])->name('historyUser');
 
 Route::get('/detail', function () {
     return view('user.pages.detail', [
