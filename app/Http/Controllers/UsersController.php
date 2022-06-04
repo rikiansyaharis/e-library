@@ -28,7 +28,7 @@ class UsersController extends Controller
 
     public function insertUser(Request $request) {
         Anggota::create($request->only('nama_anggota','jenis_kelamin','alamat', 'email','nomor'));
-        return redirect()->route('admin')->with('success','Berhasil ditambahkan');
+        return redirect()->route('user')->with('success','Berhasil ditambahkan');
     }
 
     public function update($id) {

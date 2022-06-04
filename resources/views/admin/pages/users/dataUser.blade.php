@@ -39,11 +39,11 @@
                                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                                 </button>
                                             </a>
-                                            <a href="#/deleteuser/{{$user->id}}" onclick="return confirm('Hapus?');">
+                                            <a href="/deleteuser/{{$user->id}}" onclick="return confirm('Hapus?');">
                                                 <button class="btn btn-sm btn-outline-primary">
                                                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                 </button>
-                                            </a> 
+                                            </a>
                                         </td>
                                     </tr>
 

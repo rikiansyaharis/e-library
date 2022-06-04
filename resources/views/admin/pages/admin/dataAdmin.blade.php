@@ -28,7 +28,7 @@
                                 <tbody>
                                     @foreach ($dataAdmin as $us)
                                     <tr>
-                                        
+
                                         <td>{{$us->id}}</td>
                                         <td>{{$us->nip}}</td>
                                         <td>{{$us->nama_petugas}}</td>
@@ -58,12 +58,7 @@
                                     <i class="fa fa-plus" ></i>
                                 </button>
                             </a>
-{{--
-                            @if ($message = Session::get('success'))
-                                <div class="alert alert-success" role="alert">
-                                    {{$message}}
-                                </div>
-                            @endif  --}}
+
                         </div>
                     </div>
                 </div>
