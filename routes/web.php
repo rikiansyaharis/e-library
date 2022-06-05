@@ -34,18 +34,18 @@ Route::get('/deleteadmin/{id}',[AdminController::class,'deleteAdmin'])->name('de
 Route::get('/datauser', [UsersController::class,'user'])->name('user');
 Route::get('/formUser', [UsersController::class,'formUser'])->name('form');
 Route::post('/insertuser',[UsersController::class,'insertUser'])->name('insertUser');
-Route::get('/updateuser/{id}',[UsersController::class,'update'])->name('update');
+Route::get('/updateuser/{id}',[UsersController::class,'update'])->name('formupdate');
 Route::post('/updateuser/{id}',[UsersController::class,'updateUser'])->name('updateUser');
 Route::get('/deleteuser/{id}',[UsersController::class,'deleteUser'])->name('delete');
 
 
 //buku
-Route::get('/databuku', [BookController::class,'Buku'])->name('buku');
+Route::get('/databuku', [BookController::class,'buku'])->name('buku');
 Route::get('/formbuku', [BookController::class,'formBuku'])->name('formbuku');
 Route::post('/insertbuku',[BookController::class,'insertBook'])->name('insertBuku');
-Route::get('/updatebuku/{id}',[BookController::class,'update'])->name('update');
-Route::get('/updatebuku/{id}',[BookController::class,'updateBuku'])->name('updateBuku');
-Route::get('/deletebuku/{id}',[UsersController::class,'deleteBuku'])->name('delete');
+Route::get('/updatebuku/{id}',[BookController::class,'editForm'])->name('update');
+Route::post('/updatebuku/{id}',[BookController::class,'updateBook'])->name('updateBuku');
+Route::get('/deletebuku/{id}',[BookController::class,'delete'])->name('delete');
 
 
 

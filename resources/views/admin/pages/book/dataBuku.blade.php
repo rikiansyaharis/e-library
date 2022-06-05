@@ -7,7 +7,7 @@
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">
                 <div class="x_title">
-                    <h3>Data Pengguna</h3>
+                    <h3>Data Buku</h3>
                 </div>
                 <a href="/formbuku">
                     <button class="btn btn-sm btn-outline-success mr-auto col-sm-2" style="width: 100px;">Tambah
@@ -23,29 +23,32 @@
                             <tr>
                                 <th width="10px">No.</th>
                                 <th width="50px">Image</th>
+                                <th width="50px">Genre</th>
                                 <th width="50px">Nama</th>
                                 <th width="50px">Penulis</th>
                                 <th width="50px">Jumlah Halaman</th>
                                 <th width="840px">Deskripsi</th>
                                 <th width="50px">Opsi</th>
+
                             </tr>
                         </thead>
                                 <tbody>
                                     @foreach ($buku as $listBuku)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td><img src="{{ asset('images/book_colection/' . $listBuku['foto_buku'])}}" width="50px" height="80" alt=""></td>
-                                        <td>{{ $listBuku ['nama_buku'] }}</td>
-                                        <td>{{ $listBuku ['penulis_buku'] }}</td>
-                                        <td>{{ $listBuku ['jumlah_halaman'] }}</td>
-                                        <td>{{ $listBuku ['deskripsi'] }}</td>
+                                        <td><img src="{{ asset('images/book_colection/' . $listBuku->foto_buku)}}" width="50px" height="80" alt=""></td>
+                                        <td>{{ $listBuku->genre->nama_genre}}</td>
+                                        <td>{{ $listBuku->nama_buku }}</td>
+                                        <td>{{ $listBuku->penulis_buku }}</td>
+                                        <td>{{ $listBuku->jumlah_halaman }}</td>
+                                        <td>{{ $listBuku->deskripsi }}</td>
                                         <td>
-                                            <a href="#">
+                                            <a href="/updatebuku/{{$listBuku->id}}">
                                                 <button class="btn btn-sm btn-outline-primary">
                                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                                 </button>
                                             </a>
-                                            <a href="#" onclick="return confirm('Hapus?');">
+                                            <a href="/deletebuku/{{$listBuku->id}}" onclick="return confirm('Hapus?');">
                                                 <button class="btn btn-sm btn-outline-primary">
                                                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                 </button>

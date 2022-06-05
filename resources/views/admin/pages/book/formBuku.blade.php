@@ -12,33 +12,36 @@
               <div class="x_content">
                   <div class="row">
                       <div class="col-sm-12">
-                        <form method="POST" action="" enctype="multipart/form-data">
+                        <form method="POST" action="{{$action}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-sm border-ra" name="id"  id="id" {{ isset($updateadmin) ? $updateadmin->id : '' }} hidden readonly>
+                                <input type="text" class="form-control form-control-sm border-ra" name="id"  id="id" {{ isset($buku) ? $buku->id : '' }} hidden readonly>
+                            </div>
+
+                            <div class="form-group" >
+                                <label for="Nama">Judul buku</label>
+                                <input type="text" class="form-control form-control-sm" name="nama_petugas" id="Nama" required value="{{ isset($buku) ? $buku->nama_buku : '' }}">
                             </div>
                             <div class="form-group">
                                 <label for="Nama">Genre</label>
-                                <select class="form-control form-control-sm" name="id__genre"  id="id_genre" {{ isset($updateadmin) ? $updateadmin->id_genre : '' }}>
-                                    <option>Umum</option>
-                                    <option>Action</option>
-                                    <option>Horor</option>
-                                    <option>Fantasi</option>
-                                    <option>Thriller</option>
+                                <select class="form-control form-control-sm" name="id__genre"  id="id_genre" {{ isset($buku) ? $buku->id_genre : '' }}>
+                                    <option>Pilih Genre</option>
+                                    @foreach ($genre as $item)
+                                    <option value="{{$item->id}}" {{isset($buku) && $buku->id_brand == $item->id ? 'Selected' : ''}}>
+                                        {{$item->nama_genre}}
+                                    </option>
+
+                                    @endforeach
                                 </select>
-                            </div>
-                            <div class="form-group" >
-                                <label for="Nama">Judul buku</label>
-                                <input type="text" class="form-control form-control-sm" name="nama_petugas" id="Nama" required value="{{ isset($updateadmin) ? $updateadmin->nama_buku : '' }}">
                             </div>
                             <div class="form-group">
                                 <label for="Jabatan">Penulis</label>
-                                <input type="text" class="form-control form-control-sm" name="jabatan" id="Jabatan" required value="{{ isset($updateadmin) ? $updateadmin->penulis_buku : '' }}">
+                                <input type="text" class="form-control form-control-sm" name="jabatan" id="Jabatan" required value="{{ isset($buku) ? $buku->penulis_buku : '' }}">
                             </div>
                             <div class="form-group">
 
                                 <label for="Jabatan">Deskripsi</label>
-                                <textarea class="form-control" name="deskripsi" id="deskripsi" value="{{ isset($updateadmin) ? $updateadmin->deskripsi : '' }}"></textarea>
+                                <textarea class="form-control" name="deskripsi" id="deskripsi" value="{{ isset($buku) ? $buku->deskripsi : '' }}"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="image">Image</label>
@@ -46,7 +49,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary btn-sm">Submit</button>
 
-                            <a href="/dataadmin">
+                            <a href="/buku">
                                 <button type="button" class="btn btn-secondary btn-sm">Close</button>
                             </a>
                         </form>
