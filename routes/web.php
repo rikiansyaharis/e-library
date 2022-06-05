@@ -40,8 +40,14 @@ Route::get('/deleteuser/{id}',[UsersController::class,'deleteUser'])->name('dele
 
 
 //buku
-Route::get('/databuku', [BookController::class,'Buku'])->name('databuku');
+Route::get('/databuku', [BookController::class,'Buku'])->name('buku');
 Route::get('/formbuku', [BookController::class,'formBuku'])->name('formbuku');
+Route::post('/insertbuku',[BookController::class,'insertBook'])->name('insertBuku');
+Route::get('/updatebuku/{id}',[BookController::class,'update'])->name('update');
+Route::get('/updatebuku/{id}',[BookController::class,'updateBuku'])->name('updateBuku');
+Route::get('/deletebuku/{id}',[UsersController::class,'deleteBuku'])->name('delete');
+
+
 
 // Route::get('/detailbukuadmin/{id}', [BookController::class,'detailBuku'])->name('detail');
 

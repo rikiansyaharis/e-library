@@ -53,7 +53,7 @@
 
 
                 <div class="clearfix"></div>
-                <br />
+                <br/>
 
                 <div>
                   <h1><img src="{{ asset('images/icon.png') }}" class="logo" width="250px"></img> </h1>
