@@ -24,5 +24,18 @@ class BookController extends Controller
     //         ];
     //     return view('admin.pages.book.detailBuku', $detailBuku);
     // }
+
+    public function create () {
+        $createBook = [
+            'createbook' => DetailBuku::all()
+        ];
+        return view ('admin.pages.book.formBuku',$createBook);
+    }
+
+    public function insertBook(Request $request) {
+        DetailBuku::create($request->only('id_genre','foto_buku','nama_buku','penulis_buku','jumlah_halaman','deskripsi'));
+        return redirect()->route('book')->with('succes','berhasil diatambahkan');
+    }
+    
 }
 
