@@ -32,7 +32,7 @@
         <div class="animate form login_form">
           <section class="login_content">
             <form action="{{ route('signin') }}" method="POST">
-              <h1>Login e-library</h1>
+              <h1>Login e-Perpus</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" />
               </div>
@@ -66,7 +66,8 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form>
+            <form action="{{ route('register') }}" method="POST">
+              @csrf
               <h1>Daftar</h1>
               <div>
                 <input type="text" name="name" class="form-control" placeholder="Nama" required="" />

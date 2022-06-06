@@ -7,6 +7,7 @@ use App\Models\Anggota;
 use App\Models\Pengguna;
 use App\Models\DetailBuku;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 
 class PageController extends Controller {
@@ -43,6 +44,7 @@ class PageController extends Controller {
     }
 
     public function register(Request $request){
+        // return dd($request->all());
         $request->validate([
             'name' => 'required',
             'username' => 'required|unique:users',
@@ -52,7 +54,7 @@ class PageController extends Controller {
         
         try {
             $request->merge(['password' => Hash::make($request->password)]);
-            User::create($request->only(['name', 'username', 'password']));
+            User::create($request->only(['name', 'username', 'email', 'password']));
 
             return redirect()->route('signin');
         } catch(Exception $e) {
