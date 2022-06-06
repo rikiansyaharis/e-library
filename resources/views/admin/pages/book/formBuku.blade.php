@@ -17,7 +17,10 @@
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-sm border-ra" name="id"  id="id" {{ isset($buku) ? $buku->id : '' }} hidden readonly>
                             </div>
-
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" name="file" id="dropify" required>
+                            </div>
                             <div class="form-group" >
                                 <label for="Nama">Judul buku</label>
                                 <input type="text" class="form-control form-control-sm" name="nama_petugas" id="Nama" required value="{{ isset($buku) ? $buku->nama_buku : '' }}">
@@ -43,10 +46,7 @@
                                 <label for="Jabatan">Deskripsi</label>
                                 <textarea class="form-control" name="deskripsi" id="deskripsi" value="{{ isset($buku) ? $buku->deskripsi : '' }}"></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="image">Image</label>
-                                <input type="file" name="file" id="dropify" required>
-                            </div>
+
                             <button type="submit" class="btn btn-primary btn-sm">Submit</button>
 
                             <a href="/buku">

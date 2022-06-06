@@ -19,4 +19,47 @@ class PageController extends Controller {
         return view('admin.pages.home');
     }
 
+    public function login(Request $request) {
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        try{
+            $user = User::where('username', $request->username);
+
+            if($user->count() > 0){
+                if(Auth::attempt(['username' => $request->username, 'password' => $request->password])){
+                    $user = $user->first();
+
+                    return redirect()->route('index');
+                } else {
+                    return redirect()->route('signin')->withErrors(['message' => 'Username atau password tidak sesuai']);
+                }
+            }
+        } catch(Exception $e){
+            return redirect()->route('signin')->withErrors(['message' => $e->getMessage()]);
+        }
+    }
+
+    public function register(Request $request){
+        $request->validate([
+            'name' => 'required',
+            'username' => 'required|unique:users',
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+        
+        try {
+            $request->merge(['password' => Hash::make($request->password)]);
+            User::create($request->only(['name', 'username', 'password']));
+
+            return redirect()->route('signin');
+        } catch(Exception $e) {
+            return restponse()->json([
+                'message' => $e->getMessage(),
+                'trace' => $e->getTrace()
+            ], 500);
+        }
+    }
 }

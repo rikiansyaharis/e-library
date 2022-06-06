@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 //home
 Route::get('/', [PageController::class,'index'])->name('index');
 Route::get('/home', [PageController::class,'home'])->name('home');
+Route::post('/signin', [PageController::class, 'login'])->name('signin');
+Route::post('/register', [PageController::class, 'register'])->name('register');
 
 //admin
 Route::get('/dataadmin', [AdminController::class,'admin'])->name('admin');
@@ -46,7 +48,6 @@ Route::post('/insertbuku',[BookController::class,'insertBook'])->name('insertBuk
 Route::get('/updatebuku/{id}',[BookController::class,'editForm'])->name('update');
 Route::post('/updatebuku/{id}',[BookController::class,'updateBook'])->name('updateBuku');
 Route::get('/deletebuku/{id}',[BookController::class,'delete'])->name('delete');
-
 
 
 // Route::get('/detailbukuadmin/{id}', [BookController::class,'detailBuku'])->name('detail');
@@ -85,3 +86,5 @@ Route::get('/detail', function () {
         "title" => "Detail"
     ]);
 });
+
+
