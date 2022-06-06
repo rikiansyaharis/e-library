@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 //home
 Route::get('/', [PageController::class,'index'])->name('index');
 Route::get('/home', [PageController::class,'home'])->name('home');
-Route::post('/signin', [PageController::class, 'login'])->name('signin');
+Route::get('/signin', [PageController::class, 'login'])->name('signin');
 Route::post('/register', [PageController::class, 'register'])->name('register');
 
 //admin
