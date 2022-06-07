@@ -32,18 +32,28 @@
         <div class="animate form login_form">
           <section class="login_content">
             <form action="{{ route('signin') }}" method="POST">
+              @csrf
               <h1>Login e-Perpus</h1>
+              @error('message')
+                <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" name="username" class="form-control" placeholder="Username" required="" />
               </div>
+              @error('username')
+                <i class="px-2 small text-danger">{{ $message }}</i>
+              @enderror
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" name="password" class="form-control" placeholder="Password" required="" />
               </div>
+              @error('password')
+                <i class="px-2 small text-danger">{{ $message }}</i>
+              @enderror
               <div>
-                <a class="btn btn-default submit" href="/home">Masuk</a>
+                <button class="btn btn-default submit" style="color: grey" type="submit" >Masuk</button>
                 <a class="reset_pass" href="#">lupa password?</a>
               </div>
-              <a href="/dashboard">ke user</a>
+              {{-- <a href="/dashboard">ke user</a> --}}
               <div class="clearfix"></div>
 
               <div class="separator">
