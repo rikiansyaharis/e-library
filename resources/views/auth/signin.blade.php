@@ -54,48 +54,6 @@
 
                 <div class="clearfix"></div>
                 <br/>
-
-                <div>
-                  <h1><img src="{{ asset('images/icon.png') }}" class="logo" width="250px"></img> </h1>
-                  <p>©2022 All Rights Reserved. Privacy and Terms</p>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
-
-        <div id="register" class="animate form registration_form">
-          <section class="login_content">
-            <form action="{{ route('register') }}" method="POST">
-              @csrf
-              <h1>Daftar</h1>
-              <div>
-                <input type="text" name="name" class="form-control" placeholder="Nama" required="" />
-              </div>
-              <div>
-                <input type="text" name="username" class="form-control" placeholder="Username" required="" />
-              </div>
-              <div>
-                <input type="email" name="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <div>
-                <input type="password" name="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <button type="submit" class="btn btn-default submit">Submit</button>
-              </div>
-
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <p class="change_link">Sudah punya akun?
-                  <a href="#signin" class="to_register"> Masuk </a>
-                </p>
-
-
-                <div class="clearfix"></div>
-                <br />
-
                 <div>
                   <h1><img src="{{ asset('images/icon.png') }}" class="logo" width="250px"></img> </h1>
                   <p>©2022 All Rights Reserved. Privacy and Terms</p>

@@ -40,9 +40,9 @@ Route::get('/updateuser/{id}',[UsersController::class,'update'])->name('formupda
 Route::post('/updateuser/{id}',[UsersController::class,'updateUser'])->name('updateUser');
 Route::get('/deleteuser/{id}',[UsersController::class,'deleteUser'])->name('delete');
 
-
 //buku
 Route::get('/databuku', [BookController::class,'buku'])->name('buku');
+Route::get('/detailbuku/{id}', [BookController::class,'detailBuku'])->name('DetailBuku');
 Route::get('/formbuku', [BookController::class,'formBuku'])->name('formbuku');
 Route::post('/insertbuku',[BookController::class,'insertBook'])->name('insertBuku');
 Route::get('/updatebuku/{id}',[BookController::class,'editForm'])->name('update');

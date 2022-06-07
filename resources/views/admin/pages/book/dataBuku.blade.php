@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                         <div class="card-box table-responsive">
-                        <table  class="table table-striped table-bordered dt-responsive nowrap" >
+                        <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" >
                             <thead>
                             <tr>
                                 <th width="10px">No.</th>
@@ -27,7 +27,7 @@
                                 <th width="50px">Nama</th>
                                 <th width="50px">Penulis</th>
                                 <th width="50px">Jumlah Halaman</th>
-                                <th width="840px">Deskripsi</th>
+                                {{--  <th width="840px">Deskripsi</th>  --}}
                                 <th width="50px">Opsi</th>
 
                             </tr>
@@ -41,7 +41,6 @@
                                         <td>{{ $listBuku->nama_buku }}</td>
                                         <td>{{ $listBuku->penulis_buku }}</td>
                                         <td>{{ $listBuku->jumlah_halaman }}</td>
-                                        <td>{{ $listBuku->deskripsi }}</td>
                                         <td>
                                             <a href="/updatebuku/{{$listBuku->id}}">
                                                 <button class="btn btn-sm btn-outline-primary">
@@ -53,6 +52,12 @@
                                                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                 </button>
                                             </a>
+                                            </a>
+                                            <a href="/detailbuku/{{$listBuku->id}}">
+                                                <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#staticBackdrop">
+                                                    <i class="fa fa-spinner" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
                                         </td>
                                     </tr>
 
@@ -61,7 +66,27 @@
                         </table>
                         <hr>
 
-
+                        <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

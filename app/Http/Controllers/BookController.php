@@ -12,9 +12,19 @@ class BookController extends Controller
     public function buku() {
         $buku = [
             Genre::all(),
+            'genre' => Genre::all(),
             'buku' => DetailBuku::all()
         ];
         return view('admin.pages.book.dataBuku', $buku);
+    }
+
+    public function detailBuku($id) {
+        $detail = [
+            Genre::all(),
+            'genre' => Genre::all(),
+            'detail' => DetailBuku::find($id)
+        ];
+        return view('admin.pages.book.detailBuku', $detail);
     }
 
     //form insert

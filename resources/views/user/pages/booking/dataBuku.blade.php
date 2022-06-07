@@ -11,7 +11,7 @@
           </div>
 
           <div class="title_right">
-            <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+            <div class="col-md-5 col-sm-5 form-group pull-right top_search">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn">
@@ -35,7 +35,33 @@
 
                 @foreach ($buku as $lt)
                 <div class="card">
-                  <img src="{{asset('images/book_colection/' . $lt['foto_buku'])}} " class="card-img-top" alt="...">
+                    <div class="thumbnail">
+                        <div class="image view view-first">
+                          <img src="{{asset('images/book_colection/' . $lt['foto_buku'])}}" class="card-img-top" alt="image" />
+                          <div class="mask">
+                            <p>Your Text</p>
+                            <div class="tools tools-bottom">
+                              <a href="#"><i class="fa fa-link"></i></a>
+                              <a href="#"><i class="fa fa-pencil"></i></a>
+                              <a href="#"><i class="fa fa-times"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="caption">
+                          <p>Snow and Ice Incoming for the South</p>
+                        </div>
+                      </div>
+                    {{--  <div class="image view view-first">
+                        <img src="{{asset('images/book_colection/' . $lt['foto_buku'])}} " class="card-img-top" alt="...">
+                        <div class="mask">
+                            <p>Your Text</p>
+                            <div class="tools tools-bottom">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                                <a href="#"><i class="fa fa-pencil"></i></a>
+                                <a href="#"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                  </div>  --}}
                   <div class="card-body">
                     <h6 class="card-title">{{ $lt['judul_buku'] }}</h6>
                     <a href="/detailbukuadmin/{{ $lt['id'] }}">
