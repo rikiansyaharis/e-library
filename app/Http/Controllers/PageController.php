@@ -8,6 +8,7 @@ use App\Models\Pengguna;
 use App\Models\DetailBuku;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 
 class PageController extends Controller {
@@ -27,19 +28,18 @@ class PageController extends Controller {
         ]);
 
         try{
-            $user = User::where('username', $request->username);
+            // $user = User::where('username', $request->username);
 
-            if($user->count() > 0){
-                if(Auth::attempt(['username' => $request->username, 'password' => $request->password])){
-                    $user = $user->first();
+            // if($user->count() > 0){
+            if(Auth::attempt(['username' => $request->username, 'password' => $request->password])){
+                // $user = $user->first();
 
-                    return redirect()->route('index');
-                } else {
-                    return redirect()->route('signin')->withErrors(['message' => 'Username atau password tidak sesuai']);
-                }
+                return redirect()->route('home');
+            } else {
+                return redirect()->route('index')->withErrors(['message' => 'Username atau password tidak sesuai']);
             }
         } catch(Exception $e){
-            return redirect()->route('signin')->withErrors(['message' => $e->getMessage()]);
+            return redirect()->route('index')->withErrors(['message' => $e->getMessage()]);
         }
     }
 
