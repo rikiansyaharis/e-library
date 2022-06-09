@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            IsiRole::class,
+            IsiUser::class,
             IsiPengguna::class,
             IsiAnggota::class,
             IsiGenre::class,

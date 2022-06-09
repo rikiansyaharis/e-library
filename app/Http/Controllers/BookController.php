@@ -31,7 +31,7 @@ class BookController extends Controller
     public function formBuku() {
         $data = [
             'genre' => Genre::all(),
-            'action' => '/insertbook'
+            'action' => '/insertbuku'
         ];
         return view('admin.pages.book.formBuku', $data);
     }
@@ -49,8 +49,9 @@ class BookController extends Controller
             $filename = 'product_'. rand(0, 999999999999) .'_'. rand(0, 999999999999) .'.'. $file->getClientOriginalExtension();
             $file->move($path, $filename);
         }
-        $request->merge(['image' => $filename]);
-        DetailBuku::create($request->only('id_genre','foto_buku','nama_buku','penulis_buku','jumlah_halaman','deskripsi'));
+        // return dd($request->all());
+        $request->merge(['foto_buku' => $filename]);
+        DetailBuku::create($request->only(['id_genre','foto_buku','nama_buku','penulis_buku','jumlah_halaman','deskripsi']));
         return redirect('/databuku');
     }
 

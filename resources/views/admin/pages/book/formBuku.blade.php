@@ -23,14 +23,14 @@
                             </div>
                             <div class="form-group" >
                                 <label for="Nama">Judul buku</label>
-                                <input type="text" class="form-control form-control-sm" name="nama_petugas" id="Nama" required value="{{ isset($buku) ? $buku->nama_buku : '' }}">
+                                <input type="text" class="form-control form-control-sm" name="nama_buku" id="nama_buku" required value="{{ isset($buku) ? $buku->nama_buku : '' }}">
                             </div>
                             <div class="form-group">
                                 <label for="Nama">Genre</label>
-                                <select class="form-control form-control-sm" name="id__genre"  id="id_genre" {{ isset($buku) ? $buku->id_genre : '' }}>
+                                <select class="form-control form-control-sm" name="id_genre"  id="id_genre">
                                     <option>Pilih Genre</option>
                                     @foreach ($genre as $item)
-                                    <option value="{{$item->id}}" {{isset($buku) && $buku->id_brand == $item->id ? 'Selected' : ''}}>
+                                    <option value="{{$item->id}}" {{isset($buku) && $buku->id_brand == $item->id ? 'selected' : ''}}>
                                         {{$item->nama_genre}}
                                     </option>
 
@@ -39,10 +39,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="Jabatan">Penulis</label>
-                                <input type="text" class="form-control form-control-sm" name="jabatan" id="Jabatan" required value="{{ isset($buku) ? $buku->penulis_buku : '' }}">
+                                <input type="text" class="form-control form-control-sm" name="penulis_buku" id="Jabatan" required value="{{ isset($buku) ? $buku->penulis_buku : '' }}">
                             </div>
                             <div class="form-group">
-
+                                <label for="Jabatan">Jumlah Halaman</label>
+                                <input type="text" class="form-control form-control-sm" name="jumlah_halaman" id="Jabatan" required value="{{ isset($buku) ? $buku->jumlah_halaman : '' }}">
+                            </div>
+                            <div class="form-group">
                                 <label for="Jabatan">Deskripsi</label>
                                 <textarea class="form-control" name="deskripsi" id="deskripsi" value="{{ isset($buku) ? $buku->deskripsi : '' }}"></textarea>
                             </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Role;
 use App\Models\Anggota;
 use App\Models\Pengguna;
 use App\Models\DetailBuku;
@@ -14,7 +15,18 @@ use Illuminate\Support\Facades\Auth;
 class PageController extends Controller {
 
     public function index() {
-        return view('auth.signin');
+
+        $data = [
+            'title' => 'Login',
+        ];
+        // if (Auth::user() != null) {
+        //     return redirect()->route('home');
+        // } else {
+            // }
+                return view('auth.signin', $data);
+    }
+    public function signup() {
+        return view('auth.signup');
     }
 
     public function home() {
@@ -23,20 +35,28 @@ class PageController extends Controller {
 
     public function login(Request $request) {
         $request->validate([
-            'username' => 'required',
+            'name' => 'required',
             'password' => 'required',
         ]);
 
         try{
-            // $user = User::where('username', $request->username);
+            $user = User::where('name', $request->name);
 
-            // if($user->count() > 0){
-            if(Auth::attempt(['username' => $request->username, 'password' => $request->password])){
-                // $user = $user->first();
+            // return dd($user->with('role')->first());ww
+            if($user->count() > 0) {
+                if(Auth::attempt(['name' => $request->name, 'password' => $request->password])){
+                    $user = $user->with('role')->first();
 
-                return redirect()->route('home');
+                    if($user->role->name == 'admin') {
+                        return redirect()->route('admin');
+                    } else {
+                        return redirect()->route('dashboard');
+                    }
+                } else {
+                    return redirect()->back()->withErrors(['message' => 'password tidak sesuai']);
+                }
             } else {
-                return redirect()->route('index')->withErrors(['message' => 'Username atau password tidak sesuai']);
+                return redirect()->back()->withErrors(['message' => 'Username tidak sesuai']);
             }
         } catch(Exception $e){
             return redirect()->route('index')->withErrors(['message' => $e->getMessage()]);
@@ -44,21 +64,14 @@ class PageController extends Controller {
     }
 
     public function register(Request $request){
-        // return dd($request->all());
-        $request->validate([
-            'name' => 'required',
-            'username' => 'required|unique:users',
-            'email' => 'required|email',
-            'password' => 'required'
-        ]);
-        
-        try {
-            $request->merge(['password' => Hash::make($request->password)]);
-            User::create($request->only(['name', 'username', 'email', 'password']));
 
-            return redirect()->route('signin');
+        try {
+            $request->merge(['name' => $request->name, 'password' => Hash::make($request->password), 'id_role' => 2]);
+            User::create($request->only(['name', 'id_role', 'email', 'password']));
+
+            return redirect()->route('index');
         } catch(Exception $e) {
-            return restponse()->json([
+            return response()->json([
                 'message' => $e->getMessage(),
                 'trace' => $e->getTrace()
             ], 500);

@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HistoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 //home
 Route::get('/', [PageController::class,'index'])->name('index');
+Route::get('/signup', [PageController::class,'signup'])->name('signup');
 Route::get('/home', [PageController::class,'home'])->name('home');
 Route::post('/signin', [PageController::class, 'login'])->name('signin');
 Route::post('/register', [PageController::class, 'register'])->name('register');
@@ -65,11 +67,8 @@ Route::get('/pengembalian', function () {
 
 
 // user
-Route::get('/dashboard', function () {
-    return view('user.pages.dashboard', [
-        "title" => "Dashboard"
-    ]);
-});
+Route::get('/dashboard', [HomeController::class,'index'])->name('dashboard');
+
 
 Route::get('/favorit', function () {
     return view('user.pages.Favorit', [

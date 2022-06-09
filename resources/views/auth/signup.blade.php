@@ -10,66 +10,63 @@
 
     <title>E-Perpus</title>
 
-    <!-- Bootstrap -->
-    <link href=" {{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- bootstrap-->
+    <link rel="stylesheet" href="{{asset('vendors/bootstrap/dist/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
-    <link href=" {{ asset('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <!-- NProgress -->
-    <link href=" {{ asset('vendors/nprogress/nprogress.css') }}" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href=" {{ asset('vendors/animate.css/animate.min.css') }}" rel="stylesheet">
+    <link href=" {{ asset('vendors/font-material/material-icon/css/material-design-iconic-font.min.css') }}" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href=" {{ asset('build/css/custom.min.css') }}" rel="stylesheet">
+    <link href=" {{ asset('build/css/mycss.css') }}" rel="stylesheet">
   </head>
 
-  <body class="login">
-    <div>
-      <a class="hiddenanchor" id="signup"></a>
-      <a class="hiddenanchor" id="signin"></a>
-
-      <div class="login_wrapper">
-        <div class=id="register" class="animate form registration_form">
-            <section class="login_content">
-                <form action="{{ route('register') }}" method="POST">
-                  @csrf
-                  <h1>Daftar</h1>
-                  <div>
-                    <input type="text" name="name" class="form-control" placeholder="Nama" required="" />
-                  </div>
-                  <div>
-                    <input type="text" name="username" class="form-control" placeholder="Username" required="" />
-                  </div>
-                  <div>
-                    <input type="email" name="email" class="form-control" placeholder="Email" required="" />
-                  </div>
-                  <div>
-                    <input type="password" name="password" class="form-control" placeholder="Password" required="" />
-                  </div>
-                  <div>
-                    <button type="submit" class="btn btn-default submit">Submit</button>
-                  </div>
-
-                  <div class="clearfix"></div>
-
-                  <div class="separator">
-                    <p class="change_link">Sudah punya akun?
-                      <a href="#signin" class="to_register"> Masuk </a>
-                    </p>
+  <body>
 
 
-                    <div class="clearfix"></div>
-                    <br />
-
-                    <div>
-                      <h1><img src="{{ asset('images/icon.png') }}" class="logo" width="250px"></img> </h1>
-                      <p>©2022 All Rights Reserved. Privacy and Terms</p>
+    <div class="main">
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign Up</h2>
+                        <form action="{{ route('register') }}" method="POST" class="register-form" id="register-form">
+                            @csrf
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="zmdi zmdi-account material-icons-name"></i>
+                                </label>
+                                <input type="text" name="name" id="name" placeholder="Nama"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="zmdi zmdi-email"></i>
+                                </label>
+                                <input type="email" name="email" id="email" required placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">
+                                    <i class="zmdi zmdi-lock"></i>
+                                </label>
+                                <input type="password" name="password" id="pass" required placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">
+                                    <i class="zmdi zmdi-lock"></i>
+                                </label>
+                                <input type="password" name="confirm_password" id="pass" required placeholder="Confirm Password"/>
+                            </div>
+                            <div class="form-group form-button">
+                                <button class="btn btn-primary submit" type="submit" name="signup" id="signup" >Submit</button>
+                            </div>
+                        </form>
                     </div>
-                  </div>
-                </form>
-              </section>
-        </div>
-      </div>
+                    <div class="signup-image">
+                        <figure><img src="{{asset('images/signup-image.jpg')}}" alt="sing up image"></figure>
+                        <a href="/" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </body>
+</body>
 </html>
