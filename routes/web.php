@@ -25,6 +25,7 @@ Route::get('/signup', [PageController::class,'signup'])->name('signup');
 Route::get('/home', [PageController::class,'home'])->name('home');
 Route::post('/signin', [PageController::class, 'login'])->name('signin');
 Route::post('/register', [PageController::class, 'register'])->name('register');
+Route::get('logout', [PageController::class, 'logout'])->name('logout');
 
 //admin
 Route::get('/dataadmin', [AdminController::class,'admin'])->name('admin');

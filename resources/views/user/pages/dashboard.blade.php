@@ -2,625 +2,270 @@
 
 @section('content')
 
-<!-- Slider Start -->
-<div class="slider-area">
-    <div class="slider-active owl-dot-style owl-carousel">
-        <div class="single-slider ptb-265 bg-img" style="background-image:url(assets/img/slider/slider-2.jpg);">
-            <div class="container">
-                <div class="slider-content slider-animated-1 text-center">
-                    <h1 class="animated">Want to stay healthy</h1>
-                    <h1 class="animated">drink matcha.</h1>
-                    <div class="slider-btn mt-25">
-                        <a class="animated" href="product-details.html">shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="single-slider ptb-265 bg-img" style="background-image:url(assets/img/slider/slider-2.jpg);">
-            <div class="container">
-                <div class="slider-content slider-animated-1 text-center">
-                    <h1 class="animated">Want to stay healthy</h1>
-                    <h1 class="animated">drink matcha.</h1>
-                    <div class="slider-btn mt-25">
-                        <a class="animated" href="product-details.html">shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Slider End -->
 
-<!-- Product Area Start -->
-<div class="product-area bg-image-1 pt-90 pb-95">
+
+<!-- Breadcrumb Area Start -->
+<div class="breadcrumb-area bg-image-3 ptb-150">
     <div class="container">
-        <div class="product-top-bar style-two section-border mb-55">
-            <div class="section-title-wrap text-center">
-                <h3 class="section-title">Latest Products</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt </p>
-            </div>
-        </div>
-        <div class="featured-product-active hot-flower owl-carousel product-nav">
-            <div class="product-wrapper">
-                <div class="product-img">
-                    <a href="product-details.html">
-                        <img alt="" src="assets/img/product/product-1.jpg">
-                    </a>
-                    <span>-20%</span>
-                    <div class="product-action">
-                        <a class="action-wishlist" href="#" title="Wishlist">
-                            <i class="ion-android-favorite-outline"></i>
-                        </a>
-                        <a class="action-cart" href="#" title="Add To Cart">
-                            <i class="ion-ios-shuffle-strong"></i>
-                        </a>
-                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                            <i class="ion-ios-search-strong"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="product-content text-left">
-                    <div class="product-hover-style">
-                        <div class="product-title">
-                            <h4>
-                                <a href="product-details.html">Nature Close Tea</a>
-                            </h4>
-                        </div>
-                        <div class="cart-hover">
-                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                        </div>
-                    </div>
-                    <div class="product-price-wrapper">
-                        <span>$100.00 -</span>
-                        <span class="product-price-old">$120.00 </span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-wrapper">
-                <div class="product-img">
-                    <a href="product-details.html">
-                        <img alt="" src="assets/img/product/product-2.jpg">
-                    </a>
-                    <div class="product-action">
-                        <a class="action-wishlist" href="#" title="Wishlist">
-                            <i class="ion-android-favorite-outline"></i>
-                        </a>
-                        <a class="action-cart" href="#" title="Add To Cart">
-                            <i class="ion-ios-shuffle-strong"></i>
-                        </a>
-                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                            <i class="ion-ios-search-strong"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="product-content text-left">
-                    <div class="product-hover-style">
-                        <div class="product-title">
-                            <h4>
-                                <a href="product-details.html">Pink wave Cup</a>
-                            </h4>
-                        </div>
-                        <div class="cart-hover">
-                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                        </div>
-                    </div>
-                    <div class="product-price-wrapper">
-                        <span>$100.00 -</span>
-                        <span class="product-price-old">$120.00 </span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-wrapper">
-                <div class="product-img">
-                    <a href="product-details.html">
-                        <img alt="" src="assets/img/product/product-3.jpg">
-                    </a>
-                    <span>-50%</span>
-                    <div class="product-action">
-                        <a class="action-wishlist" href="#" title="Wishlist">
-                            <i class="ion-android-favorite-outline"></i>
-                        </a>
-                        <a class="action-cart" href="#" title="Add To Cart">
-                            <i class="ion-ios-shuffle-strong"></i>
-                        </a>
-                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                            <i class="ion-ios-search-strong"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="product-content text-left">
-                    <div class="product-hover-style">
-                        <div class="product-title">
-                            <h4>
-                                <a href="product-details.html">Tea and Chai</a>
-                            </h4>
-                        </div>
-                        <div class="cart-hover">
-                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                        </div>
-                    </div>
-                    <div class="product-price-wrapper">
-                        <span>$100.00 -</span>
-                        <span class="product-price-old">$120.00 </span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-wrapper">
-                <div class="product-img">
-                    <a href="product-details.html">
-                        <img alt="" src="assets/img/product/product-4.jpg">
-                    </a>
-                    <div class="product-action">
-                        <a class="action-wishlist" href="#" title="Wishlist">
-                            <i class="ion-android-favorite-outline"></i>
-                        </a>
-                        <a class="action-cart" href="#" title="Add To Cart">
-                            <i class="ion-ios-shuffle-strong"></i>
-                        </a>
-                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                            <i class="ion-ios-search-strong"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="product-content text-left">
-                    <div class="product-hover-style">
-                        <div class="product-title">
-                            <h4>
-                                <a href="product-details.html">Pearly Everlasting</a>
-                            </h4>
-                        </div>
-                        <div class="cart-hover">
-                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                        </div>
-                    </div>
-                    <div class="product-price-wrapper">
-                        <span>$100.00 -</span>
-                        <span class="product-price-old">$120.00 </span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-wrapper">
-                <div class="product-img">
-                    <a href="product-details.html">
-                        <img alt="" src="assets/img/product/product-5.jpg">
-                    </a>
-                    <span>-30%</span>
-                    <div class="product-action">
-                        <a class="action-wishlist" href="#" title="Wishlist">
-                            <i class="ion-android-favorite-outline"></i>
-                        </a>
-                        <a class="action-cart" href="#" title="Add To Cart">
-                            <i class="ion-ios-shuffle-strong"></i>
-                        </a>
-                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                            <i class="ion-ios-search-strong"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="product-content text-left">
-                    <div class="product-hover-style">
-                        <div class="product-title">
-                            <h4>
-                                <a href="product-details.html">Que herbal Tea</a>
-                            </h4>
-                        </div>
-                        <div class="cart-hover">
-                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                        </div>
-                    </div>
-                    <div class="product-price-wrapper">
-                        <span>$100.00 -</span>
-                        <span class="product-price-old">$120.00 </span>
-                    </div>
-                </div>
-            </div>
+        <div class="breadcrumb-content text-center">
+            <h3>WELCOME TO E-BOOK</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
         </div>
     </div>
 </div>
-<!-- Product Area End -->
-<!-- Testimonial Area Start -->
-<div class="testimonials-area bg-img pt-100 pb-100">
+<!-- Breadcrumb Area End -->
+<!-- blog-area start -->
+<div class="blog-page-area ptb-100">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-12">
-                <div class="testimonial-active owl-carousel">
-                    <div class="single-testimonial text-center">
-                        <div class="testimonial-img">
-                            <img alt="" src="assets/img/icon-img/testi.png">
+            <div class="col-lg-8 col-xl-9 col-md-8">
+                <div class="blog-wrapper">
+                    <div class="single-blog-wrapper mb-40">
+                        <div class="blog-img mb-30">
+                            <div class="blog-gallery-slider owl-carousel mb-30">
+                                <a href="#"><img alt="" src="{{ asset('images/book_colection/Cooking.jpg') }}"></a>
+                                <a href="#"><img alt="" src="{{ asset('images/book_colection/Hyderabad.jpg') }}"></a>
+                                <a href="#"><img alt="" src="{{ asset('images/book_colection/Cooking.jpg') }}"></a>
+                            </div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eiusmod tempor incididunt ut labore</p>
-                        <h4>Gregory Perkins</h4>
-                        <h5>Customer</h5>
+                        <div class="blog-content">
+                            <h2><a href="blog-details-standerd.html">Instant Green Tea Premix</a></h2>
+                            <div class="blog-date-categori">
+                                <ul>
+                                    <li>October 14, 2018 </li>
+                                    <li><a href="#">Admin </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                        <div class="blog-btn-social mt-30">
+                            <div class="blog-btn">
+                                <a href="blog-details-standerd.html">read more</a>
+                            </div>
+                            <div class="blog-social">
+                                <span>share :</span>
+                                <ul>
+                                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-skype"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="single-testimonial text-center">
-                        <div class="testimonial-img">
-                            <img alt="" src="assets/img/icon-img/testi.png">
+                    <div class="single-blog-wrapper mb-40">
+                        <div class="sound-cloud embed-responsive embed-responsive-16by9 mb-30">
+                            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276580716&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eiusmod tempor incididunt ut labore</p>
-                        <h4>Khabuli Teop</h4>
-                        <h5>Marketing</h5>
+                        <div class="blog-content">
+                            <h2><a href="blog-details-audio.html">Que Herbal Matcha Tea</a></h2>
+                            <div class="blog-date-categori">
+                                <ul>
+                                    <li>October 14, 2018 </li>
+                                    <li><a href="#">Admin </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                        <div class="blog-btn-social mt-30">
+                            <div class="blog-btn">
+                                <a href="blog-details-audio.html">read more</a>
+                            </div>
+                            <div class="blog-social">
+                                <span>share :</span>
+                                <ul>
+                                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-skype"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="single-testimonial text-center">
-                        <div class="testimonial-img">
-                            <img alt="" src="assets/img/icon-img/testi.png">
+                    <div class="single-blog-wrapper mb-50">
+                        <div class="quote-post">
+                            <div class="quote-content">
+                                <span>October 14, 2018 </span>
+                                <h3><a href="blog-details-quote.html">Lorem ipsum dolor sit amet co adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a></h3>
+                                <h6>Tasnim</h6>
+                            </div>
+                            <div class="post-img">
+                                <img alt="" src="assets/img/blog/quote-post.png">
+                            </div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eiusmod tempor incididunt ut labore </p>
-                        <h4>Lotan Jopon</h4>
-                        <h5>Admin</h5>
+                    </div>
+                    <div class="single-blog-wrapper mb-40">
+                        <div class="blog-gallery-slider owl-carousel mb-30">
+                            <a href="blog-details-gallery.html"><img alt="" src="{{ asset('images/book_colection/Cooking.jpg') }}"></a>
+                            <a href="blog-details-gallery.html"><img alt="" src="assets/img/blog/blog-1.jpg"></a>
+                            <a href="blog-details-gallery.html"><img alt="" src="{{ asset('images/book_colection/Cooking.jpg') }}"></a>
+                        </div>
+                        <div class="blog-content">
+                            <h2><a href="blog-details-gallery.html">Green Tea Tulsi Time</a></h2>
+                            <div class="blog-date-categori">
+                                <ul>
+                                    <li>October 14, 2018 </li>
+                                    <li><a href="#">Admin </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                        <div class="blog-btn-social mt-30">
+                            <div class="blog-btn">
+                                <a href="blog-details-gallery.html">read more</a>
+                            </div>
+                            <div class="blog-social">
+                                <span>share :</span>
+                                <ul>
+                                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-skype"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-blog-wrapper">
+                        <div class="link-post">
+                            <div class="link-content">
+                                <span>October 14, 2018 </span>
+                                <h3><a href="blog-details-link.html">Lorem ipsum dolor sit amet co adipisicing elit,</a></h3>
+                            </div>
+                            <div class="post-img">
+                                <img alt="" src="assets/img/blog/link-post.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination-total-pages mt-50">
+                        <div class="pagination-style">
+                            <ul>
+                                <li><a class="prev-next prev" href="#"><i class="ion-ios-arrow-left"></i> Prev</a></li>
+                                <li><a class="active" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a class="prev-next next" href="#">Next<i class="ion-ios-arrow-right"></i> </a></li>
+                            </ul>
+                        </div>
+                        <div class="total-pages">
+                            <p>Showing 1 - 20 of 30 results  </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial Area End -->
-<!-- New Products Start -->
-<div class="product-area gray-bg pt-90 pb-65">
-    <div class="container">
-        <div class="product-top-bar style-two section-border mb-55">
-            <div class="section-title-wrap text-center">
-                <h3 class="section-title">New Products</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt </p>
-            </div>
-        </div>
-        <div class="tab-content jump">
-            <div class="tab-pane active">
-                <div class="featured-product-active owl-carousel product-nav">
-                    <div class="product-wrapper-single">
-                        <div class="product-wrapper mb-30">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img alt="" src="assets/img/product/product-1.jpg">
-                                </a>
-                                <span>-30%</span>
-                                <div class="product-action">
-                                    <a class="action-wishlist" href="#" title="Wishlist">
-                                        <i class="ion-android-favorite-outline"></i>
-                                    </a>
-                                    <a class="action-cart" href="#" title="Add To Cart">
-                                        <i class="ion-ios-shuffle-strong"></i>
-                                    </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content text-left">
-                                <div class="product-hover-style">
-                                    <div class="product-title">
-                                        <h4>
-                                            <a href="product-details.html">BeBe Bloom tea</a>
-                                        </h4>
-                                    </div>
-                                    <div class="cart-hover">
-                                        <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                    </div>
-                                </div>
-                                <div class="product-price-wrapper">
-                                    <span>$100.00 -</span>
-                                    <span class="product-price-old">$120.00 </span>
-                                </div>
-                            </div>
+            <div class="col-lg-4 col-xl-3 col-md-4">
+                <div class="blog-sidebar-wrapper sidebar-mrg">
+                    <div class="blog-widget mb-50">
+                        <div class="blog-search">
+                            <form class="news-form">
+                                <input type="text" placeholder="Search.....">
+                                <button type="submit">
+                                    <i class="ion-ios-search-strong"></i>
+                                </button>
+                            </form>
                         </div>
-                        <div class="product-wrapper mb-30">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img alt="" src="assets/img/product/product-2.jpg">
-                                </a>
-                                <span>-50%</span>
-                                <div class="product-action">
-                                    <a class="action-wishlist" href="#" title="Wishlist">
-                                        <i class="ion-android-favorite-outline"></i>
-                                    </a>
-                                    <a class="action-cart" href="#" title="Add To Cart">
-                                        <i class="ion-ios-shuffle-strong"></i>
-                                    </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
+                    </div>
+                    <div class="blog-widget mb-40">
+                        <div class="blog-author">
+                            <a href="#"><img src="assets/img/blog/blog-author.png" alt=""></a>
+                            <h4><a href="#">Kathy Gibson</a></h4>
+                            <span>Head of Director, SEO</span>
+                        </div>
+                    </div>
+                    <div class="blog-widget mb-45">
+                        <h4 class="blog-widget-title mb-25">Recent post</h4>
+                        <div class="blog-recent-post">
+                            <div class="recent-post-wrapper mb-25">
+                                <div class="recent-post-img">
+                                    <a href="#"><img src="assets/img/blog/blog-recentpost-1.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-post-content">
+                                    <h4><a href="#">New Products</a></h4>
+                                    <span>October 14, 2018</span>
                                 </div>
                             </div>
-                            <div class="product-content text-left">
-                                <div class="product-hover-style">
-                                    <div class="product-title">
-                                        <h4>
-                                            <a href="product-details.html">Every spice Tea</a>
-                                        </h4>
-                                    </div>
-                                    <div class="cart-hover">
-                                        <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                    </div>
+                            <div class="recent-post-wrapper mb-25">
+                                <div class="recent-post-img">
+                                    <a href="#"><img src="assets/img/blog/blog-recentpost-2.jpg" alt=""></a>
                                 </div>
-                                <div class="product-price-wrapper">
-                                    <span>$100.00 -</span>
-                                    <span class="product-price-old">$120.00 </span>
+                                <div class="recent-post-content">
+                                    <h4><a href="#">New Products</a></h4>
+                                    <span>October 14, 2018</span>
+                                </div>
+                            </div>
+                            <div class="recent-post-wrapper mb-25">
+                                <div class="recent-post-img">
+                                    <a href="#"><img src="assets/img/blog/blog-recentpost-3.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-post-content">
+                                    <h4><a href="#">New Products</a></h4>
+                                    <span>October 14, 2018</span>
+                                </div>
+                            </div>
+                            <div class="recent-post-wrapper mb-25">
+                                <div class="recent-post-img">
+                                    <a href="#"><img src="assets/img/blog/blog-recentpost-4.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-post-content">
+                                    <h4><a href="#">New Products</a></h4>
+                                    <span>October 14, 2018</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product-wrapper-single">
-                        <div class="product-wrapper mb-30">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img alt="" src="assets/img/product/product-3.jpg">
-                                </a>
-                                <span>-60%</span>
-                                <div class="product-action">
-                                    <a class="action-wishlist" href="#" title="Wishlist">
-                                        <i class="ion-android-favorite-outline"></i>
-                                    </a>
-                                    <a class="action-cart" href="#" title="Add To Cart">
-                                        <i class="ion-ios-shuffle-strong"></i>
-                                    </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content text-left">
-                                <div class="product-hover-style">
-                                    <div class="product-title">
-                                        <h4>
-                                            <a href="product-details.html">Que herbal Tea</a>
-                                        </h4>
-                                    </div>
-                                    <div class="cart-hover">
-                                        <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                    </div>
-                                </div>
-                                <div class="product-price-wrapper">
-                                    <span>$100.00 -</span>
-                                    <span class="product-price-old">$120.00 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-wrapper mb-30">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img alt="" src="assets/img/product/product-4.jpg">
-                                </a>
-                                <div class="product-action">
-                                    <a class="action-wishlist" href="#" title="Wishlist">
-                                        <i class="ion-android-favorite-outline"></i>
-                                    </a>
-                                    <a class="action-cart" href="#" title="Add To Cart">
-                                        <i class="ion-ios-shuffle-strong"></i>
-                                    </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content text-left">
-                                <div class="product-hover-style">
-                                    <div class="product-title">
-                                        <h4>
-                                            <a href="product-details.html">Tea and Chai</a>
-                                        </h4>
-                                    </div>
-                                    <div class="cart-hover">
-                                        <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                    </div>
-                                </div>
-                                <div class="product-price-wrapper">
-                                    <span>$100.00 -</span>
-                                    <span class="product-price-old">$120.00 </span>
-                                </div>
-                            </div>
+                    <div class="blog-widget mb-40">
+                        <h4 class="blog-widget-title mb-25">categories</h4>
+                        <div class="blog-categori">
+                            <ul>
+                                <li><a href="#">Morning Tea (05)</a></li>
+                                <li><a href="#">Tea Trends (08)</a></li>
+                                <li><a href="#">Most Tea Map (02)</a></li>
+                                <li><a href="#">Herbal Tea (07)</a></li>
+                                <li><a href="#">Rooibos Tea (06)</a></li>
+                                <li><a href="#">Organic Tea (01)</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="product-wrapper-single">
-                        <div class="product-wrapper mb-30">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img alt="" src="assets/img/product/product-5.jpg">
-                                </a>
-                                <div class="product-action">
-                                    <a class="action-wishlist" href="#" title="Wishlist">
-                                        <i class="ion-android-favorite-outline"></i>
-                                    </a>
-                                    <a class="action-cart" href="#" title="Add To Cart">
-                                        <i class="ion-ios-shuffle-strong"></i>
-                                    </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content text-left">
-                                <div class="product-hover-style">
-                                    <div class="product-title">
-                                        <h4>
-                                            <a href="product-details.html">Society Ice Tea</a>
-                                        </h4>
-                                    </div>
-                                    <div class="cart-hover">
-                                        <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                    </div>
-                                </div>
-                                <div class="product-price-wrapper">
-                                    <span>$100.00 -</span>
-                                    <span class="product-price-old">$120.00 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-wrapper mb-30">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img alt="" src="assets/img/product/product-6.jpg">
-                                </a>
-                                <span>-40%</span>
-                                <div class="product-action">
-                                    <a class="action-wishlist" href="#" title="Wishlist">
-                                        <i class="ion-android-favorite-outline"></i>
-                                    </a>
-                                    <a class="action-cart" href="#" title="Add To Cart">
-                                        <i class="ion-ios-shuffle-strong"></i>
-                                    </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content text-left">
-                                <div class="product-hover-style">
-                                    <div class="product-title">
-                                        <h4>
-                                            <a href="product-details.html">Green Tea Tulsi</a>
-                                        </h4>
-                                    </div>
-                                    <div class="cart-hover">
-                                        <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                    </div>
-                                </div>
-                                <div class="product-price-wrapper">
-                                    <span>$100.00 -</span>
-                                    <span class="product-price-old">$120.00 </span>
-                                </div>
-                            </div>
+                    <div class="blog-widget mb-35">
+                        <h4 class="blog-widget-title mb-30">instagram</h4>
+                        <div class="blog-instagram">
+                            <ul>
+                                <li><a href="#"><img src="assets/img/instagram/instagram1.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/img/instagram/instagram2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/img/instagram/instagram3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/img/instagram/instagram4.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/img/instagram/instagram5.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/img/instagram/instagram6.jpg" alt=""></a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="product-wrapper-single">
-                        <div class="product-wrapper mb-30">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img alt="" src="assets/img/product/product-7.jpg">
-                                </a>
-                                <span>-60%</span>
-                                <div class="product-action">
-                                    <a class="action-wishlist" href="#" title="Wishlist">
-                                        <i class="ion-android-favorite-outline"></i>
-                                    </a>
-                                    <a class="action-cart" href="#" title="Add To Cart">
-                                        <i class="ion-ios-shuffle-strong"></i>
-                                    </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content text-left">
-                                <div class="product-hover-style">
-                                    <div class="product-title">
-                                        <h4>
-                                            <a href="product-details.html">Best Friends Tea</a>
-                                        </h4>
-                                    </div>
-                                    <div class="cart-hover">
-                                        <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                    </div>
-                                </div>
-                                <div class="product-price-wrapper">
-                                    <span>$100.00 -</span>
-                                    <span class="product-price-old">$120.00 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-wrapper mb-30">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img alt="" src="assets/img/product/product-8.jpg">
-                                </a>
-                                <div class="product-action">
-                                    <a class="action-wishlist" href="#" title="Wishlist">
-                                        <i class="ion-android-favorite-outline"></i>
-                                    </a>
-                                    <a class="action-cart" href="#" title="Add To Cart">
-                                        <i class="ion-ios-shuffle-strong"></i>
-                                    </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content text-left">
-                                <div class="product-hover-style">
-                                    <div class="product-title">
-                                        <h4>
-                                            <a href="product-details.html">Instant Tea Premix</a>
-                                        </h4>
-                                    </div>
-                                    <div class="cart-hover">
-                                        <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                    </div>
-                                </div>
-                                <div class="product-price-wrapper">
-                                    <span>$100.00 -</span>
-                                    <span class="product-price-old">$120.00 </span>
-                                </div>
-                            </div>
+                    <div class="blog-widget mb-35">
+                        <h4 class="blog-widget-title mb-20">follow us </h4>
+                        <div class="blog-sidebar-social">
+                            <ul>
+                                <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                                <li><a href="#"><i class="ion-social-skype"></i></a></li>
+                                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="product-wrapper-single">
-                        <div class="product-wrapper mb-30">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img alt="" src="assets/img/product/product-3.jpg">
-                                </a>
-                                <span>-30%</span>
-                                <div class="product-action">
-                                    <a class="action-wishlist" href="#" title="Wishlist">
-                                        <i class="ion-android-favorite-outline"></i>
-                                    </a>
-                                    <a class="action-cart" href="#" title="Add To Cart">
-                                        <i class="ion-ios-shuffle-strong"></i>
-                                    </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content text-left">
-                                <div class="product-hover-style">
-                                    <div class="product-title">
-                                        <h4>
-                                            <a href="product-details.html">Black Ossum Tea</a>
-                                        </h4>
-                                    </div>
-                                    <div class="cart-hover">
-                                        <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                    </div>
-                                </div>
-                                <div class="product-price-wrapper">
-                                    <span>$100.00 -</span>
-                                    <span class="product-price-old">$120.00 </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-wrapper mb-30">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img alt="" src="assets/img/product/product-6.jpg">
-                                </a>
-                                <span>-70%</span>
-                                <div class="product-action">
-                                    <a class="action-wishlist" href="#" title="Wishlist">
-                                        <i class="ion-android-favorite-outline"></i>
-                                    </a>
-                                    <a class="action-cart" href="#" title="Add To Cart">
-                                        <i class="ion-ios-shuffle-strong"></i>
-                                    </a>
-                                    <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content text-left">
-                                <div class="product-hover-style">
-                                    <div class="product-title">
-                                        <h4>
-                                            <a href="product-details.html">Le Bongai Tea</a>
-                                        </h4>
-                                    </div>
-                                    <div class="cart-hover">
-                                        <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                    </div>
-                                </div>
-                                <div class="product-price-wrapper">
-                                    <span>$100.00 -</span>
-                                    <span class="product-price-old">$120.00 </span>
-                                </div>
-                            </div>
+                    <div class="blog-widget">
+                        <h4 class="blog-widget-title mb-25">tags</h4>
+                        <div class="blog-tags">
+                            <ul>
+                                <li><a href="#">Green</a></li>
+                                <li><a href="#">Oolong </a></li>
+                                <li><a href="#">Black </a></li>
+                                <li><a href="#">Puerh </a></li>
+                                <li><a href="#">love  </a></li>
+                                <li><a href="#">special </a></li>
+                                <li><a href="#">success </a></li>
+                                <li><a href="#">Dark </a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -628,39 +273,7 @@
         </div>
     </div>
 </div>
-<!-- New Products End -->
-
-<!-- Newsletter Araea Start -->
-<div class="newsletter-area bg-image-2 pt-90 pb-100">
-    <div class="container">
-        <div class="product-top-bar section-border mb-45">
-            <div class="section-title-wrap text-center">
-                <h3 class="section-title">Join to our Newsletter</h3>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-lg-6 col-md-10 col-md-auto">
-                <div class="footer-newsletter">
-                     <div id="mc_embed_signup" class="subscribe-form">
-                        <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                            <div id="mc_embed_signup_scroll" class="mc-form">
-                                <input type="email" value="" name="EMAIL" class="email" placeholder="Your Email Address*" required>
-                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                <div class="submit-button">
-                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Newsletter Araea End -->
+<!-- blog-area end -->
 
 
         {{--  <div class="col-lg-12">

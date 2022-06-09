@@ -77,4 +77,10 @@ class PageController extends Controller {
             ], 500);
         }
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('index');
+    }
 }

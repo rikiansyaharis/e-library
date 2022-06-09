@@ -5,14 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\Pengguna;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
     public function admin() {
-        $admin = [
-        'dataAdmin' => Pengguna::all()
-            ];
-        return view('admin.pages.admin.dataAdmin', $admin);
+        // return dd(Auth::user() == null);
+        if (Auth::user() == null) {
+            return redirect()->route('index');
+        } else {
+            $admin = [
+            'dataAdmin' => Pengguna::all()
+                ];
+            return view('admin.pages.admin.dataAdmin', $admin);
+        }
     }
 
     public function formAdmin() {
@@ -47,4 +53,6 @@ class AdminController extends Controller
         Pengguna::where('id', $id)->delete();
         return redirect()->route('admin')->with('success','Berhasil dihapus');
     }
+
+    
 }
