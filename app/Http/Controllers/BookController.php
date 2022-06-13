@@ -6,6 +6,7 @@ use App\Models\Genre;
 use App\Models\DetailBuku;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use File;
 
 class BookController extends Controller
 {
@@ -45,11 +46,10 @@ class BookController extends Controller
 
         if($request->hasFile('file')) {
             $file = $request->file('file');
-            $path = public_path('images/product');
-            $filename = 'product_'. rand(0, 999999999999) .'_'. rand(0, 999999999999) .'.'. $file->getClientOriginalExtension();
+            $path = public_path('images/book_colection');
+            $filename = 'image_'. rand(0, 999999999999) .'_'. rand(0, 999999999999) .'.'. $file->getClientOriginalExtension();
             $file->move($path, $filename);
         }
-        // return dd($request->all());
         $request->merge(['foto_buku' => $filename]);
         DetailBuku::create($request->only(['id_genre','foto_buku','nama_buku','penulis_buku','jumlah_halaman','deskripsi']));
         return redirect('/databuku');
@@ -59,7 +59,7 @@ class BookController extends Controller
     public function editForm($id) {
         $data = [
             'genre' => Genre::all(),
-            'book'  => DetailBuku::find($id),
+            'buku'  => DetailBuku::find($id),
             'action' => "/updatebuku/$id"
         ];
         return view('admin.pages.book.formBuku', $data);
@@ -73,19 +73,18 @@ class BookController extends Controller
 
         $data = DetailBuku::find($request->id);
         if($request->hasFile('file')) {
-            $path = public_path('images/product');
-            if (file_exists($path. '/' . $data->image)) {
-                File::delete($path. '/' . $data->image);
+            $path = public_path('images/book_colection');
+            if (file_exists($path. '/' . $data->foto_buku)) {
+                File::delete($path. '/' . $data->foto_buku);
             }
 
             $file = $request->file('file');
-            $filename = 'product_'. rand(0, 999999999999) .'_'. rand(0, 999999999999) .'.'. $file->getClientOriginalExtension();
+            $filename = 'image_'. rand(0, 999999999999) .'_'. rand(0, 999999999999) .'.'. $file->getClientOriginalExtension();
             $file->move($path, $filename);
         }
 
-        $request->merge(['image' => $filename]);
+        $request->merge(['foto_buku' => $filename]);
         DetailBuku::where('id', $request->id)->update($request->only('id_genre','foto_buku','nama_buku','penulis_buku','jumlah_halaman','deskripsi'));
-
         return redirect('/databuku');
     }
 
@@ -93,8 +92,8 @@ class BookController extends Controller
     {
         $data = DetailBuku::findOrFail($id);
 
-        if(file_exists(public_path('images/product' . $data->image))){
-            File::delete(public_path('images/product' . $data->image));
+        if(file_exists(public_path('images/book_colection' . $data->foto_buku))){
+            File::delete(public_path('images/book_colection' . $data->foto_buku));
         }
         $data->delete();
         return redirect('/databuku');

@@ -1,12 +1,12 @@
 (function($) {
     'use strict';
-    
+
     /*--
     Menu Stick
     -----------------------------------*/
     var header = $('.transparent-bar');
     var win = $(window);
-    
+
     win.on('scroll', function() {
         var scroll = win.scrollTop();
         if (scroll < 200) {
@@ -15,22 +15,22 @@
             header.addClass('stick');
         }
     });
-    
-    
+
+
     /* jQuery MeanMenu */
     $('#mobile-menu-active').meanmenu({
         meanScreenWidth: "991",
         meanMenuContainer: ".mobile-menu-area .mobile-menu",
     });
-    
+
     /* Cart */
     $(".language-click , .icon-cart , .icon-setting").on("click", function() {
         $(this).parent().find('.language-dropdown , .shopping-cart-content , .setting-wrapper').slideToggle('medium');
     })
-    
+
     /* Slider active */
     $('.slider-active').owlCarousel({
-        loop: true,
+        // loop: true,
         nav: false,
         autoplay: false,
         autoplayTimeout: 5000,
@@ -50,10 +50,10 @@
             }
         }
     })
-    
+
     /* Best selling active */
     $('.featured-product-active').owlCarousel({
-        loop: true,
+        // loop: true,
         nav: false,
         autoplay: false,
         autoplayTimeout: 5000,
@@ -81,10 +81,10 @@
             }
         }
     })
-    
+
     /* Best selling active */
     $('.best-selling-active').owlCarousel({
-        loop: true,
+        // loop: true,
         nav: true,
         autoplay: false,
         autoplayTimeout: 5000,
@@ -108,10 +108,10 @@
             }
         }
     })
-    
+
     /* Best selling active 2 */
     $('.best-selling-active-2').owlCarousel({
-        loop: true,
+        // loop: true,
         nav: false,
         item: 1,
         responsive: {
@@ -132,10 +132,10 @@
             }
         }
     })
-    
+
     /* Testimonial active */
     $('.testimonial-active').owlCarousel({
-        loop: true,
+        // loop: true,
         nav: false,
 		dots: false,
         autoplay: false,
@@ -155,10 +155,10 @@
             }
         }
     })
-    
+
     /* Brand logo active */
     $('.brand-logo-active').owlCarousel({
-        loop: true,
+        // loop: true,
         nav: false,
         autoplay: false,
         autoplayTimeout: 5000,
@@ -186,7 +186,7 @@
             }
         }
     })
-    
+
     /*---------------------
         Countdown
     --------------------- */
@@ -197,8 +197,8 @@
             $this.html(event.strftime('<span class="cdown day">%-D <p>Days</p></span> <span class="cdown hour">%-H <p>Hour</p></span> <span class="cdown minutes">%M <p>Min</p></span class="cdown second"> <span>%S <p>Sec</p></span>'));
         });
     });
-    
-    
+
+
     /* Hover 3d init for tilt */
     if ($('.tilter').length > 0) {
         $('.tilter').tilt({
@@ -210,7 +210,7 @@
             transition: true,
         });
     }
-    
+
     /*--------------------------
         ScrollUp
     ---------------------------- */
@@ -220,7 +220,7 @@
         scrollSpeed: 900,
         animation: 'fade'
     });
-    
+
     /*---------------------
         Price slider
     --------------------- */
@@ -239,7 +239,7 @@
         amountprice.val("$" + sliderrange.slider("values", 0) +
             " - $" + sliderrange.slider("values", 1));
     });
-    
+
     /*---------------------
         Product dec slider
     --------------------- */
@@ -273,16 +273,16 @@
             }
         ]
     });
-    
+
     /*------ Wow Active ----*/
     new WOW().init();
-    
+
     /* counterUp */
     $('.count').counterUp({
         delay: 10,
         time: 1000
     });
-    
+
     /*----------------------------
     	Cart Plus Minus Button
     ------------------------------ */
@@ -304,7 +304,7 @@
         }
         $button.parent().find("input").val(newVal);
     });
-    
+
     /*-------------------------------------
         Thumbnail Product activation
     --------------------------------------*/
@@ -332,8 +332,8 @@
     $('.thumb-menu a').on('click', function () {
         $('.thumb-menu a').removeClass('active');
     })
-    
-    
+
+
     /*---------------------
     shop grid list
     --------------------- */
@@ -343,7 +343,7 @@
         $(this).parent('li').addClass('active');
         $('.product-view').removeClass('product-grid product-list').addClass($proStyle);
     })
-    
+
     /* blog gallery slider */
     $('.blog-gallery-slider').owlCarousel({
         loop: true,
@@ -366,7 +366,7 @@
             }
         }
     })
-    
+
     /* isotop active */
     // filter items on button click
     $('.blog-area').imagesLoaded(function() {
@@ -386,7 +386,7 @@
             }
         });
     });
-    
+
     /*--------------------------
         Product Zoom
 	---------------------------- */
@@ -399,7 +399,7 @@
         zoomType: "inner",
         cursor: "crosshair"
     });
-    
+
     $('.testimonial-2-active').owlCarousel({
         loop: true,
         margin:20,

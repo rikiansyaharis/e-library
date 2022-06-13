@@ -1425,7 +1425,8 @@ textarea:focus {
   background-size: cover;
 }
 .bg-image-3{
-  background-image: url("../img/bg/breadcrumb.jpg");
+
+  background-image: url("../img/bg-jumbotron.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2189,6 +2190,7 @@ textarea:focus {
 .product-wrapper:hover .product-action a {
     transform: scaleY(1);
 }
+
 .product-content .product-title > h4 {
   color: #6d6d6d;
   font-size: 18px;
@@ -5488,6 +5490,7 @@ section.wn_contact_area {
   padding-bottom: 60px;
 }
 }
+
 
 
 

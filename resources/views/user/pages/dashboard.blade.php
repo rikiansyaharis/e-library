@@ -16,6 +16,7 @@
     </div>
 </div>
 <!-- Breadcrumb Area End -->
+
 <!-- blog-area start -->
 <div class="blog-page-area ptb-100">
     <div class="container">
@@ -25,25 +26,22 @@
                     <div class="single-blog-wrapper mb-40">
                         <div class="blog-img mb-30">
                             <div class="blog-gallery-slider owl-carousel mb-30">
-                                <a href="#"><img alt="" src="{{ asset('images/book_colection/Cooking.jpg') }}"></a>
-                                <a href="#"><img alt="" src="{{ asset('images/book_colection/Hyderabad.jpg') }}"></a>
-                                <a href="#"><img alt="" src="{{ asset('images/book_colection/Cooking.jpg') }}"></a>
+                                <a href="#"><img alt="" src="{{ asset('assets/img/slider1.jpg') }}"></a>
+                                <a href="#"><img alt="" src="{{ asset('assets/img/slider2.jpg') }}"></a>
+                                <a href="#"><img alt="" src="{{ asset('assets/img/slider3.jpg') }}"></a>
                             </div>
                         </div>
                         <div class="blog-content">
-                            <h2><a href="blog-details-standerd.html">Instant Green Tea Premix</a></h2>
+                            <h2><a href="blog-details-standerd.html">Various types of books are available here</a></h2>
                             <div class="blog-date-categori">
                                 <ul>
-                                    <li>October 14, 2018 </li>
-                                    <li><a href="#">Admin </a></li>
+                                    <li> 11 Juni 2022 </li>
+                                    <li><a href="/dashboard">Home </a></li>
                                 </ul>
                             </div>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
                         <div class="blog-btn-social mt-30">
-                            <div class="blog-btn">
-                                <a href="blog-details-standerd.html">read more</a>
-                            </div>
                             <div class="blog-social">
                                 <span>share :</span>
                                 <ul>
@@ -51,194 +49,245 @@
                                     <li><a href="#"><i class="ion-social-skype"></i></a></li>
                                     <li><a href="#"><i class="ion-social-twitter"></i></a></li>
                                     <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-github"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="single-blog-wrapper mb-40">
-                        <div class="sound-cloud embed-responsive embed-responsive-16by9 mb-30">
-                            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276580716&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-                        </div>
-                        <div class="blog-content">
-                            <h2><a href="blog-details-audio.html">Que Herbal Matcha Tea</a></h2>
-                            <div class="blog-date-categori">
-                                <ul>
-                                    <li>October 14, 2018 </li>
-                                    <li><a href="#">Admin </a></li>
-                                </ul>
+
+                    <!-- Content -->
+                    <div class="product-area bg-image-1 pt-90 pb-95">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h3 style="font-family: poppins"> Rekomendasi Untukmu </h3>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="">
+                                        <h5 class="mt-3">Lihat Semua </h5>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                        <div class="blog-btn-social mt-30">
-                            <div class="blog-btn">
-                                <a href="blog-details-audio.html">read more</a>
-                            </div>
-                            <div class="blog-social">
-                                <span>share :</span>
-                                <ul>
-                                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
-                                    <li><a href="#"><i class="ion-social-skype"></i></a></li>
-                                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-blog-wrapper mb-50">
-                        <div class="quote-post">
-                            <div class="quote-content">
-                                <span>October 14, 2018 </span>
-                                <h3><a href="blog-details-quote.html">Lorem ipsum dolor sit amet co adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a></h3>
-                                <h6>Tasnim</h6>
-                            </div>
-                            <div class="post-img">
-                                <img alt="" src="assets/img/blog/quote-post.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-blog-wrapper mb-40">
-                        <div class="blog-gallery-slider owl-carousel mb-30">
-                            <a href="blog-details-gallery.html"><img alt="" src="{{ asset('images/book_colection/Cooking.jpg') }}"></a>
-                            <a href="blog-details-gallery.html"><img alt="" src="assets/img/blog/blog-1.jpg"></a>
-                            <a href="blog-details-gallery.html"><img alt="" src="{{ asset('images/book_colection/Cooking.jpg') }}"></a>
-                        </div>
-                        <div class="blog-content">
-                            <h2><a href="blog-details-gallery.html">Green Tea Tulsi Time</a></h2>
-                            <div class="blog-date-categori">
-                                <ul>
-                                    <li>October 14, 2018 </li>
-                                    <li><a href="#">Admin </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                        <div class="blog-btn-social mt-30">
-                            <div class="blog-btn">
-                                <a href="blog-details-gallery.html">read more</a>
-                            </div>
-                            <div class="blog-social">
-                                <span>share :</span>
-                                <ul>
-                                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
-                                    <li><a href="#"><i class="ion-social-skype"></i></a></li>
-                                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                </ul>
+
+
+                            <div class="featured-product-active hot-flower owl-carousel product-nav">
+                                @foreach ($buku as $listbook)
+                                <div class="product-wrapper">
+                                    <div class="product-img">
+                                        <a href="product-details.html">
+                                            <img alt="" src="{{asset('images/book_colection/' . $listbook->foto_buku)}}"  >
+                                        </a>
+                                        <div class="product-action">
+                                            <a class="action-wishlist" href="#" title="Add To Favorite">
+                                                <i class="ion-android-favorite-outline"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content text-left">
+                                        <div class="product-hover-style">
+                                            <div class="product-title">
+                                                <h4>
+                                                    <a href="product-details.html">{{ $listbook->nama_buku }}</a>
+                                                </h4>
+                                            </div>
+                                            <div class="cart-hover">
+                                                <h4><a href="/detail">Lihat Detail</a></h4>
+                                            </div>
+                                        </div>
+                                        <div class="product-price-wrapper">
+                                            <span>{{ $listbook->penulis_buku }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
-                    <div class="single-blog-wrapper">
-                        <div class="link-post">
-                            <div class="link-content">
-                                <span>October 14, 2018 </span>
-                                <h3><a href="blog-details-link.html">Lorem ipsum dolor sit amet co adipisicing elit,</a></h3>
+
+                    <!-- ============================================ -->
+                    <div class="product-area bg-image-1 pt-10 pb-95">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h3 style="font-family: poppins"> Populer </h3>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="">
+                                        <h5 class="mt-3 ">Lihat Semua </h5>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="post-img">
-                                <img alt="" src="assets/img/blog/link-post.png">
+                            <div class="featured-product-active hot-flower owl-carousel product-nav">
+                                <div class="product-wrapper">
+                                    <div class="product-img">
+                                        <a href="">
+                                            <img alt="" src="{{asset('images/book_colection/KKN.jpg')}}">
+                                        </a>
+                                        <div class="product-action">
+                                            <a class="action-wishlist" href="#" title="Add To Favorite">
+                                                <i class="ion-android-favorite-outline"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content text-left">
+                                        <div class="product-hover-style">
+                                            <div class="product-title">
+                                                <h4>
+                                                    <a href="/detail">KKN Di Desa Penari</a>
+                                                </h4>
+                                            </div>
+                                            <div class="cart-hover">
+                                                <h4><a href="/detail">Lihat Detail</a></h4>
+                                            </div>
+                                        </div>
+                                        <div class="product-price-wrapper">
+                                            <span>Simpleman</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="pagination-total-pages mt-50">
-                        <div class="pagination-style">
-                            <ul>
-                                <li><a class="prev-next prev" href="#"><i class="ion-ios-arrow-left"></i> Prev</a></li>
-                                <li><a class="active" href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">...</a></li>
-                                <li><a href="#">10</a></li>
-                                <li><a class="prev-next next" href="#">Next<i class="ion-ios-arrow-right"></i> </a></li>
-                            </ul>
-                        </div>
-                        <div class="total-pages">
-                            <p>Showing 1 - 20 of 30 results  </p>
+
+                    <!-- ============================================ -->
+                    <div class="product-area bg-image-1 pt-10 pb-95">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h3 style="font-family: poppins"> Pilihan </h3>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="">
+                                        <h5 class="mt-3">Lihat Semua </h5>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="featured-product-active hot-flower owl-carousel product-nav">
+                                <div class="product-wrapper">
+                                    <div class="product-img">
+                                        <a href="product-details.html">
+                                            <img alt="" src="{{asset('images/book_colection/dongeng-anak-nusantara-pilihan.jpg')}}">
+                                        </a>
+                                        <div class="product-action">
+                                            <a class="action-wishlist" href="#" title="Add To Favorite">
+                                                <i class="ion-android-favorite-outline"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content text-left">
+                                        <div class="product-hover-style">
+                                            <div class="product-title">
+                                                <h4>
+                                                    <a href="product-details.html">Dongeng Anak Nusantara</a>
+                                                </h4>
+                                            </div>
+                                            <div class="cart-hover">
+                                                <h4><a href="product-details.html">Lihat Detail</a></h4>
+                                            </div>
+                                        </div>
+                                        <div class="product-price-wrapper">
+                                            <span>Gramedia</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- End Content -->
                 </div>
             </div>
+
+            <!-- Right SideBar -->
             <div class="col-lg-4 col-xl-3 col-md-4">
                 <div class="blog-sidebar-wrapper sidebar-mrg">
                     <div class="blog-widget mb-50">
                         <div class="blog-search">
-                            <form class="news-form">
-                                <input type="text" placeholder="Search.....">
+                            <form class="news-form" action="/search" method="GET">
+                                <input type="search" name="search" placeholder="Search.....">
                                 <button type="submit">
                                     <i class="ion-ios-search-strong"></i>
                                 </button>
                             </form>
                         </div>
                     </div>
-                    <div class="blog-widget mb-40">
-                        <div class="blog-author">
-                            <a href="#"><img src="assets/img/blog/blog-author.png" alt=""></a>
-                            <h4><a href="#">Kathy Gibson</a></h4>
-                            <span>Head of Director, SEO</span>
-                        </div>
-                    </div>
+
+
+                    <!-- New Post -->
                     <div class="blog-widget mb-45">
                         <h4 class="blog-widget-title mb-25">Recent post</h4>
                         <div class="blog-recent-post">
                             <div class="recent-post-wrapper mb-25">
                                 <div class="recent-post-img">
-                                    <a href="#"><img src="assets/img/blog/blog-recentpost-1.jpg" alt=""></a>
+                                    <a href="#"><img src="{{asset('images/book_colection/senja-dan-pagi.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="recent-post-content">
-                                    <h4><a href="#">New Products</a></h4>
-                                    <span>October 14, 2018</span>
+                                    <h4><a href="#">Senja Dan Pagi</a></h4>
+                                    <span>Gramedia</span>
                                 </div>
                             </div>
                             <div class="recent-post-wrapper mb-25">
                                 <div class="recent-post-img">
-                                    <a href="#"><img src="assets/img/blog/blog-recentpost-2.jpg" alt=""></a>
+                                    <a href="#"><img src="{{asset('images/book_colection/senja-dan-pagi.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="recent-post-content">
-                                    <h4><a href="#">New Products</a></h4>
-                                    <span>October 14, 2018</span>
+                                    <h4><a href="#">Senja Dan Pagi</a></h4>
+                                    <span>Gramedia</span>
                                 </div>
                             </div>
                             <div class="recent-post-wrapper mb-25">
                                 <div class="recent-post-img">
-                                    <a href="#"><img src="assets/img/blog/blog-recentpost-3.jpg" alt=""></a>
+                                    <a href="#"><img src="{{asset('images/book_colection/senja-dan-pagi.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="recent-post-content">
-                                    <h4><a href="#">New Products</a></h4>
-                                    <span>October 14, 2018</span>
+                                    <h4><a href="#">Senja Dan Pagi</a></h4>
+                                    <span>Gramedia</span>
                                 </div>
                             </div>
                             <div class="recent-post-wrapper mb-25">
                                 <div class="recent-post-img">
-                                    <a href="#"><img src="assets/img/blog/blog-recentpost-4.jpg" alt=""></a>
+                                    <a href="#"><img src="{{asset('images/book_colection/senja-dan-pagi.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="recent-post-content">
-                                    <h4><a href="#">New Products</a></h4>
-                                    <span>October 14, 2018</span>
+                                    <h4><a href="#">Senja Dan Pagi</a></h4>
+                                    <span>Gramedia</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- End New Post -->
                     <div class="blog-widget mb-40">
                         <h4 class="blog-widget-title mb-25">categories</h4>
                         <div class="blog-categori">
                             <ul>
-                                <li><a href="#">Morning Tea (05)</a></li>
-                                <li><a href="#">Tea Trends (08)</a></li>
-                                <li><a href="#">Most Tea Map (02)</a></li>
-                                <li><a href="#">Herbal Tea (07)</a></li>
-                                <li><a href="#">Rooibos Tea (06)</a></li>
-                                <li><a href="#">Organic Tea (01)</a></li>
+                                <li><a href="#">All</a></li>
+                                <li><a href="#">Comedy</a></li>
+                                <li><a href="#">Fantasy</a></li>
+                                <li><a href="#">Fiksi</a></li>
+                                <li><a href="#">Mystery</a></li>
+                                <li><a href="#">Sci-Fi </a></li>
+                                <li><a href="#">Romance</a></li>
+                                <li><a href="#">Thriller</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="blog-widget mb-35">
-                        <h4 class="blog-widget-title mb-30">instagram</h4>
+                        <h4 class="blog-widget-title mb-30">Product</h4>
                         <div class="blog-instagram">
                             <ul>
-                                <li><a href="#"><img src="assets/img/instagram/instagram1.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="assets/img/instagram/instagram2.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="assets/img/instagram/instagram3.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="assets/img/instagram/instagram4.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="assets/img/instagram/instagram5.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="assets/img/instagram/instagram6.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="{{ asset('images/book_colection/Cooking.jpg')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{ asset('images/book_colection/Hyderabad.jpg')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{ asset('images/book_colection/kisah-tanah-jawa.jpg')}}" alt=""></a></li>
+
+                                <li><a href="#"><img src="{{ asset('images/book_colection/Komet_Minor.jpg')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{ asset('images/book_colection/mindset.jpg')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{ asset('images/book_colection/orang-orang-biasa.jpg')}}" alt=""></a></li>
+
+                                <li><a href="#"><img src="{{ asset('images/book_colection/senja-dan-pagi.jpg')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{ asset('images/book_colection/the-power-of-habit.jpg')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{ asset('images/book_colection/tia.jpg')}}" alt=""></a></li>
                             </ul>
                         </div>
                     </div>
@@ -250,6 +299,7 @@
                                 <li><a href="#"><i class="ion-social-skype"></i></a></li>
                                 <li><a href="#"><i class="ion-social-twitter"></i></a></li>
                                 <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-github"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -257,14 +307,12 @@
                         <h4 class="blog-widget-title mb-25">tags</h4>
                         <div class="blog-tags">
                             <ul>
-                                <li><a href="#">Green</a></li>
-                                <li><a href="#">Oolong </a></li>
-                                <li><a href="#">Black </a></li>
-                                <li><a href="#">Puerh </a></li>
-                                <li><a href="#">love  </a></li>
-                                <li><a href="#">special </a></li>
-                                <li><a href="#">success </a></li>
-                                <li><a href="#">Dark </a></li>
+                                <li><a href="#">E-Book </a></li>
+                                <li><a href="#">E-Library </a></li>
+                                <li><a href="#">Github </a></li>
+                                <li><a href="#">Laravel  </a></li>
+                                <li><a href="#">Javascript </a></li>
+                                <li><a href="#">Vue Js </a></li>
                             </ul>
                         </div>
                     </div>
@@ -275,27 +323,34 @@
 </div>
 <!-- blog-area end -->
 
-
-        {{--  <div class="col-lg-12">
-            <h5 class="py-2">Top Trending</h5>
-            <div class="card-deck">
-                <div class="card card_responsive">
-                    <img src="{{asset('images/book_colection/tia.jpg')}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Tia</p>
-                        <a href="/detail">
-                        <p class="card-text">
-                            <button class="btn btn-sm btn-outline-success">
-                                Lihat detail....
-                            </button>
-                            <button class="btn btn-sm">
-                                <i class="fa fa-heart" style="color: red; font-size:15px; margin-left: 2px; " aria-hidden="true"></i>
-                            </button>
-                        </p>
+<!-- About Us Area Start -->
+<section id="about">
+    <div class="about-us-area pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 d-flex align-items-center">
+                    <div class="overview-content-2">
+                        <h4>Hi, everyone</h4>
+                        <h2>E-Book!</h2>
+                        <p class="peragraph-blog">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, praesentium quam quas expedita sequi aliquid deleniti blanditiis error numquam facilis ut, vitae officia tenetur et? Sit neque, quasi reprehenderit consequatur aliquid aliquam accusamus veniam aspernatur? Nobis nihil quasi voluptatibus quidem eveniet, ex magnam corrupti repellendus quas accusamus.</p>
+                        <p> Modi, aliquam! Unde ad libero qui assumenda commodi consequuntur mollitia temporibus officiis placeat earum provident quos nobis, aliquam omnis doloremque, ducimus repellendus dolores eveniet pariatur aut recusandae, impedit vero culpa sunt. Sapiente assumenda itaque dicta placeat reprehenderit adipisci, voluptate amet rerum, quas sit laborum magnam vero pariatur voluptatum a deserunt eveniet, possimus repellendus?</p>
+                        <div class="overview-btn mt-40">
+                            <img src="assets/img/icon-img/signature.png" alt="Candidate Signature">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="overview-img text-center">
+                        <a href="#">
+                            <img src="{{asset('images/pexels-photo-3847621.webp')}}" alt="">
                         </a>
                     </div>
                 </div>
             </div>
-        </div>  --}}
+        </div>
+    </div>
+</section>
+<!-- About Us Area End -->
+
 
 @endsection

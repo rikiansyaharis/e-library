@@ -15,7 +15,7 @@
                         <form method="POST" action="{{$action}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-sm border-ra" name="id"  id="id" {{ isset($buku) ? $buku->id : '' }} hidden readonly>
+                                <input type="text" class="form-control form-control-sm border-ra" name="id"  id="id" required value="{{ isset($buku) ? $buku->id : '' }}" hidden readonly>
                             </div>
                             <div class="form-group">
                                 <label for="image">Image</label>
@@ -27,10 +27,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="Nama">Genre</label>
-                                <select class="form-control form-control-sm" name="id_genre"  id="id_genre">
+                                <select class="form-control form-control-sm" name="id_genre"  id="id_genre" required>
                                     <option>Pilih Genre</option>
                                     @foreach ($genre as $item)
-                                    <option value="{{$item->id}}" {{isset($buku) && $buku->id_brand == $item->id ? 'selected' : ''}}>
+                                    <option value="{{$item->id}}" {{isset($buku) && $buku->id_genre == $item->id ? 'selected' : ''}}>
                                         {{$item->nama_genre}}
                                     </option>
 
@@ -47,7 +47,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="Jabatan">Deskripsi</label>
-                                <textarea class="form-control" name="deskripsi" id="deskripsi" value="{{ isset($buku) ? $buku->deskripsi : '' }}"></textarea>
+                                <textarea class="form-control" name="deskripsi" id="deskripsi" value="">{{ isset($buku) ? $buku->deskripsi : '' }}</textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-sm">Submit</button>
