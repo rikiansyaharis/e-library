@@ -17,7 +17,16 @@ class IsiUser extends Seeder
     public function run()
     {
         User::insert([
-            [
+        [
+            'name' => 'admin',
+            'role_id' => 1,
+            'email' => 'rikiansyah.aris28@gmail.com',
+            'password' => Hash::make('admin'),
+            'created_at' => now(),
+            'updated_at' => now()
+
+        ],
+        [
             'name' => 'rikiansyah',
             'role_id' => 1,
             'email' => 'rikiansyah.aris29@gmail.com',

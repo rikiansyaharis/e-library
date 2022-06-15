@@ -13,20 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('anggotas', function (Blueprint $table) {
+        Schema::create('pinjams', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_anggota');
-            $table->string('jenis_kelamin');
-            $table->string('alamat');
-            $table->string('email');
-            $table->string('nomor');
+            $table->foreignId('id_peminjaman');
+            $table->foreignId('id_buku');
             $table->timestamps();
+
+            $table->foreign('id_buku')->references('id')->on('detail_bukus');
+            $table->foreign('id_peminjaman')->references('id')->on('peminjamen');
         });
     }
 
-    public function boot() {
-        Schema::defaultStringLength(200);
-    }
     /**
      * Reverse the migrations.
      *
@@ -34,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anggotas');
+        Schema::dropIfExists('pinjams');
     }
 };

@@ -17,8 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call([
             IsiRole::class,
             IsiUser::class,
-            IsiPengguna::class,
-            IsiAnggota::class,
             IsiGenre::class,
             IsiDetail::class,
             IsiFavorit::class,

@@ -55,7 +55,7 @@
                                             </a>
                                             <a href="/detailbuku/{{$listBuku->id}}">
                                                 <button class="btn btn-sm btn-outline-primary">
-                                                    <i class="fa fa-spinner" aria-hidden="true"></i>
+                                                    <i class="fa fa-eye" aria-hidden="true"></i>
                                                 </button>
                                             </a>
                                         </td>

@@ -1,7 +1,8 @@
 <?php
 
 use App\Models\DetailBuku;
+use App\Models\Genre;
 
-function getDetailBuku() {
-    return DetailBuku::all();
+function getGenre() {
+    return Genre::all();
 }

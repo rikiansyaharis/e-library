@@ -48,7 +48,7 @@ class PageController extends Controller {
                     $user = $user->with('role')->first();
 
                     if($user->role->name == 'admin') {
-                        return redirect()->route('admin');
+                        return redirect()->route('home');
                     } else {
                         return redirect()->route('dashboard');
                     }
@@ -66,8 +66,8 @@ class PageController extends Controller {
     public function register(Request $request){
 
         try {
-            $request->merge(['name' => $request->name, 'password' => Hash::make($request->password), 'id_role' => 2]);
-            User::create($request->only(['name', 'id_role', 'email', 'password']));
+            $request->merge(['name' => $request->name, 'password' => Hash::make($request->password), 'role_id' => 2]);
+            User::create($request->only(['name', 'role_id', 'email', 'password']));
 
             return redirect()->route('index');
         } catch(Exception $e) {
@@ -78,9 +78,11 @@ class PageController extends Controller {
         }
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
         Auth::logout();
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
         return redirect()->route('index');
     }
 }

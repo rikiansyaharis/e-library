@@ -1,47 +1,71 @@
 @extends('user.layouts.top-bar')
 
-@section('content-user')
+@section('content')
 
-<div class="container">
-    <div class="col-md-12 col-sm-12 mt-5">
-        <div class="x_panel">
-            <div class="x_title">
-                    <h3 class="text-center">History</h3>
-            </div>
-            <div class="x_content">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card-box table-responsive">
-                            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+<!-- shopping-cart-area start -->
+        <div class="cart-main-area ptb-50">
+            <div class="container">
+                <h3 class="page-title text-center">History</h3>
+                <div class="row center">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <form action="#">
+                            <div class="table-content table-responsive">
+                                <table align="center">
                                     <thead>
                                         <tr>
-                                            <th>Time</th>
-                                            <th>Nama</th>
-                                            <th>Judul</th>
-                                            <th> </th>
+                                            <th>No.</th>
+                                            <th>Nama Buku</th>
+                                            <th>Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($userHistory as $historyU)
-
                                         <tr>
-                                            <td>{{$historyU['time']}}</td>
-                                            <td>{{$historyU['namaAnggota']}}</td>
-                                            <td>{{$historyU['judul']}}</td>
-                                            <td >
-                                            <a href="/hapusHistory" onclick="return confirm('Hapus?');">Hapus</a> |
-                                        </td>
-                                    </tr>
-
-                                    @endforeach
-                                    </tbody>                  
+                                            <td>1</td>
+                                            <td class="product-name"><a href="#">KKN Di Desa Penari </a></td>
+                                            <td class="product-remove">
+                                                <a href="#"><i class="fa fa-times"></i></a>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="product-name"><a href="#">KKN Di Desa Penari </a></td>
+                                            <td class="product-remove">
+                                                <a href="#"><i class="fa fa-times"></i></a>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="product-name"><a href="#">KKN Di Desa Penari </a></td>
+                                            <td class="product-remove">
+                                                <a href="#"><i class="fa fa-times"></i></a>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="product-name"><a href="#">KKN Di Desa Penari </a></td>
+                                            <td class="product-remove">
+                                                <a href="#"><i class="fa fa-times"></i></a>
+                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="product-name"><a href="#">KKN Di Desa Penari </a></td>
+                                            <td class="product-remove">
+                                                <a href="#"><i class="fa fa-times"></i></a>
+                                           </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
+                        </form>
+                        <div class="pt-10 text-center">
+                            <a href="/dashboard">
+                                <button class="btn btn-sm btn-primary">Kembali</button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
-</div>
+        </div>
 
 @endsection

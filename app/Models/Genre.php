@@ -13,4 +13,7 @@ class Genre extends Model
     {
         return $this->hasMany(DetailBuku::class);
     }
+
+    protected $guarded = [];
 }
+

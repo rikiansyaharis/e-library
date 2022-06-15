@@ -16,30 +16,25 @@
                             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
                                 <thead>
                                 <tr>
-                                    <th>Nama</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Alamat</th>
-                                    <th>Email</th>
-                                    <th>No.Hp</th>
+                                    <th>No</th>
+                                    <th>Role</th>
+                                    <th>Username</th>
+                                    <th>email</th>
+                                    <th>Password</th>
                                     <th>Opsi</th>
                                 </tr>
                                 </thead>
                                  <tbody>
-                                     @foreach ($dataUser as $user)
+                                     @foreach ($dataUser as $users)
 
                                      <tr>
-                                         <td>{{$user->nama_anggota}}</td>
-                                         <td>{{$user->jenis_kelamin}}</td>
-                                         <td>{{$user->alamat}}</td>
-                                         <td>{{$user->email}}</td>
-                                         <td>{{$user->nomor}}</td>
+                                         <td>{{ $loop->iteration }}</td>
+                                         <td>{{$users->role->name}}</td>
+                                         <td>{{$users->name}}</td>
+                                         <td>{{$users->email}}</td>
+                                         <td>{{$users->password}}</td>
                                          <td >
-                                            <a href="/updateuser/{{$user->id}}">
-                                                <button class="btn btn-sm btn-outline-primary">
-                                                    <i class="fa fa-edit" aria-hidden="true"></i>
-                                                </button>
-                                            </a>
-                                            <a href="/deleteuser/{{$user->id}}" onclick="return confirm('Hapus?');">
+                                            <a href="/deleteuser/{{$users->id}}" onclick="return confirm('Hapus?');">
                                                 <button class="btn btn-sm btn-outline-primary">
                                                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                 </button>
@@ -50,11 +45,6 @@
                                     @endforeach
                                     </tbody>
                             </table>
-                            <hr>
-                            <a href="/formUser">
-                            <button class="btn btn-outline-success ml-3 col-sm-2">Tambah
-                                <i class="fa fa-plus"></i>
-                            </button>
                             </a>
                         </div>
                     </div>

@@ -3,8 +3,10 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\GenreController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -20,28 +22,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
 //home
 Route::get('/', [PageController::class,'index'])->name('index');
 Route::get('/signup', [PageController::class,'signup'])->name('signup');
 Route::get('/home', [PageController::class,'home'])->name('home');
 Route::post('/signin', [PageController::class, 'login'])->name('signin');
 Route::post('/register', [PageController::class, 'register'])->name('register');
-Route::get('logout', [PageController::class, 'logout'])->name('logout');
+Route::post('/logout', [PageController::class, 'logout'])->name('logout');
 
-//admin
-Route::get('/dataadmin', [AdminController::class,'admin'])->name('admin');
-Route::get('/formAdmin', [AdminController::class,'formAdmin'])->name('form');
-Route::post('/insertadmin',[AdminController::class,'insertAdmin'])->name('insertAdmin');
-Route::get('/updateadmin/{id}',[AdminController::class,'update'])->name('update');
-Route::post('/updateadmin/{id}',[AdminController::class,'updateAdmin'])->name('updateAdmin');
-Route::get('/deleteadmin/{id}',[AdminController::class,'deleteAdmin'])->name('delete');
+//genre
+Route::get('/datagenre', [GenreController::class,'index'])->name('genre');
+Route::get('/formgenre', [GenreController::class,'formgenre'])->name('form');
+Route::post('/insertgenre',[GenreController::class,'insertgenre'])->name('insertgenre');
+Route::get('/updategenre/{id}',[GenreController::class,'update'])->name('update');
+Route::post('/updategenre/{id}',[GenreController::class,'updateuser'])->name('updategenre');
+Route::get('/deletegenre/{id}',[GenreController::class,'delete'])->name('delete');
 
-//user/anggota
+// user/anggota
 Route::get('/datauser', [UsersController::class,'user'])->name('user');
-Route::get('/formUser', [UsersController::class,'formUser'])->name('form');
-Route::post('/insertuser',[UsersController::class,'insertUser'])->name('insertUser');
-Route::get('/updateuser/{id}',[UsersController::class,'update'])->name('formupdate');
-Route::post('/updateuser/{id}',[UsersController::class,'updateUser'])->name('updateUser');
 Route::get('/deleteuser/{id}',[UsersController::class,'deleteUser'])->name('delete');
 
 //buku
@@ -54,40 +55,38 @@ Route::post('/updatebuku/{id}',[BookController::class,'updateBook'])->name('upda
 Route::get('/deletebuku/{id}',[BookController::class,'delete'])->name('delete');
 
 
-// Route::get('/detailbukuadmin/{id}', [BookController::class,'detailBuku'])->name('detail');
+//view all
+Route::get('/all-book',[ProductController::class,'viewall'])->name('viewall');
+Route::get('genre/{nama_genre}',[ProductController::class, 'genre'])->name('genre');
 
+// Transaction
 Route::get('/transaksi', function () {
     return view('admin.pages.transaksi', [
         "title" => "Transaksi"
     ]);
 });
+
 Route::get('/pengembalian', function () {
     return view('admin.pages.pengembalian', [
         "title" => "Pengembalian"
     ]);
 });
 
-
 // Home User
 Route::get('/dashboard', [ProductController::class,'index'])->name('dashboard');
 Route::get('/detail', [ProductController::class,'detail'])->name('detail');
-// Route::get('/search', [ProductController::class,'index'])->name('search');
+Route::get('/search', [ProductController::class,'index'])->name('search');
 
 
-Route::get('/favorit', function () {
-    return view('user.pages.Favorit', [
-        "title" => "Favorit"
-    ]);
-});
+
+// Favorite
+Route::get('/favorite', [FavoriteController::class, 'index'])->name('favorite');
 
 // Historry
-Route::get('/history', [HistoryController::class, 'history'])->name('history');
-Route::get('/history', [HistoryController::class, 'historyUser'])->name('historyUser');
+Route::get('/history', [HistoryController::class, 'index'])->name('history');
 
-// Route::get('/detail', function () {
-//     return view('user.pages.detail', [
-//         "title" => "Detail"
-//     ]);
-// });
+// Online Book
+Route::get('/onlinebook', [ProductController::class, 'onlinebook'])->name('Online-Book');
+
 
 

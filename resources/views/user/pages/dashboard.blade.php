@@ -63,7 +63,7 @@
                                     <h3 style="font-family: poppins"> Rekomendasi Untukmu </h3>
                                 </div>
                                 <div class="col-md-2">
-                                    <a href="">
+                                    <a href="/all-book">
                                         <h5 class="mt-3">Lihat Semua </h5>
                                     </a>
                                 </div>
@@ -121,52 +121,6 @@
                                 <div class="product-wrapper">
                                     <div class="product-img">
                                         <a href="">
-                                            <img alt="" src="{{asset('images/book_colection/KKN.jpg')}}">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-wishlist" href="#" title="Add To Favorite">
-                                                <i class="ion-android-favorite-outline"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content text-left">
-                                        <div class="product-hover-style">
-                                            <div class="product-title">
-                                                <h4>
-                                                    <a href="/detail">KKN Di Desa Penari</a>
-                                                </h4>
-                                            </div>
-                                            <div class="cart-hover">
-                                                <h4><a href="/detail">Lihat Detail</a></h4>
-                                            </div>
-                                        </div>
-                                        <div class="product-price-wrapper">
-                                            <span>Simpleman</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ============================================ -->
-                    <div class="product-area bg-image-1 pt-10 pb-95">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-10">
-                                    <h3 style="font-family: poppins"> Pilihan </h3>
-                                </div>
-                                <div class="col-md-2">
-                                    <a href="">
-                                        <h5 class="mt-3">Lihat Semua </h5>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="featured-product-active hot-flower owl-carousel product-nav">
-                                <div class="product-wrapper">
-                                    <div class="product-img">
-                                        <a href="product-details.html">
                                             <img alt="" src="{{asset('images/book_colection/dongeng-anak-nusantara-pilihan.jpg')}}">
                                         </a>
                                         <div class="product-action">
@@ -179,11 +133,57 @@
                                         <div class="product-hover-style">
                                             <div class="product-title">
                                                 <h4>
-                                                    <a href="product-details.html">Dongeng Anak Nusantara</a>
+                                                    <a href="/detail">Dongeng Anak Nusantara</a>
                                                 </h4>
                                             </div>
                                             <div class="cart-hover">
-                                                <h4><a href="product-details.html">Lihat Detail</a></h4>
+                                                <h4><a href="/detail">Lihat Detail</a></h4>
+                                            </div>
+                                        </div>
+                                        <div class="product-price-wrapper">
+                                            <span>Gramedia</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <div class="product-area bg-image-1 pt-10 pb-95">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h3 style="font-family: poppins"> Baca Online </h3>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="">
+                                        <h5 class="mt-3">Lihat Semua </h5>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="featured-product-active hot-flower owl-carousel product-nav">
+                                <div class="product-wrapper">
+                                    <div class="product-img">
+                                        <a href="product-details.html">
+                                            <img alt="" src="{{asset('images/book_colection/KKN.jpg')}}">
+                                        </a>
+                                        <div class="product-action">
+                                            <a class="action-wishlist" href="#" title="Add To Favorite">
+                                                <i class="ion-android-favorite-outline"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content text-left">
+                                        <div class="product-hover-style">
+                                            <div class="product-title">
+                                                <h4>
+                                                    <a href="/onlinebook">KKN Di Desa Penari</a>
+                                                </h4>
+                                            </div>
+                                            <div class="cart-hover">
+                                                <h4><a href="/onlinebook">Lihat Detail</a></h4>
                                             </div>
                                         </div>
                                         <div class="product-price-wrapper">
@@ -218,44 +218,20 @@
                     <!-- New Post -->
                     <div class="blog-widget mb-45">
                         <h4 class="blog-widget-title mb-25">Recent post</h4>
+                        @foreach ($new_add as $add)
                         <div class="blog-recent-post">
                             <div class="recent-post-wrapper mb-25">
                                 <div class="recent-post-img">
-                                    <a href="#"><img src="{{asset('images/book_colection/senja-dan-pagi.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('images/book_colection/'. $add->foto_buku)}}" alt=""></a>
                                 </div>
                                 <div class="recent-post-content">
-                                    <h4><a href="#">Senja Dan Pagi</a></h4>
-                                    <span>Gramedia</span>
-                                </div>
-                            </div>
-                            <div class="recent-post-wrapper mb-25">
-                                <div class="recent-post-img">
-                                    <a href="#"><img src="{{asset('images/book_colection/senja-dan-pagi.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="recent-post-content">
-                                    <h4><a href="#">Senja Dan Pagi</a></h4>
-                                    <span>Gramedia</span>
-                                </div>
-                            </div>
-                            <div class="recent-post-wrapper mb-25">
-                                <div class="recent-post-img">
-                                    <a href="#"><img src="{{asset('images/book_colection/senja-dan-pagi.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="recent-post-content">
-                                    <h4><a href="#">Senja Dan Pagi</a></h4>
-                                    <span>Gramedia</span>
-                                </div>
-                            </div>
-                            <div class="recent-post-wrapper mb-25">
-                                <div class="recent-post-img">
-                                    <a href="#"><img src="{{asset('images/book_colection/senja-dan-pagi.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="recent-post-content">
-                                    <h4><a href="#">Senja Dan Pagi</a></h4>
-                                    <span>Gramedia</span>
+                                    <h4><a href="#">{{$add->nama_buku}}</a></h4>
+                                    <span>{{$add->penulis_buku}}</span>
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        @endforeach
                     </div>
                     <!-- End New Post -->
                     <div class="blog-widget mb-40">
@@ -263,32 +239,22 @@
                         <div class="blog-categori">
                             <ul>
                                 <li><a href="#">All</a></li>
-                                <li><a href="#">Comedy</a></li>
-                                <li><a href="#">Fantasy</a></li>
-                                <li><a href="#">Fiksi</a></li>
-                                <li><a href="#">Mystery</a></li>
-                                <li><a href="#">Sci-Fi </a></li>
-                                <li><a href="#">Romance</a></li>
-                                <li><a href="#">Thriller</a></li>
+                                @foreach (getGenre() as $genre)
+                                <li><a href="{{ route('genre', $genre->nama_genre)}}">{{$genre->nama_genre}}</a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
                     <div class="blog-widget mb-35">
                         <h4 class="blog-widget-title mb-30">Product</h4>
                         <div class="blog-instagram">
-                            <ul>
-                                <li><a href="#"><img src="{{ asset('images/book_colection/Cooking.jpg')}}" alt=""></a></li>
-                                <li><a href="#"><img src="{{ asset('images/book_colection/Hyderabad.jpg')}}" alt=""></a></li>
-                                <li><a href="#"><img src="{{ asset('images/book_colection/kisah-tanah-jawa.jpg')}}" alt=""></a></li>
-
-                                <li><a href="#"><img src="{{ asset('images/book_colection/Komet_Minor.jpg')}}" alt=""></a></li>
-                                <li><a href="#"><img src="{{ asset('images/book_colection/mindset.jpg')}}" alt=""></a></li>
-                                <li><a href="#"><img src="{{ asset('images/book_colection/orang-orang-biasa.jpg')}}" alt=""></a></li>
-
-                                <li><a href="#"><img src="{{ asset('images/book_colection/senja-dan-pagi.jpg')}}" alt=""></a></li>
-                                <li><a href="#"><img src="{{ asset('images/book_colection/the-power-of-habit.jpg')}}" alt=""></a></li>
-                                <li><a href="#"><img src="{{ asset('images/book_colection/tia.jpg')}}" alt=""></a></li>
-                            </ul>
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                                @foreach ($new_add as $img)
+                                <div class="col-md-4 p-2">
+                                    <img src="{{ asset('images/book_colection/' . $img->foto_buku)}}" alt="">
+                                </div>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                     <div class="blog-widget mb-35">
@@ -334,9 +300,6 @@
                         <h2>E-Book!</h2>
                         <p class="peragraph-blog">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, praesentium quam quas expedita sequi aliquid deleniti blanditiis error numquam facilis ut, vitae officia tenetur et? Sit neque, quasi reprehenderit consequatur aliquid aliquam accusamus veniam aspernatur? Nobis nihil quasi voluptatibus quidem eveniet, ex magnam corrupti repellendus quas accusamus.</p>
                         <p> Modi, aliquam! Unde ad libero qui assumenda commodi consequuntur mollitia temporibus officiis placeat earum provident quos nobis, aliquam omnis doloremque, ducimus repellendus dolores eveniet pariatur aut recusandae, impedit vero culpa sunt. Sapiente assumenda itaque dicta placeat reprehenderit adipisci, voluptate amet rerum, quas sit laborum magnam vero pariatur voluptatum a deserunt eveniet, possimus repellendus?</p>
-                        <div class="overview-btn mt-40">
-                            <img src="assets/img/icon-img/signature.png" alt="Candidate Signature">
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">

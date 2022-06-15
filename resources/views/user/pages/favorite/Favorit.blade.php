@@ -1,51 +1,53 @@
 @extends('user.layouts.top-bar')
 
-@section('content-user')
+@section('content')
 
-<div class="container">
-    <h2 class="text-center mt-5">Favorit</h2>
-    <div class="d-flex justify-content-center">
+<!-- shopping-cart-area start -->
+        <div class="cart-main-area ptb-50">
+            <div class="container">
+                <h3 class="page-title text-center">Favorite</h3>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <form action="#">
+                            <div class="table-content table-responsive">
+                                <table align="center">
+                                    <thead>
+                                        <tr>
 
-        <div class="card mb-3 mt-3" style="max-width: 540px;" >
-            <div class="row no-gutters">
-            <div class="col-md-4">
-                <img src="{{asset('images/book_colection/tia.jpg')}}" width="150px" height="220px"  alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            <th>No</th>
+                                            <th>Image</th>
+                                            <th>Nama Buku</th>
+                                            <th>Penulis Buku</th>
+                                            <th>Genre</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="product-thumbnail">
+                                                <a href="#"><img src="{{asset('images/book_colection/KKN.jpg')}}" width="60px" alt=""></a>
+                                            </td>
+                                            <td class="product-name"><a href="#">KKN Di Desa Penari</a></td>
+                                            <td class="product-price-cart"><span class="amount">Simpleman</span></td>
+                                            <td class="product-price-cart"><span class="amount">Horor</span></td>
+                                            <td class="product-remove">
+                                                <a href="#"><i class="fa fa-times"></i></a>
+                                           </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                        <div class="pt-10 text-center">
+                            <a href="/dashboard">
+                                <button class="btn btn-sm btn-primary">Kembali</button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
-            <hr>
-            <div class="row no-gutters">
-            <div class="col-md-4">
-                <img src="{{asset('images/book_colection/tia.jpg')}}" width="150px" height="220px"  alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-            </div>
-            <hr>
-            <div class="row no-gutters">
-            <div class="col-md-4">
-                <img src="{{asset('images/book_colection/tia.jpg')}}" width="150px" height="220px"  alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
             </div>
         </div>
-
-    </div>
-</div>
-
 
 @endsection

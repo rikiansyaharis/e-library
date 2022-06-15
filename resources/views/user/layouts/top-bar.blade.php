@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="{{asset('images/logo.png')}}" type="image">
 
-<title>E-Perpus | </title>
+<title>E-Perpus </title>
 
 <!-- all css here -->
 <link rel="stylesheet" href="{{asset('assets/css/jquery-ui.css')}}">
@@ -51,13 +51,10 @@
                                         <li class="top-hover"><a href="#">Category</a>
                                             <ul class="submenu">
                                                 <li><a href="#">All</a></li>
-                                                <li><a href="#">Comedy</a></li>
-                                                <li><a href="#">Fantasy</a></li>
-                                                <li><a href="#">Fiksi</a></li>
-                                                <li><a href="#">Mystery</a></li>
-                                                <li><a href="#">Sci-Fi </a></li>
-                                                <li><a href="#">Romance</a></li>
-                                                <li><a href="#">Thriller</a></li>
+                                                @foreach (getGenre() as $genre)
+
+                                                <li><a href="{{ route('genre', $genre->nama_genre)}}">{{$genre->nama_genre}}</a></li>
+                                                @endforeach
                                             </ul>
                                         </li>
                                         <li><a href="#about"> About </a></li>
@@ -69,73 +66,60 @@
                                 <div class="dollar-submenu">
                                     <ul>
                                         <li><a href="#">Home</a></li>
-                                        <li><a href="#">Favorite</a></li>
+                                        <li><a href="/favorite">Favorite</a></li>
                                         <li><a href="#">Setting</a></li>
-                                        <li><a href="#">History</a></li>
-                                        <li><a href="/">Log Out</a></li>
+                                        <li><a href="/history">History</a></li>
+                                        <form action="/logout" method="post">
+                                            @csrf
+                                            <li>
+                                                <button class="btn btn-light btn-outline-light text-dark" >
+                                                     Log Out
+                                                </button>
+                                            </li>
+                                        </form>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="header-cart">
-                                <a href="#">
-                                    <div class="cart-icon">
-                                        <i class="fa fa-heart-o"></i>
+                                <div class="header-cart">
+                                    <a href="#">
+                                        <div class="cart-icon">
+                                            <i class="ti-shopping-cart"></i>
+                                        </div>
+                                    </a>
+                                    <div class="shopping-cart-content">
+                                        <ul>
+                                            <li class="single-shopping-cart">
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="" width="60px" src="{{asset('images/book_colection/KKN.jpg')}}"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h4><a href="#">KKN </a></h4>
+                                                    <span>Simpleman</span>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="ion ion-close"></i></a>
+                                                </div>
+                                            </li>
+                                            <li class="single-shopping-cart">
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="" width="60px" src="{{asset('images/book_colection/KKN.jpg')}}"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h4><a href="#">KKN</a></h4>
+                                                    <span>Simpleman</span>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="ion ion-close"></i></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="shopping-cart-total">
+                                            <h4>Total : <span class="shop-total">2</span></h4>
+                                        </div>
+                                        <div class="shopping-cart-btn">
+                                            <a href="">checkout</a>
+                                        </div>
                                     </div>
-                                </a>
-                                <div class="shopping-cart-content">
-                                    <ul>
-                                        <li class="single-shopping-cart">
-                                            <div class="shopping-cart-img">
-                                                <a href="#"><img alt="" height="50px" src="{{asset('images/book_colection/KKN.jpg')}}"></a>
-                                            </div>
-                                            <div class="shopping-cart-title">
-                                                <h4><a href="#">KKN Di Desa Penari </a></h4>
-                                                <span>Simpleman</span>
-                                            </div>
-                                            <div class="shopping-cart-delete">
-                                                <a href="#"><i class="ion ion-close"></i></a>
-                                            </div>
-                                        </li>
-                                        <li class="single-shopping-cart">
-                                            <div class="shopping-cart-img">
-                                                <a href="#"><img alt="" height="50px" src="{{asset('images/book_colection/KKN.jpg')}}"></a>
-                                            </div>
-                                            <div class="shopping-cart-title">
-                                                <h4><a href="#">KKN Di Desa Penari</a></h4>
-
-                                                <span>Simpleman</span>
-                                            </div>
-                                            <div class="shopping-cart-delete">
-                                                <a href="#"><i class="ion ion-close"></i></a>
-                                            </div>
-                                        </li>
-                                        <li class="single-shopping-cart">
-                                            <div class="shopping-cart-img">
-                                                <a href="#"><img alt="" height="50px" src="{{asset('images/book_colection/KKN.jpg')}}"></a>
-                                            </div>
-                                            <div class="shopping-cart-title">
-                                                <h4><a href="#">KKN Di Desa Penari</a></h4>
-
-                                                <span>Simpleman</span>
-                                            </div>
-                                            <div class="shopping-cart-delete">
-                                                <a href="#"><i class="ion ion-close"></i></a>
-                                            </div>
-                                        </li>
-                                        <li class="single-shopping-cart">
-                                            <div class="shopping-cart-img">
-                                                <a href="#"><img alt="" height="50px" src="{{asset('images/book_colection/KKN.jpg')}}"></a>
-                                            </div>
-                                            <div class="shopping-cart-title">
-                                                <h4><a href="#">KKN Di Desa Penari</a></h4>
-
-                                                <span>Simpleman</span>
-                                            </div>
-                                            <div class="shopping-cart-delete">
-                                                <a href="#"><i class="ion ion-close"></i></a>
-                                            </div>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -151,13 +135,9 @@
                                 <li><a href="#">Category</a>
                                     <ul>
                                         <li><a href="#">All</a></li>
-                                        <li><a href="#">Comedy</a></li>
-                                        <li><a href="#">Fantasy</a></li>
-                                        <li><a href="#">Fiksi</a></li>
-                                        <li><a href="#">Mystery</a></li>
-                                        <li><a href="#">Sci-Fi </a></li>
-                                        <li><a href="#">Romance</a></li>
-                                        <li><a href="#">Thriller</a></li>
+                                        @foreach (getGenre() as $genre)
+                                        <li><a href="{{ route('genre', $genre->nama_genre)}}">{{$genre->nama_genre}}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li><a href="#about">About us </a></li>
@@ -175,9 +155,9 @@
             @yield('content')
 
 			<!-- Footer style Start -->
-			<footer class="footer-area pt-75 gray-bg-3">
-				<div class="footer-top gray-bg-3 pb-35">
-					<div class="container">
+			<footer class="footer-area pt-75 gray-bg-3" style="background-color: #BDF2D5;">
+				<div class="footer-top gray-bg-3 pb-35" style="background-color: #BDF2D5;">
+					<div class="container ">
 						<div class="row">
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="footer-widget mb-40">

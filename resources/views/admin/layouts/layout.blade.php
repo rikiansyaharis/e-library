@@ -9,7 +9,7 @@
     <link rel="icon" href="{{asset('images/logo.png')}}" type="image">
 
 
-    <title>E-Perpus | </title>
+    <title>E-Perpus </title>
 
     <!-- Bootstrap -->
     <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -94,7 +94,7 @@
                                 <span class="fa fa-chevron-down"></span>
                             </a>
                             <ul class="nav child_menu">
-                                <li><a href="/dataadmin">Data Admin</a></li>
+                                <li><a href="/datagenre">Data Genre</a></li>
                                 <li><a href="/datauser">Data User</a></li>
                                 <li><a href="/databuku">Data Buku</a></li>
                             </ul>
@@ -133,7 +133,12 @@
                         <a class="dropdown-item"  href="#">Profile</a>
                         <a class="dropdown-item"  href="#">Settings</a>
                         <a class="dropdown-item"  href="#">Help</a>
-                        <a class="dropdown-item"  href="/"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                        <form action="/logout" method="post">
+                            @csrf
+                            <button class="dropdown-item btn btn-light" >
+                                <i class="fa fa-sign-out pull-right"></i> Log Out
+                            </button>
+                        </form>
                     </div>
                   </li>
                 </ul>

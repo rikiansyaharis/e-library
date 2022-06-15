@@ -27,15 +27,6 @@ class IsiDetail extends Seeder
             ],
             [
                 'id' => 002,
-                'id_genre' => 101,
-                'foto_buku' => 'kisah-tanah-jawa.jpg',
-                'nama_buku' => 'Kisah Tanah Jawa',
-                'penulis_buku' => '@kisahtanahjawa',
-                'jumlah_halaman' => '250',
-                'deskripsi' => 'Tanah Jawa menyimpan banyak kisah misteri yang takkan habis diceritakan dalam semalam. Sosok misterius, ritual mistis, dan tempat angker, selalu membuat kita penasaran. Buku Kisah Tanah Jawa mengajak pembaca membuka selubung mitos dan mistis yang selama ini hanya menjadi ksak-kusuk di masyarakat'
-            ],
-            [
-                'id' => 003,
                 'id_genre' => 103,
                 'foto_buku' => 'kisah-tanah-jawa.jpg',
                 'nama_buku' => 'Kisah Tanah Jawa',
@@ -44,7 +35,7 @@ class IsiDetail extends Seeder
                 'deskripsi' => 'Tanah Jawa menyimpan banyak kisah misteri yang takkan habis diceritakan dalam semalam. Sosok misterius, ritual mistis, dan tempat angker, selalu membuat kita penasaran. Buku Kisah Tanah Jawa mengajak pembaca membuka selubung mitos dan mistis yang selama ini hanya menjadi ksak-kusuk di masyarakat'
             ],
             [
-                'id' => 004,
+                'id' => 003,
                 'id_genre' => 104,
                 'foto_buku' => 'Hyderabad.jpg',
                 'nama_buku' => 'Hyderabad',
@@ -57,7 +48,7 @@ class IsiDetail extends Seeder
                 “ Aku berangkat Bu.” Aku melihat senyum itu tersungging di bibirnya.'
             ],
             [
-                'id' => 005,
+                'id' => 004,
                 'id_genre' => 104,
                 'foto_buku' => 'Mindset.jpg',
                 'nama_buku' => 'Mindset',
