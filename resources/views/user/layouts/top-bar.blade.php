@@ -7,6 +7,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="{{csrf_token()}}">
+<meta name="base_url" content="{{asset('images/book_colection')}}">
+
 <link rel="icon" href="{{asset('images/logo.png')}}" type="image">
 
 <title>E-Perpus </title>
@@ -57,7 +60,6 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li><a href="#about"> About </a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -69,14 +71,15 @@
                                         <li><a href="/favorite">Favorite</a></li>
                                         <li><a href="#">Setting</a></li>
                                         <li><a href="/history">History</a></li>
-                                        <form action="/logout" method="post">
+                                        <li><a href="/logout">Log Out</a></li>
+                                        {{--  <form action="/logout" method="post">
                                             @csrf
                                             <li>
                                                 <button class="btn btn-light btn-outline-light text-dark" >
                                                      Log Out
                                                 </button>
                                             </li>
-                                        </form>
+                                        </form>  --}}
                                     </ul>
                                 </div>
                             </div>
@@ -86,37 +89,14 @@
                                             <i class="ti-shopping-cart"></i>
                                         </div>
                                     </a>
-                                    <div class="shopping-cart-content">
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" width="60px" src="{{asset('images/book_colection/KKN.jpg')}}"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">KKN </a></h4>
-                                                    <span>Simpleman</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="ion ion-close"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" width="60px" src="{{asset('images/book_colection/KKN.jpg')}}"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h4><a href="#">KKN</a></h4>
-                                                    <span>Simpleman</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="ion ion-close"></i></a>
-                                                </div>
-                                            </li>
+                                    <div class="shopping-cart-content" data-url="{{route('getDataCart')}}">
+                                        <ul class="minicart-list">
                                         </ul>
                                         <div class="shopping-cart-total">
-                                            <h4>Total : <span class="shop-total">2</span></h4>
+                                            <h4>Total : <span class="shop-total cartCount d-none"> </span></h4>
                                         </div>
                                         <div class="shopping-cart-btn">
+                                            <a href="/cart">view cart</a>
                                             <a href="">checkout</a>
                                         </div>
                                     </div>
@@ -249,8 +229,9 @@
 <script src="{{asset('assets/js/ajax-mail.js')}}"></script>
 <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('assets/js/plugins.js')}}"></script>
-<script src="{{asset('assets/js/main.js')}}"></script>
 <script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 
+<script src="{{asset('assets/js/main.js')}}"></script>
+<script src="{{asset('assets/js/custom.js')}}"></script>
 </body>
 </html>

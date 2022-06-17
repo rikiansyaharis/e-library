@@ -19,8 +19,6 @@ class BookController extends Controller
         return view('admin.pages.book.dataBuku', $buku);
     }
 
-
-
     public function detailBuku($id) {
         $detail = [
             Genre::all(),

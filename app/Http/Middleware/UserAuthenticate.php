@@ -4,9 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class AdminAuthenticate
+class UserAuthenticate
 {
     /**
      * Handle an incoming request.
@@ -19,7 +18,7 @@ class AdminAuthenticate
     {
 
         if (Auth::user() != null) {
-            if(Auth::user()->role->name !== 'admin') {
+            if(Auth::user()->role->name !== 'user') {
                 return abort(403, 'Access Denied');
             } else {
                 return $next($request);
@@ -27,6 +26,6 @@ class AdminAuthenticate
         } else {
             return redirect()->route('index');
         }
-        // return $next($request);
+        return $next($request);
     }
 }

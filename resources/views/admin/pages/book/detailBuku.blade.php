@@ -15,7 +15,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title text-left">Judul Buku : {{ $detail ->nama_buku }}</h5>
-                                {{--  <p class="card-text text-left">Genre : {{ $detail ->genre->id_genre }}</p>  --}}
+                                <p class="card-text text-left">Genre : {{ $detail ->genre->id_genre }}</p>
                                 <p class="card-text text-left">Penulis : {{ $detail ->penulis_buku }}</p>
                                 <p class="card-text text-left">Jumlah Halaman : {{ $detail ->jumlah_halaman }}</p>
                                 <p class="card-text text-left">Deskripsi : </p>

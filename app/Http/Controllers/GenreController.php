@@ -32,7 +32,7 @@ class GenreController extends Controller
 
     public function insertgenre(Request $request) {
         Genre::create($request->only('nama_genre'));
-        return redirect()->route('genre');
+        return redirect()->route('add-genre');
     }
 
     //form
@@ -46,11 +46,11 @@ class GenreController extends Controller
 
     public function updateuser(Request $request, $id) {
         Genre::where('id', $id)->update($request->only('nama_genre'));
-        return redirect()->route('genre');
+        return redirect()->route('add-genre');
     }
 
     public function delete($id) {
         Genre::where('id', $id)->delete();
-        return redirect()->route('genre');
+        return redirect()->route('add-genre');
     }
 }

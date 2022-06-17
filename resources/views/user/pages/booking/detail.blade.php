@@ -8,12 +8,12 @@
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <div class="product-details-img">
-                    <img class="zoompro" src="{{asset('images/book_colection/KKN.jpg')}}" data-zoom-image="{{asset('images/book_colection/KKN.jpg')}}" alt="zoom"/>
+                    <img class="zoompro" src="{{asset('images/book_colection/' . $detailuser->foto_buku)}}"/>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="product-details-content">
-                    <h4>KKN Di Desa Penari</h4>
+                    <h4>{{ $detailuser ->nama_buku }}</h4>
                     <div class="rating-review">
                         <div class="pro-dec-rating">
                             <i class="ion-android-star-outline theme-star"></i>
@@ -24,13 +24,12 @@
                         </div>
                     </div>
                     <div class="in-stock">
-                        <p>Nama Penulis : <span>Simpleman</span></p>
-                        <p>Jumlah Halaman : <span>--</span></p>
-                        <p>Genre : <span></span>Horor</p>
+                        <p>Nama Penulis : <span>{{$detailuser ->penulis_buku }}</span></p>
+                        <p>Jumlah Halaman : <span>{{$detailuser ->jumlah_halaman }}</span></p>
+                        <p>Genre : <span></span>{{$detailuser ->genre->nama_genre }}</p>
                         <p>Deskripsi : </p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, hic ut repudiandae iste animi illo aliquid quibusdam praesentium suscipit omnis tempora? Labore repellat illum vitae atque at ducimus animi, earum porro, maiores tenetur autem beatae eos, consectetur iusto. Quasi veritatis maxime, porro facilis necessitatibus quos voluptatibus officiis enim ut distinctio. </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam rem ipsa id vitae culpa temporibus vel quis explicabo, recusandae fugiat eligendi animi odit fuga? Dolor ut dignissimos rem, neque quibusdam officiis sed nulla unde deserunt impedit odio dicta tenetur, ducimus vel voluptates modi inventore consectetur asperiores cupiditate error hic?</p>
+                    <p>{{$detailuser->deskripsi}}</p>
                     <div class="quality-add-to-cart">
                         <div class="">
                             <a title="" href="#">

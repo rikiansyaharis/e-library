@@ -18,7 +18,7 @@ class IsiGenre extends Seeder
         Genre::insert([
         [
             'id' => 101,
-            'nama_genre' => 'All',
+            'nama_genre' => 'Action',
         ],
         [
             'id' => 102,
@@ -26,22 +26,18 @@ class IsiGenre extends Seeder
         ],
         [
             'id' => 103,
-            'nama_genre' => 'Action',
-        ],
-        [
-            'id' => 104,
             'nama_genre' => 'Horor',
         ],
         [
-            'id' => 105,
+            'id' => 104,
             'nama_genre' => 'Romance',
         ],
         [
-            'id' => 106,
+            'id' => 105,
             'nama_genre' => 'Fiksi',
         ],
         [
-            'id' => 107,
+            'id' => 106,
             'nama_genre' => 'Thriller',
         ],
     ]);

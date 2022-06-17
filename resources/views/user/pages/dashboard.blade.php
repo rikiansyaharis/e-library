@@ -74,12 +74,15 @@
                                 @foreach ($buku as $listbook)
                                 <div class="product-wrapper">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="/detailbukuuser/{{$listbook->id}}">
                                             <img alt="" src="{{asset('images/book_colection/' . $listbook->foto_buku)}}"  >
                                         </a>
                                         <div class="product-action">
                                             <a class="action-wishlist" href="#" title="Add To Favorite">
                                                 <i class="ion-android-favorite-outline"></i>
+                                            </a>
+                                            <a class="action-cart add-to-cart" href="{{ route('add-to-cart', $listbook->id)}}" title="Add To Cart">
+                                                <i class="ion-ios-cart-outline"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -87,11 +90,11 @@
                                         <div class="product-hover-style">
                                             <div class="product-title">
                                                 <h4>
-                                                    <a href="product-details.html">{{ $listbook->nama_buku }}</a>
+                                                    <a href="/detailbukuuser/{{$listbook->id}}">{{ $listbook->nama_buku }}</a>
                                                 </h4>
                                             </div>
                                             <div class="cart-hover">
-                                                <h4><a href="/detail">Lihat Detail</a></h4>
+                                                <h4><a href="/detailbukuuser/{{$listbook->id}}">Lihat Detail</a></h4>
                                             </div>
                                         </div>
                                         <div class="product-price-wrapper">
@@ -104,50 +107,7 @@
                         </div>
                     </div>
 
-                    <!-- ============================================ -->
-                    <div class="product-area bg-image-1 pt-10 pb-95">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-10">
-                                    <h3 style="font-family: poppins"> Populer </h3>
-                                </div>
-                                <div class="col-md-2">
-                                    <a href="">
-                                        <h5 class="mt-3 ">Lihat Semua </h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="featured-product-active hot-flower owl-carousel product-nav">
-                                <div class="product-wrapper">
-                                    <div class="product-img">
-                                        <a href="">
-                                            <img alt="" src="{{asset('images/book_colection/dongeng-anak-nusantara-pilihan.jpg')}}">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-wishlist" href="#" title="Add To Favorite">
-                                                <i class="ion-android-favorite-outline"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content text-left">
-                                        <div class="product-hover-style">
-                                            <div class="product-title">
-                                                <h4>
-                                                    <a href="/detail">Dongeng Anak Nusantara</a>
-                                                </h4>
-                                            </div>
-                                            <div class="cart-hover">
-                                                <h4><a href="/detail">Lihat Detail</a></h4>
-                                            </div>
-                                        </div>
-                                        <div class="product-price-wrapper">
-                                            <span>Gramedia</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
 
                     <!-- ============================================ -->
                     <div class="product-area bg-image-1 pt-10 pb-95">
@@ -172,6 +132,9 @@
                                         <div class="product-action">
                                             <a class="action-wishlist" href="#" title="Add To Favorite">
                                                 <i class="ion-android-favorite-outline"></i>
+                                            </a>
+                                            <a class="action-cart" href="#" title="Add To Cart">
+                                                <i class="ion-ios-shuffle-strong"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -218,7 +181,7 @@
                     <!-- New Post -->
                     <div class="blog-widget mb-45">
                         <h4 class="blog-widget-title mb-25">Recent post</h4>
-                        @foreach ($new_add as $add)
+                        @foreach ($new_book as $add)
                         <div class="blog-recent-post">
                             <div class="recent-post-wrapper mb-25">
                                 <div class="recent-post-img">
