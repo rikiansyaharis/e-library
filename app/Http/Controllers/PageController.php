@@ -19,19 +19,18 @@ class PageController extends Controller {
         $data = [
             'title' => 'Login',
         ];
-        // if (Auth::user() != null) {
-        //     return redirect()->route('home');
-        // } else {
-            // }
+      
+        if (Auth::user() != null) {
+            return redirect()->route('home');
+        } else {
+            }
                 return view('auth.signin', $data);
     }
     public function signup() {
         return view('auth.signup');
     }
 
-    public function home() {
-        return view('admin.pages.home');
-    }
+    
 
     public function login(Request $request) {
         $request->validate([
@@ -78,11 +77,9 @@ class PageController extends Controller {
         }
     }
 
-    public function logout(Request $request)
+    public function logout()
     {
         Auth::logout();
-        request()->session()->invalidate();
-        request()->session()->regenerateToken();
         return redirect()->route('index');
     }
 }

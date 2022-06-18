@@ -53,7 +53,7 @@
                                 <label for="pass">
                                     <i class="zmdi zmdi-lock"></i>
                                 </label>
-                                <input type="password" name="confirm_password" id="pass" required placeholder="Confirm Password"/>
+                                <input type="password" name="password" id="pass" required placeholder="Confirm Password"/>
                             </div>
                             <div class="form-group form-button">
                                 <button class="btn btn-primary submit" type="submit" name="signup" id="signup" >Submit</button>

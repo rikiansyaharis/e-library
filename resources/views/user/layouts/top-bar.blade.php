@@ -53,7 +53,7 @@
                                         </li>
                                         <li class="top-hover"><a href="#">Category</a>
                                             <ul class="submenu">
-                                                <li><a href="#">All</a></li>
+                                                <li><a href="/all-book">All</a></li>
                                                 @foreach (getGenre() as $genre)
 
                                                 <li><a href="{{ route('genre', $genre->nama_genre)}}">{{$genre->nama_genre}}</a></li>
@@ -64,14 +64,14 @@
                                 </nav>
                             </div>
                             <div class="header-currency">
-                                <span class="digit">Username<i class="ti-angle-down"></i></span>
+                                <span class="digit">{{ Auth::user()->name }}<i class="ti-angle-down"></i></span>
                                 <div class="dollar-submenu">
                                     <ul>
-                                        <li><a href="#">Home</a></li>
+                                        <li><a href="/dashboard">Home</a></li>
                                         <li><a href="/favorite">Favorite</a></li>
                                         <li><a href="#">Setting</a></li>
                                         <li><a href="/history">History</a></li>
-                                        <li><a href="/logout">Log Out</a></li>
+                                        <li><a href="{{route('logout')}}">Log Out</a></li>
                                         {{--  <form action="/logout" method="post">
                                             @csrf
                                             <li>
@@ -114,13 +114,13 @@
                                 <li><a href="#">HOME</a></li>
                                 <li><a href="#">Category</a>
                                     <ul>
-                                        <li><a href="#">All</a></li>
+                                        <li><a href="/all-book">All</a></li>
                                         @foreach (getGenre() as $genre)
                                         <li><a href="{{ route('genre', $genre->nama_genre)}}">{{$genre->nama_genre}}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>
-                                <li><a href="#about">About us </a></li>
+                               
                             </ul>
                         </nav>
                     </div>

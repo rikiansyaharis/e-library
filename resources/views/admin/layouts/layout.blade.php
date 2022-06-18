@@ -67,11 +67,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
                 <div class="profile_pic">
-                <img src="{{ asset('images/img.jpg') }}" alt="..." class="img-circle profile_img">
+                <img src="{{asset('images/user.svg')}}" alt="..." class="img-circle profile_img">
                 </div>
                 <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Rikiansyah</h2>
+                <h2>{{ Auth::user()->name }}</h2>
                 </div>
             </div>
             <!-- /menu profile quick info -->
@@ -126,19 +126,20 @@
                 <nav class="nav navbar-nav">
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
-                    <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="images/img.jpg" alt="">John Doe
+                    <a href="" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                      <img src="{{asset('images/user.svg')}}" alt="">{{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item"  href="#">Profile</a>
                         <a class="dropdown-item"  href="#">Settings</a>
                         <a class="dropdown-item"  href="#">Help</a>
-                        <form action="/logout" method="post">
+                        <a class="dropdown-item"  href="/logout">Logout</a>
+                        {{--  <form action="/logout" method="post">
                             @csrf
                             <button class="dropdown-item btn btn-light" >
                                 <i class="fa fa-sign-out pull-right"></i> Log Out
                             </button>
-                        </form>
+                        </form>  --}}
                     </div>
                   </li>
                 </ul>

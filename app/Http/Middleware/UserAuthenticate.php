@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserAuthenticate
 {
@@ -14,18 +15,15 @@ class UserAuthenticate
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next, ...$guards)
     {
 
-        if (Auth::user() != null) {
+        if (Auth::guard($guards)->check()) {
             if(Auth::user()->role->name !== 'user') {
-                return abort(403, 'Access Denied');
-            } else {
-                return $next($request);
+                return redirect()->route('home');
             }
-        } else {
-            return redirect()->route('index');
-        }
+                return $next($request);
+            } 
         return $next($request);
     }
 }

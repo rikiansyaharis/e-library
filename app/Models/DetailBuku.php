@@ -16,4 +16,9 @@ class DetailBuku extends Model
         return $this->belongsTo(Genre::class, 'id_genre', 'id');
     }
 
+    public function favorite()
+    {
+        return $this->hasMany(Favorite::class);
+    }
+
 }

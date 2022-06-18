@@ -23,15 +23,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 //home
-Route::get('/', [PageController::class,'index'])->name('index');
-Route::get('/signup', [PageController::class,'signup'])->name('signup');
-Route::post('/signin', [PageController::class, 'login'])->name('signin');
-Route::post('/register', [PageController::class, 'register'])->name('register');
+
+Route::prefix('auth')->group(function () {
+    Route::get('/', [PageController::class,'index'])->name('index');
+    Route::get('/signup', [PageController::class,'signup'])->name('signup');
+    Route::post('/signin', [PageController::class, 'login'])->name('signin');
+    Route::post('/register', [PageController::class, 'register'])->name('register');
+});
+
 Route::get('/logout', [PageController::class, 'logout'])->name('logout');
 
-
-// Route::prefix('admin')->middleware('adminCheck')->group(function () {
-    Route::get('/home', [PageController::class,'home'])->name('home');
+Route::middleware('auth.admin', 'auth')->group(function () {
+    Route::get('/home', [HomeController::class,'home'])->name('home');
     
     //genre
     Route::get('/datagenre', [GenreController::class,'index'])->name('add-genre');
@@ -66,11 +69,11 @@ Route::get('/logout', [PageController::class, 'logout'])->name('logout');
     //         "title" => "Pengembalian"
     //     ]);
     // });
-// });
+});
 
 
 
-// Route::prefix('user')->middleware('userCheck')->group(function () {
+Route::middleware('auth.user', 'auth')->group(function () {
     //view all
     Route::get('/all-book',[ProductController::class,'viewall'])->name('viewall');
     Route::get('genre/{nama_genre}',[ProductController::class, 'genre'])->name('genre');
@@ -80,22 +83,27 @@ Route::get('/logout', [PageController::class, 'logout'])->name('logout');
     Route::get('/detail', [ProductController::class,'detail'])->name('detail');
     Route::get('/search', [ProductController::class,'index'])->name('search');
     Route::get('/detailbukuuser/{id}', [ProductController::class,'detailBukuUser'])->name('DetailBukuUser');
+
+    // cart
+    Route::get('/cart', [ProductController::class, 'viewcart'])->name('Cart');
     Route::get('data-cart', [ProductController::class, 'cart'])->name('getDataCart');
     Route::get('add-data-to-cart/{id}', [ProductController::class, 'addToCart'])->name('add-to-cart');
     Route::delete('remove-from-cart/{id}', [ProductController::class, 'removeFromCart'])->name('remove-from-cart');
     Route::get('remove-from-bigcart/{id}', [ProductController::class, 'removeFromBigCart'])->name('remove-from-bigcart');
-
-    //cart
-    Route::get('/cart', [ProductController::class, 'viewcart'])->name('Cart');
-
+    
+    
     // Favorite
     Route::get('/favorite', [FavoriteController::class, 'index'])->name('favorite');
+    Route::get('add-data-to-favorite/{id}', [ProductController::class, 'addToCart'])->name('add-to-favorite');
+    Route::get('remove-from-favorite/{id}', [ProductController::class, 'removeFromBigCart'])->name('remove-from-favorite');
 
+    
+    
     // Historry
     Route::get('/history', [HistoryController::class, 'index'])->name('history');
 
     // Online Book
     Route::get('/onlinebook', [ProductController::class, 'onlinebook'])->name('Online-Book');
-// });
+});
 
 

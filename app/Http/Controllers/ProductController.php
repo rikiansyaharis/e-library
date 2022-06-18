@@ -77,6 +77,7 @@ class ProductController extends Controller
         return view('user.pages.cart.cart', $data);
     }
 
+    //minicart
     public function cart() {
         $transaction = Peminjaman::where(['id_user' => Auth::user()->id, 'status' => 'pending'])->first();
         $data = [
@@ -87,6 +88,7 @@ class ProductController extends Controller
         return response()->json($data);
     }
 
+    
     public function addToCart($id) {
         try {
 
@@ -154,5 +156,7 @@ class ProductController extends Controller
             ], 500);
         }
     }
+
+   
 }
 

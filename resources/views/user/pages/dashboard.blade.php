@@ -78,7 +78,7 @@
                                             <img alt="" src="{{asset('images/book_colection/' . $listbook->foto_buku)}}"  >
                                         </a>
                                         <div class="product-action">
-                                            <a class="action-wishlist" href="#" title="Add To Favorite">
+                                            <a class="action-wishlist add-to-favorite" href="{{ route('add-to-favorite', $listbook->id)}}" title="Add To Favorite">
                                                 <i class="ion-android-favorite-outline"></i>
                                             </a>
                                             <a class="action-cart add-to-cart" href="{{ route('add-to-cart', $listbook->id)}}" title="Add To Cart">

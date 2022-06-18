@@ -48,5 +48,9 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class, 'role_id', 'id');
     }
 
+    public function favorite() {
+        return $this->hasMany(favorite::class);
+    }
+
     protected $guarded = [];
 }

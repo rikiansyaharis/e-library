@@ -46,14 +46,10 @@
                     <div class="pro-dec-categories">
                         <ul>
                             <li class="categories-title">Categories:</li>
-                            <li><a href="#">All</a></li> |
-                            <li><a href="#">Comedy</a></li> |
-                            <li><a href="#">Fantasy</a></li> |
-                            <li><a href="#">Fiksi</a></li> |
-                            <li><a href="#">Mystery</a></li> |
-                            <li><a href="#">Sci-Fi </a></li> |
-                            <li><a href="#">Romance</a></li> |
-                            <li><a href="#">Thriller</a></li>
+                            <li><a href="/all-book">All</a></li> |
+                            @foreach (getGenre() as $genre)
+                                <li><a href="{{ route('genre', $genre->nama_genre)}}">{{$genre->nama_genre}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="pro-dec-categories">
