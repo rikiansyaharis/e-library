@@ -19,18 +19,18 @@ class PageController extends Controller {
         $data = [
             'title' => 'Login',
         ];
-      
+
         if (Auth::user() != null) {
             return redirect()->route('home');
         } else {
-            }
-                return view('auth.signin', $data);
+            return view('auth.signin', $data);
+        }
     }
+
     public function signup() {
         return view('auth.signup');
     }
 
-    
 
     public function login(Request $request) {
         $request->validate([

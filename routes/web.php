@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 //home
 
-Route::prefix('auth')->group(function () {
+Route::middleware('guest')->group(function () {
     Route::get('/', [PageController::class,'index'])->name('index');
     Route::get('/signup', [PageController::class,'signup'])->name('signup');
     Route::post('/signin', [PageController::class, 'login'])->name('signin');
@@ -33,9 +33,10 @@ Route::prefix('auth')->group(function () {
 
 Route::get('/logout', [PageController::class, 'logout'])->name('logout');
 
+
 Route::middleware('auth.admin', 'auth')->group(function () {
     Route::get('/home', [HomeController::class,'home'])->name('home');
-    
+
     //genre
     Route::get('/datagenre', [GenreController::class,'index'])->name('add-genre');
     Route::get('/formgenre', [GenreController::class,'formgenre'])->name('form');
@@ -90,15 +91,15 @@ Route::middleware('auth.user', 'auth')->group(function () {
     Route::get('add-data-to-cart/{id}', [ProductController::class, 'addToCart'])->name('add-to-cart');
     Route::delete('remove-from-cart/{id}', [ProductController::class, 'removeFromCart'])->name('remove-from-cart');
     Route::get('remove-from-bigcart/{id}', [ProductController::class, 'removeFromBigCart'])->name('remove-from-bigcart');
-    
-    
+
+
     // Favorite
     Route::get('/favorite', [FavoriteController::class, 'index'])->name('favorite');
     Route::get('add-data-to-favorite/{id}', [ProductController::class, 'addToCart'])->name('add-to-favorite');
     Route::get('remove-from-favorite/{id}', [ProductController::class, 'removeFromBigCart'])->name('remove-from-favorite');
 
-    
-    
+
+
     // Historry
     Route::get('/history', [HistoryController::class, 'index'])->name('history');
 
