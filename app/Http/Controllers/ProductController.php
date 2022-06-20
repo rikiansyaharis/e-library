@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use App\Models\Genre;
 use App\Models\DetailBuku;
+use App\Models\BookOnline;
 use App\Models\Peminjaman;
 use App\Models\Pinjam;
 use Illuminate\Http\Request;
@@ -18,6 +19,7 @@ class ProductController extends Controller
             Genre::all(),
             'genre' => Genre::all(),
             'buku' => DetailBuku::orderBy('created_at','desc')->get(),
+            'ebook' => BookOnline::orderBy('created_at','desc')->get(),
             'new_add' => DetailBuku::orderBy('created_at','desc')->take(6)->get(),
             'new_book' => DetailBuku::orderBy('created_at','desc')->take(5)->get()
         ];
@@ -42,6 +44,15 @@ class ProductController extends Controller
         return view('user.pages.booking.detail', $detail);
     }
 
+    public function detailBukuOnline($id) {
+        $detail = [
+            Genre::all(),
+            'genre' => Genre::all(),
+            'detailbukuonline' => BookOnline::find($id)
+        ];
+        return view('user.pages.online-book.detail', $detail);
+    }
+
     public function genre($genre) {
         $data = [
             'buku' =>DetailBuku::wherehas('genre', function ($query) use ($genre) {
@@ -63,16 +74,12 @@ class ProductController extends Controller
         return view('user.pages.booking.all-book', $search);
     }
 
-    // ONLINE BOOK
-    public function onlinebook() {
-        return view('user.pages.online_book.detail');
-    }
 
     public function viewcart() {
         $transaction = Peminjaman::where(['id_user' => Auth::user()->id, 'status' => 'pending'])->first();
         $data = [
             'count' => !is_null($transaction) ? $transaction->pinjam->count() : 0,
-            'data' => $transaction->pinjam()->with('product')->get() ?? [],
+            'data' => !is_null($transaction) ? $transaction->pinjam()->with('product')->get() : [],
         ];
         return view('user.pages.cart.cart', $data);
     }
@@ -82,14 +89,15 @@ class ProductController extends Controller
         $transaction = Peminjaman::where(['id_user' => Auth::user()->id, 'status' => 'pending'])->first();
         $data = [
             'count' => !is_null($transaction) ? $transaction->pinjam->count() : 0,
-            'data' => $transaction->pinjam()->with('product')->get() ?? [],
+            'data' => !is_null($transaction) ? $transaction->pinjam()->with('product')->get() : [],
         ];
 
         return response()->json($data);
     }
 
-    
+
     public function addToCart($id) {
+        // dd(Auth::user()->id);
         try {
 
             $transaction = Peminjaman::where(['id_user' => Auth::user()->id, 'status' => 'pending']);
@@ -97,10 +105,11 @@ class ProductController extends Controller
             if ($transaction->count() > 0) {
                 $transaction = $transaction->first();
             } else {
-                $transaction = Transaction::create([
+                $transaction = Peminjaman::create([
+                    'id_user' => Auth::user()->id,
                     'status' => 'pending'
                 ]);
-            }   
+            }
 
             $product = DetailBuku::find($id);
             $check = Pinjam::where(['id_peminjaman' => $transaction->id, 'id_buku' => $product->id]);
@@ -118,6 +127,7 @@ class ProductController extends Controller
             // return redirect()->back();
         } catch (Exception $e) {
             return response()->json([
+                'trace' => $e->getTrace(),
                 'message' => $e-> getMessage()
             ], 500);
         }
@@ -157,6 +167,7 @@ class ProductController extends Controller
         }
     }
 
-   
+
+
 }
 

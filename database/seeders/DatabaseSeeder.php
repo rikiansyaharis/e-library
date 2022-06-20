@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             IsiUser::class,
             IsiGenre::class,
             IsiDetail::class,
+            IsiBookOnline::class,
             IsiFavorit::class,
             IsiHistory::class,
             IsiPinjam::class,

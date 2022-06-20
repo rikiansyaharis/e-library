@@ -3,8 +3,8 @@ loadCart()
 // Cart
 async function loadCart(){
     const res = await fetch('/data-cart')
-    console.log(res); 
-    
+    console.log(res);
+
     if(res.status == 200){
         var data = await res.json()
         $('.cartCount').text(data.count)
@@ -38,7 +38,7 @@ async function loadCart(){
             const res = await fetch($(this).attr('href'), {
                 method: 'delete',
                 headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') 
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             })
 
@@ -55,7 +55,7 @@ async function loadCart(){
 
 $('.add-to-cart').unbind().on('click', async function(e) {
     e.preventDefault()
-    var url = $(this).attr('href') 
+    var url = $(this).attr('href')
 
     const res = await fetch(url)
 
@@ -67,16 +67,3 @@ $('.add-to-cart').unbind().on('click', async function(e) {
 })
 
 
-// Favorite
-$('.add-to-favorite').unbind().on('click', async function(e) {
-    e.preventDefault()
-    var url = $(this).attr('href') 
-
-    const res = await fetch(url)
-
-    if(res.status == 200) {
-        loadCart()
-    } else {
-        alert('Opps! Terjadi Kesalahan')
-    }
-})

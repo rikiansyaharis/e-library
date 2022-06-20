@@ -2,25 +2,36 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\DetailBuku;
+use App\Models\Favorit;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Exception;
 
 class FavoriteController extends Controller
 {
     public function index() {
-        return view('user.pages.favorite.Favorit');
+        // dd(Auth::user()->id);
+        $favorite = Favorit::where(['id_user' => Auth::user()->id,])->first();
+        $data = [
+            'data' => $favorite->book()->with('favorite')->get() ?? [],
+        ];
+        return view('user.pages.favorite.Favorit', $data);
     }
 
     public function addToFavorite($id) {
         try {
 
-            $transaction = Favorite::where(['id_user' => Auth::user()->id]); 
+            $favorite = Favorite::where(['id_user' => Auth::user()->id]);
 
             $product = DetailBuku::find($id);
-            $check = Pinjam::where(['id_peminjaman' => $transaction->id, 'id_buku' => $product->id]);
+            $check = Pinjam::where(['id_user' => $favorite->id, 'id_buku' => $product->id]);
 
             if ($check->count() <= 0) {
                 Pinjam::create([
-                    'id_peminjaman' => $transaction->id,
+                    'id_user' => $favorite->id,
                     'id_buku' => $product->id,
                 ]);
             }
@@ -35,4 +46,17 @@ class FavoriteController extends Controller
             ], 500);
         }
     }
+
+    public function removeFromBigCart($id) {
+        try {
+            Favorite::findOrFail($id)->delete();
+
+            return redirect()->back();
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => $e->getMessage()
+            ], 500);
+        }
+    }
+    
 }

@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class BookOnline extends Model
 {
     use HasFactory;
+
+    public function online_genre()
+    {
+        return $this->belongsTo(Genre::class, 'id_genre', 'id');
+    }
+
+    protected $guarded = [];
 }
+

@@ -17,6 +17,6 @@ class Favorit extends Model
 
     public function book()
     {
-        return $this->belongsTo(DetailBuku::class, 'id_buku', 'id');
+        return $this->belongsTo(DetailBuku::class, 'id_buku',);
     }
 }

@@ -43,6 +43,14 @@ class IsiUser extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ],
+        [
+            'name' => 'user',
+            'role_id' => 2,
+            'email' => 'user@gmail.com',
+            'password' => Hash::make('user'),
+            'created_at' => now(),
+            'updated_at' => now()
+        ],
     ]);
 
 

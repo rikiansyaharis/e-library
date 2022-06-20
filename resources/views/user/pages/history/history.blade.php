@@ -14,46 +14,27 @@
                                     <thead>
                                         <tr>
                                             <th>No.</th>
-                                            <th>Nama Buku</th>
-                                            <th>Delete</th>
+
+                                            <th>Tanggal Pinjam</th>
+                                            <th>Jatuh Tempo</th>
+                                            <th>Tanggal Kembali</th>
+                                            <th>Status</th>
+                                            <th>Denda</th>
+                                            <th>Keterangan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($data as $item)
                                         <tr>
-                                            <td>1</td>
-                                            <td class="product-name"><a href="#">KKN Di Desa Penari </a></td>
-                                            <td class="product-remove">
-                                                <a href="#"><i class="fa fa-times"></i></a>
-                                           </td>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $item->tanggal_pinjam }}</td>
+                                            <td>{{ $item->jatuh_tempo }}</td>
+                                            <td>{{ $item->tanggal_kembali }}</td>
+                                            <td>{{ $item->status }}</td>
+                                            <td>{{ $item->denda }}</td>
+                                            <td>{{ $item->keterangan }}</td>
                                         </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="product-name"><a href="#">KKN Di Desa Penari </a></td>
-                                            <td class="product-remove">
-                                                <a href="#"><i class="fa fa-times"></i></a>
-                                           </td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="product-name"><a href="#">KKN Di Desa Penari </a></td>
-                                            <td class="product-remove">
-                                                <a href="#"><i class="fa fa-times"></i></a>
-                                           </td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="product-name"><a href="#">KKN Di Desa Penari </a></td>
-                                            <td class="product-remove">
-                                                <a href="#"><i class="fa fa-times"></i></a>
-                                           </td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="product-name"><a href="#">KKN Di Desa Penari </a></td>
-                                            <td class="product-remove">
-                                                <a href="#"><i class="fa fa-times"></i></a>
-                                           </td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

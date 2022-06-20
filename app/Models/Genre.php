@@ -14,6 +14,12 @@ class Genre extends Model
         return $this->hasMany(DetailBuku::class);
     }
 
+    public function onlinebook()
+    {
+        return $this->hasMany(BookOnline::class);
+    }
+
+
     protected $guarded = [];
 }
 

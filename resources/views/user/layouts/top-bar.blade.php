@@ -72,14 +72,6 @@
                                         <li><a href="#">Setting</a></li>
                                         <li><a href="/history">History</a></li>
                                         <li><a href="{{route('logout')}}">Log Out</a></li>
-                                        {{--  <form action="/logout" method="post">
-                                            @csrf
-                                            <li>
-                                                <button class="btn btn-light btn-outline-light text-dark" >
-                                                     Log Out
-                                                </button>
-                                            </li>
-                                        </form>  --}}
                                     </ul>
                                 </div>
                             </div>
@@ -97,7 +89,7 @@
                                         </div>
                                         <div class="shopping-cart-btn">
                                             <a href="/cart">view cart</a>
-                                            <a href="">checkout</a>
+                                            <a href="{{route('history')}}">checkout</a>
                                         </div>
                                     </div>
                                 </div>
@@ -120,7 +112,7 @@
                                         @endforeach
                                     </ul>
                                 </li>
-                               
+
                             </ul>
                         </nav>
                     </div>

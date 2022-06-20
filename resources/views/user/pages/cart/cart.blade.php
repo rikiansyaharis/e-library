@@ -22,11 +22,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($data as $item)   
+                                        @foreach ($data as $item)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td class="product-thumbnail">
-                                                {{--  {{dd($item->product)}}  --}}
                                                 <a href="#"><img src="{{asset('images/book_colection/'. $item->product->foto_buku) }}" width="60px" alt=""></a>
                                             </td>
                                             <td class="product-name"><a href="#">{{$item->product->nama_buku}}</a></td>
@@ -35,13 +34,6 @@
                                                 <a href="{{route('remove-from-bigcart', $item->id)}}">
                                                     <i class="fa fa-times"></i>
                                                 </a>
-                                            {{--  <form action="{{route('remove-from-bigcart', $item->id)}}" method="post">
-                                                @method('delete')
-                                                @csrf
-                                                <button class="btn product-remove" type="submit">
-                                                    <i class="fa fa-times"></i>
-                                                </button>
-                                                </form>  --}}
                                             </td>
                                         </tr>
                                         @endforeach
@@ -52,6 +44,12 @@
                         <div class="pt-10 text-center">
                             <a href="/dashboard">
                                 <button class="btn btn-sm btn-primary">Kembali</button>
+                            </a>
+                            <a href="{{route('checkout')}}">
+                                <button class="btn btn-sm btn-primary">Check Out</button>
+                            </a>
+                            <a href="/history">
+                                <button class="btn btn-sm btn-success">Lihat History Peminjaman</button>
                             </a>
                         </div>
                     </div>

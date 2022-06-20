@@ -18,7 +18,7 @@ class DetailBuku extends Model
 
     public function favorite()
     {
-        return $this->hasMany(Favorite::class);
+        return $this->hasMany(Favorit::class);
     }
 
 }

@@ -124,17 +124,16 @@
                             </div>
 
                             <div class="featured-product-active hot-flower owl-carousel product-nav">
+                                @foreach ($ebook as $item)
+
                                 <div class="product-wrapper">
                                     <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img alt="" src="{{asset('images/book_colection/KKN.jpg')}}">
+                                        <a href="/detailbukuonline/{{$item->id}}">
+                                            <img alt="" src="{{asset('images/book_colection/'. $item->foto_buku )}}">
                                         </a>
                                         <div class="product-action">
                                             <a class="action-wishlist" href="#" title="Add To Favorite">
                                                 <i class="ion-android-favorite-outline"></i>
-                                            </a>
-                                            <a class="action-cart" href="#" title="Add To Cart">
-                                                <i class="ion-ios-shuffle-strong"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -142,19 +141,21 @@
                                         <div class="product-hover-style">
                                             <div class="product-title">
                                                 <h4>
-                                                    <a href="/onlinebook">KKN Di Desa Penari</a>
+                                                    <a href="/detailbukuonline/{{$item->id}}">{{ $item->nama_buku }}</a>
                                                 </h4>
                                             </div>
                                             <div class="cart-hover">
-                                                <h4><a href="/onlinebook">Lihat Detail</a></h4>
+                                                <h4><a href="/detailbukuonline/{{$item->id}}">Lihat Detail</a></h4>
                                             </div>
                                         </div>
                                         <div class="product-price-wrapper">
-                                            <span>Gramedia</span>
+                                            <span>{{ $item->penulis_buku }}</span>
 
                                         </div>
                                     </div>
                                 </div>
+
+                                @endforeach
                             </div>
                         </div>
                     </div>

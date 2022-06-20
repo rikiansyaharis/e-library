@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\BookOnlineController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\UsersController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +37,7 @@ Route::get('/logout', [PageController::class, 'logout'])->name('logout');
 
 
 Route::middleware('auth.admin', 'auth')->group(function () {
+    //home
     Route::get('/home', [HomeController::class,'home'])->name('home');
 
     //genre
@@ -58,18 +61,25 @@ Route::middleware('auth.admin', 'auth')->group(function () {
     Route::post('/updatebuku/{id}',[BookController::class,'updateBook'])->name('updateBuku');
     Route::get('/deletebuku/{id}',[BookController::class,'delete'])->name('delete');
 
-    // // Transaction
-    // Route::get('/transaksi', function () {
-    //     return view('admin.pages.transaksi', [
-    //         "title" => "Transaksi"
-    //     ]);
-    // });
+    //online
+    Route::get('/buku-online', [BookOnlineController::class, 'index'])->name('Online-Book');
+    Route::get('/detailonline/{id}', [BookOnlineController::class,'detailOnline'])->name('Detail-Buku-Online');
+    Route::get('/formonline', [BookOnlineController::class,'formBukuOnline'])->name('Form-Buku-Online');
+    Route::post('/insertbukuonline',[BookOnlineController::class,'insertBookOnline'])->name('insert-Buku-Online');
+    Route::get('/updatebukuonline/{id}',[BookOnlineController::class,'editFormOnline'])->name('Update-Buku-Online');
+    Route::post('/updatebukuonline/{id}',[BookOnlineController::class,'updateBookOnline'])->name('Update-Buku');
+    Route::get('/deletebukuonline/{id}',[BookOnlineController::class,'deleteOnline'])->name('Delete-Buku');
 
-    // Route::get('/pengembalian', function () {
-    //     return view('admin.pages.pengembalian', [
-    //         "title" => "Pengembalian"
-    //     ]);
-    // });
+    // // Transaction
+    Route::get('/transaksi',[TransactionController::class,'index'])->name('admin.transaksi');
+    Route::get('/form-transaksi',[TransactionController::class,'formTransaksi'])->name('form-transaksi');
+    Route::post('/add-transaction',[TransactionController::class,'addTransaction'])->name('insert-transaksi');
+    Route::get('/update-transaksi/{id}',[TransactionController::class,'updateTransaksi'])->name('update-transaksi');
+    Route::post('/update-transaction/{id}',[TransactionController::class,'updatetransaction'])->name('Update-transaction');
+    Route::get('/detail-transaksi/{id}',[TransactionController::class,'detailTransaksi'])->name('detail-transaksi');
+    Route::get('/update-status/{id}',[TransactionController::class,'success'])->name('update-status');
+
+
 });
 
 
@@ -85,6 +95,9 @@ Route::middleware('auth.user', 'auth')->group(function () {
     Route::get('/search', [ProductController::class,'index'])->name('search');
     Route::get('/detailbukuuser/{id}', [ProductController::class,'detailBukuUser'])->name('DetailBukuUser');
 
+    // Online Book
+    Route::get('/detailbukuonline/{id}', [ProductController::class, 'detailBukuOnline'])->name('Buku-Online');
+
     // cart
     Route::get('/cart', [ProductController::class, 'viewcart'])->name('Cart');
     Route::get('data-cart', [ProductController::class, 'cart'])->name('getDataCart');
@@ -98,13 +111,12 @@ Route::middleware('auth.user', 'auth')->group(function () {
     Route::get('add-data-to-favorite/{id}', [ProductController::class, 'addToCart'])->name('add-to-favorite');
     Route::get('remove-from-favorite/{id}', [ProductController::class, 'removeFromBigCart'])->name('remove-from-favorite');
 
-
-
     // Historry
-    Route::get('/history', [HistoryController::class, 'index'])->name('history');
+    Route::get('/history', [TransactionController::class, 'history'])->name('history');
 
-    // Online Book
-    Route::get('/onlinebook', [ProductController::class, 'onlinebook'])->name('Online-Book');
+    //
+    Route::get('/checkout', [TransactionController::class, 'checkout'])->name('checkout');
+
 });
 
 

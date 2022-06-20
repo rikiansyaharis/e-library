@@ -10,7 +10,8 @@ class GenreController extends Controller
 {
     public function index() {
         $data = [
-            'data' => Genre::all()
+            'data' => Genre::all(),
+            
         ];
         return view('admin.pages.genre.dataGenre', $data);
     }
@@ -21,6 +22,7 @@ class GenreController extends Controller
         ];
         return view('admin.pages.genre.formGenre', $data);
     }
+
 
     //form
     public function create() {

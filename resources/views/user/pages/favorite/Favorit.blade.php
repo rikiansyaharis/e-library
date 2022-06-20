@@ -23,18 +23,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($data as $item)
                                         <tr>
                                             <td>1</td>
                                             <td class="product-thumbnail">
-                                                <a href="#"><img src="{{asset('images/book_colection/KKN.jpg')}}" width="60px" alt=""></a>
+                                                <a href="#"><img src="{{asset('images/book_colection/'. $item->favorite->foto_buku) }}" width="60px" alt=""></a>
                                             </td>
-                                            <td class="product-name"><a href="#">KKN Di Desa Penari</a></td>
-                                            <td class="product-price-cart"><span class="amount">Simpleman</span></td>
-                                            <td class="product-price-cart"><span class="amount">Horor</span></td>
+                                            <td class="product-name"><a href="#">{{$item->favorite->nama_buku}}</a></td>
+                                            <td class="product-price-cart"><span class="amount">{{$item->favorite->penulis_buku}}</span></td>
+                                            <td class="product-price-cart"><span class="amount">{{$item->favorite->genre}}</span></td>
                                             <td class="product-remove">
-                                                <a href="#"><i class="fa fa-times"></i></a>
-                                           </td>
+                                                <a href="{{route('remove-from-favorite', $item->id)}}">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
+                                            </td>
                                         </tr>
+                                        @endforeach
 
                                     </tbody>
                                 </table>

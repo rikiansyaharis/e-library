@@ -105,9 +105,14 @@
                                 <span class="fa fa-chevron-down"></span>
                             </a>
                             <ul class="nav child_menu">
-                                <li><a href="/transaksi">Peminjaman</a></li>
-                                <li><a href="/pengembalian">Pengembalian</a></li>
+                                <li><a href="{{route('admin.transaksi')}}">Transaction</a></li>
+                                <li><a href="{{route('form-transaksi')}}">Tambah Transaksi</a></li>
                             </ul>
+                        </li>
+                        <li>
+                            <a href="{{route('Online-Book')}}">
+                                <i class="fa fa-book"></i> Buku Online
+                            </a>
                         </li>
 
                     </ul>

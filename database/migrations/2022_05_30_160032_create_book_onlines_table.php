@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('penulis_buku');
             $table->string('jumlah_halaman');
             $table->text('deskripsi');
+            $table->text('file_book');
             $table->timestamps();
             $table->foreign('id_genre')->references('id')->on('genres');
         });
