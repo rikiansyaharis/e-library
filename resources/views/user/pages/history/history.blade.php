@@ -17,7 +17,7 @@
 
                                             <th>Tanggal Pinjam</th>
                                             <th>Jatuh Tempo</th>
-                                            <th>Tanggal Kembali</th>
+                                            <th>Tanggal Di Kembalikan</th>
                                             <th>Status</th>
                                             <th>Denda</th>
                                             <th>Keterangan</th>

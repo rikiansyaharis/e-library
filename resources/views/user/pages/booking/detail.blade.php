@@ -32,8 +32,8 @@
                     <p>{{$detailuser->deskripsi}}</p>
                     <div class="quality-add-to-cart">
                         <div class="">
-                            <a title="" href="#">
-                                <button type="submit" class="btn btn-sm btn-success btn-outline-success">Pinjam
+                            <a title="" class="add-to-cart" href="{{ route('add-to-cart', $detailuser->id)}}">
+                                <button type="submit" class="btn btn-sm btn-success btn-outline-success ">Pinjam
                                 </button>
                             </a>
                             <a title="Add to favorite" href="#">

@@ -32,15 +32,15 @@
                             </div>
                         </div>
                         <div class="blog-content">
-                            <h2><a href="blog-details-standerd.html">Various types of books are available here</a></h2>
+                            <h2><a href="blog-details-standerd.html">Berbagai Jenis Buku Tersedia Disini</a></h2>
                             <div class="blog-date-categori">
                                 <ul>
-                                    <li> 11 Juni 2022 </li>
+                                    <li> 22 Juni 2022 </li>
                                     <li><a href="/dashboard">Home </a></li>
                                 </ul>
                             </div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                        <p style="text-align: justify;">E-Perpus merupakan perpustakaan digital yang menyediakan berbagai jenis kategory buku, mulai dari buku umum, buku ilmu pengetahuan, ensiklopedia, artikel, makalah, dan novel dengan berbagai genre seperti Action, Comedy, Horor, Romance, Fiksi, dan Thriller. E-Perpus hadir sebagai pendukung program pemeritah dalam rangka meningkatkan minat baca masyarakat di indonesia khususnya kalangan mahasiswa. Di E-Perpus kalian dapat menemukan segala macam buku dan informasi tentang buku tersebut sesuai dengan buku yang tersedia di perpustakaan utama. E-Perpus juga menyediakan layanan untuk membaca buku secara online melalui aplikasi web E-Perpus. Jadi tunggu apa lagi, ayo gunakan E-Perpus untuk kemudahan membaca buku di mana saja dan kapan saja.</p>
                         <div class="blog-btn-social mt-30">
                             <div class="blog-social">
                                 <span>share :</span>
@@ -261,9 +261,8 @@
                 <div class="col-lg-6 col-md-12 d-flex align-items-center">
                     <div class="overview-content-2">
                         <h4>Hi, everyone</h4>
-                        <h2>E-Book!</h2>
-                        <p class="peragraph-blog">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, praesentium quam quas expedita sequi aliquid deleniti blanditiis error numquam facilis ut, vitae officia tenetur et? Sit neque, quasi reprehenderit consequatur aliquid aliquam accusamus veniam aspernatur? Nobis nihil quasi voluptatibus quidem eveniet, ex magnam corrupti repellendus quas accusamus.</p>
-                        <p> Modi, aliquam! Unde ad libero qui assumenda commodi consequuntur mollitia temporibus officiis placeat earum provident quos nobis, aliquam omnis doloremque, ducimus repellendus dolores eveniet pariatur aut recusandae, impedit vero culpa sunt. Sapiente assumenda itaque dicta placeat reprehenderit adipisci, voluptate amet rerum, quas sit laborum magnam vero pariatur voluptatum a deserunt eveniet, possimus repellendus?</p>
+                        <h2>E-Perpus</h2>
+                        <p class="peragraph-blog" style="text-align: justify;">E-Perpus merupakan perpustakaan digital yang menyediakan informasi dari setiap buku yang berada di perpustakan utama. Selain memudahkan pengguna untuk melakukan peminjaman buku, E-perpus juga menyediakan layanan untuk membaca buku secara online. Namun, layanan tersebut hanya tersedia untuk beberapa buku. Kemudahan peminjaman buku yang didapatkan melalui E-Perpus diharapkan dapat membuat mhasiswa semakin semangat untuk membaca buku ke perpustakaan dalam rangka meningkatkan minat baca masyarakat Indonesia.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
