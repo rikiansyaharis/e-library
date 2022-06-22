@@ -41,6 +41,7 @@ class BookOnlineController extends Controller
     //fungsi insert
     public function insertBookOnline(Request $request) {
 
+        
         $request->validate([
             'file' => 'required|mimes:jpg,jpeg,png,',
             'file_book_online' => 'required|mimes:pdf,word'
@@ -82,8 +83,6 @@ class BookOnlineController extends Controller
         ]);
 
         $data = BookOnline::find($request->id);
-
-        // dd($data);
 
         if($request->hasFile('file')) {
             $path = public_path('images/book_colection');

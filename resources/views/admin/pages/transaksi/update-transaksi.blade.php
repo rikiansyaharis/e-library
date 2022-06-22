@@ -24,7 +24,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Tanggal Kembali</label>
-                                <input type="date" class="form-control form-control-sm" name="tanggal_kembali" value="{{ isset($data) ? $data->tanggal_pinjam : '' }}">
+                                <input type="date" class="form-control form-control-sm" name="tanggal_kembali" value="{{ isset($data) ? $data->tanggal_kembali : '' }}">
                             </div>
                             <div class="form-group">
                                 <label for="">Denda</label>

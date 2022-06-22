@@ -9,6 +9,9 @@
               <div class="x_title">
                     <h3>Data Buku </h3>
               </div>
+
+              {{-- {{  dd($errors->all()) }} --}}
+
               <div class="x_content">
                   <div class="row">
                       <div class="col-sm-12">

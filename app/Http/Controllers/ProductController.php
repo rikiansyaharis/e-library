@@ -167,7 +167,18 @@ class ProductController extends Controller
         }
     }
 
+    public function cancelOrder($id) {
+        try {
+            Pinjam::where('id_peminjaman', $id)->delete();
+            Peminjaman::findOrFail($id)->delete();
 
+            return redirect()->back();
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => $e->getMessage()
+            ], 500);
+        }
+    }
 
 }
 

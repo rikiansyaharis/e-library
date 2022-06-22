@@ -21,6 +21,7 @@
                                             <th>Status</th>
                                             <th>Denda</th>
                                             <th>Keterangan</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -33,6 +34,11 @@
                                             <td>{{ $item->status }}</td>
                                             <td>{{ $item->denda }}</td>
                                             <td>{{ $item->keterangan }}</td>
+                                            <td>
+                                                <a href="{{ route('cancel-order', $item->id)}}">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>

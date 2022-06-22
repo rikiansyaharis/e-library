@@ -104,6 +104,8 @@ Route::middleware('auth.user', 'auth')->group(function () {
     Route::get('add-data-to-cart/{id}', [ProductController::class, 'addToCart'])->name('add-to-cart');
     Route::delete('remove-from-cart/{id}', [ProductController::class, 'removeFromCart'])->name('remove-from-cart');
     Route::get('remove-from-bigcart/{id}', [ProductController::class, 'removeFromBigCart'])->name('remove-from-bigcart');
+    Route::get('cancel-order/{id}', [ProductController::class, 'cancelOrder'])->name('cancel-order');
+
 
 
     // Favorite
@@ -116,6 +118,7 @@ Route::middleware('auth.user', 'auth')->group(function () {
 
     //
     Route::get('/checkout', [TransactionController::class, 'checkout'])->name('checkout');
+
 
 });
 
